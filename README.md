@@ -2,6 +2,8 @@
 
 A kit with a Freenove® ESP8266 Board for learning programming and electronics.
 
+<img src='Part list.jpg' width='70%'/>
+
 Esp8266 chip is manufactured by Espressif®.
 >Espressif® is a trademark of Espressif Systems (Shanghai) Co.Ltd (https://www.espressif.com/).
 
