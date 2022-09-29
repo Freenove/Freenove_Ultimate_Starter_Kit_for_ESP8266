@@ -1,6 +1,6 @@
 /**********************************************************************
   Filename    : WiFi Server
-  Description : Use ESP32's WiFi server feature to wait for other WiFi devices to connect.
+  Description : Use ESP8266's WiFi server feature to wait for other WiFi devices to connect.
                 And communicate with them once a connection has been established.
   Auther      : www.freenove.com
   Modification: 2022/05/11

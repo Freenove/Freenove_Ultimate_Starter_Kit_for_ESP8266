@@ -4,10 +4,6 @@
 * Auther      : www.freenove.com
 * Modification: 2022/05/11
 **********************************************************************/
-/*********
-  Rui Santos
-  Complete project details at https://randomnerdtutorials.com  
-*********/
 #include <ESP8266WiFi.h>
 // Replace with your network credentials
 const char* ssid     = "********";
