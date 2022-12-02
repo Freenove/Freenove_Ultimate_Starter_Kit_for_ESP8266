@@ -10,7 +10,7 @@ Esp8266 chip is manufactured by Espressif®.
 Freenove ESP8266 Board can be uploaded code using Arduino® IDE.
 > Arduino® is a trademark of Arduino LLC (https://www.arduino.cc/).
 
-<img src='ESP8266_Pinout.png' width='100%'/>
+<img src='ESP8266_Pinout.jpg' width='100%'/>
 
 ### Download
 
