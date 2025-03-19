@@ -4,7 +4,7 @@
 
 This chapter is the Start Point in the journey to build and explore ESP8266 electronic projects. We will start with simple "Blink" project.
 
-Project Blink
+0.1. Project Blink
 **********************************
 
 In this project, we will use ESP8266 to control blinking a common LED.
@@ -61,7 +61,7 @@ Select the serial port.
 .. image:: ../_static/imgs/0_LED/Chapter00_05.png
     :align: center
 
-Sketch_Blink
+Sketch_01.1_Blink
 ------------------------------
 
 .. image:: ../_static/imgs/0_LED/Chapter00_06.png
