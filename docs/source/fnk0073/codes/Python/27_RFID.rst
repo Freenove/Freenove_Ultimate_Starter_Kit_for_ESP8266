@@ -390,7 +390,7 @@ Reference
     **SoftSPI.write_readinto(write_buf, read_buf):** Write the bytes from write_buf while reading into read_buf.
     The buffers can be the same or different, but both buffers must have the same length. Returns None.
 
-Project 27.2RFID Read and Write
+Project RFID Read and Write
 ***************************************
 
 In this project, we will do reading and writing operations to the card.
@@ -414,7 +414,7 @@ Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "27.2_RFID_Read_And_Write".
 
-Select"mfrc522.py", right click to :red:`select "Upload to /", wait for "mfrc522.py" to be uploaded to ESP8266` and then double click "RFID_Read_And_Write.py".
+:red:`Select "mfrc522.py", right click to \`select "Upload to /", wait for "mfrc522.py" to be uploaded to ESP8266\`` and then double click "RFID_Read_And_Write.py".
 
 RFID_Read_UID
 ----------------------------

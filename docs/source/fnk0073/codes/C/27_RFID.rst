@@ -248,7 +248,7 @@ Then use the.anticoll() to read UID of the card and use serial port to print it 
     :lines: 41-49
     :dedent:
 
-Project 27.2Read and write
+Project Read and write
 *********************************
 
 In this project, we will do reading and writing operations to the card.
