@@ -230,6 +230,8 @@ Reference
     
     Set the brightness of the LED.
 
+.. _c_rainbow:
+
 Project Rainbow Light
 *********************************
 
