@@ -215,7 +215,7 @@ Circuit
 Code
 ==========================
 
-Open "Thonny", click "This computer"  "D:"  "Micropython_Codes"  24.2_Hygrothermograph". Select "I2C_LCD.py" and "LCD_API.py", right click your mouse to select "Upload to /", wait for "I2C_LCD.py" and "LCD_API.py" to be uploaded to ESP8266 and then double click "Hygrothermograph.py".
+Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> 24.2_Hygrothermograph". Select "I2C_LCD.py" and "LCD_API.py", right click your mouse to select "Upload to /", wait for "I2C_LCD.py" and "LCD_API.py" to be uploaded to ESP8266 and then double click "Hygrothermograph.py".
 
 Hygrothermograph
 -------------------
