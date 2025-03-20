@@ -81,7 +81,7 @@ Disconnect the A0 port from the potentiometer and connect it to the Pin 2 port. 
 .. image:: ../_static/imgs/1_Oscilloscope/Chapter01_04.png
     :align: center
 
-The left side of the software interface is a voltage scale, which is used to indicate the voltage of the waveform. The "1000ms" on top left corner is the time of a square, and you can press “↑” and “↓” key on keyboard to adjust it.
+The left side of the software interface is a voltage scale, which is used to indicate the voltage of the waveform. The "1000ms" on top left corner is the time of a square, and you can press "↑" and "↓" key on keyboard to adjust it.
 
 The "0.00V" on top right corner is the voltage value of current signal.
 

@@ -69,9 +69,9 @@ Connect Freenove ESP8266 to the computer using USB cable.
 Code
 ===========================
 
-Move the program folder “Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes” to disk(D) in advance with the path of “D:/Micropython_Codes”.
+Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
 
-Open “Thonny”, click “This computer” -> “D:” -> “Micropython_Codes” -> “30.1_Control_LED_through_Web”. and double click “Control_LED_through_Web”. 
+Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "30.1_Control_LED_through_Web". and double click "Control_LED_through_Web". 
 
 Control_LED_through_Web
 ------------------------------------
@@ -81,12 +81,12 @@ Control_LED_through_Web
 
 Because the names and passwords of routers in various places are different, before the Code runs, users need to enter the correct router’s name and password in the box as shown in the illustration above.
 
-After making sure the router name and password are entered correctly, compile and upload codes to ESP8266, wait for ESP8266 to connect to your router and print the IP address assigned by the router to ESP8266 in “Shell”.
+After making sure the router name and password are entered correctly, compile and upload codes to ESP8266, wait for ESP8266 to connect to your router and print the IP address assigned by the router to ESP8266 in "Shell".
 
 .. image:: ../_static/imgs/30_Smart_home/Chapter30_05.png
     :align: center
 
-When ESP8266 successfully connects to “ssid”, “Shell” displays the IP address assigned to ESP8266 by the router. Access http://192.168.1.45 in a computer browser on the LAN. As shown in the following figure:
+When ESP8266 successfully connects to "ssid", "Shell" displays the IP address assigned to ESP8266 by the router. Access http://192.168.1.45 in a computer browser on the LAN. As shown in the following figure:
 
 .. image:: ../_static/imgs/30_Smart_home/Chapter30_06.png
     :align: center
@@ -125,7 +125,7 @@ Set ESP8266 in Station mode and connect it to your router.
     :lines: 12-14
     :dedent:
 
-“Shell” displays the IP address assigned to ESP8266.
+"Shell" displays the IP address assigned to ESP8266.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/30.1_Control_LED_through_Web/Control_LED_through_Web.py
     :linenos: 

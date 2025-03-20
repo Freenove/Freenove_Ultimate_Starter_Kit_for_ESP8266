@@ -36,13 +36,13 @@ Component List
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
-.. |Chapter17_00| image:: ../_static/imgs/17.1_Motor_&_Driver/Chapter17_00.png
-.. |Chapter17_01| image:: ../_static/imgs/17.1_Motor_&_Driver/Chapter17_01.png
-.. |Chapter17_02| image:: ../_static/imgs/17.1_Motor_&_Driver/Chapter17_02.png
-.. |Chapter17_03| image:: ../_static/imgs/17.1_Motor_&_Driver/Chapter17_03.png
-.. |Chapter17_04| image:: ../_static/imgs/17.1_Motor_&_Driver/Chapter17_04.png
-.. |Chapter17_05| image:: ../_static/imgs/17.1_Motor_&_Driver/Chapter17_05.png
-.. |Chapter17_06| image:: ../_static/imgs/17.1_Motor_&_Driver/Chapter17_06.png
+.. |Chapter17_00| image:: ../_static/imgs/17_Motor_&_Driver/Chapter17_00.png
+.. |Chapter17_01| image:: ../_static/imgs/17_Motor_&_Driver/Chapter17_01.png
+.. |Chapter17_02| image:: ../_static/imgs/17_Motor_&_Driver/Chapter17_02.png
+.. |Chapter17_03| image:: ../_static/imgs/17_Motor_&_Driver/Chapter17_03.png
+.. |Chapter17_04| image:: ../_static/imgs/17_Motor_&_Driver/Chapter17_04.png
+.. |Chapter17_05| image:: ../_static/imgs/17_Motor_&_Driver/Chapter17_05.png
+.. |Chapter17_06| image:: ../_static/imgs/17_Motor_&_Driver/Chapter17_06.png
 
 Component knowledge
 ===========================
@@ -52,7 +52,7 @@ L293D
 
 L293D is an IC chip (Integrated Circuit Chip) with a 4-channel motor drive. You can drive a unidirectional DC motor with 4 ports or a bi-directional DC motor with 2 ports or a stepper motor (stepper motors are covered later in this Tutorial).
 
-.. image:: ../_static/imgs/17.1_Motor_&_Driver/Chapter17_07.png
+.. image:: ../_static/imgs/17_Motor_&_Driver/Chapter17_07.png
     :align: center
 
 Port description of L293D module is as follows:
@@ -81,12 +81,12 @@ When using L293D to drive DC motor, there are usually two connection options.
 
 The following connection option uses one channel of the L239D, which can control motor speed through the PWM, However the motor then can only rotate in one direction.
 
-.. image:: ../_static/imgs/17.1_Motor_&_Driver/Chapter17_08.png
+.. image:: ../_static/imgs/17_Motor_&_Driver/Chapter17_08.png
     :align: center
 
 The following connection uses two channels of the L239D: one channel outputs the PWM wave, and the other channel connects to GND, therefore you can control the speed of the motor. When these two channel signals are exchanged, not only controls the speed of motor, but also can control the steering of the motor.
 
-.. image:: ../_static/imgs/17.1_Motor_&_Driver/Chapter17_09.png
+.. image:: ../_static/imgs/17_Motor_&_Driver/Chapter17_09.png
     :align: center
 
 In practical use the motor is usually connected to channel 1 and 2 by outputting different levels to in1 and in2 to control the rotational direction of the motor, and output to the PWM wave to Enable1 port to control the motor's rotational speed. If the motor is connected to channel 3 and 4 by outputting different levels to in3 and in4 to control the motor's rotation direction, and output to the PWM wave to Enable2 pin to control the motor's rotational speed.
@@ -108,8 +108,8 @@ Use caution when connecting this circuit because the DC Motor is a high-power co
    
    * -  |Chapter17_11|
 
-.. |Chapter17_10| image:: ../_static/imgs/17.1_Motor_&_Driver/Chapter17_10.png
-.. |Chapter17_11| image:: ../_static/imgs/17.1_Motor_&_Driver/Chapter17_11.png
+.. |Chapter17_10| image:: ../_static/imgs/17_Motor_&_Driver/Chapter17_10.png
+.. |Chapter17_11| image:: ../_static/imgs/17_Motor_&_Driver/Chapter17_11.png
 
 Code
 ========================
@@ -121,12 +121,12 @@ Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "17.1_Mot
 Motor_And_Driver
 ------------------------
 
-.. image:: ../_static/imgs/17.1_Motor_&_Driver/Chapter17_15.png
+.. image:: ../_static/imgs/17_Motor_&_Driver/Chapter17_15.png
     :align: center
 
 Click "Run current script", rotate the potentiometer in one direction and the motor speeds up slowly in one direction. Rotate the potentiometer in the other direction and the motor will slow down to stop. And then rotate it in the original direction to accelerate the motor.
 
-.. image:: ../_static/imgs/17.1_Motor_&_Driver/Chapter17_16.png
+.. image:: ../_static/imgs/17_Motor_&_Driver/Chapter17_16.png
     :align: center
 
 The following is the Code:

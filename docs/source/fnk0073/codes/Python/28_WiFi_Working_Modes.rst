@@ -47,9 +47,9 @@ Connect Freenove ESP8266 to the computer using the USB cable.
 Code
 ========================
 
-Move the program folder “Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes” to disk(D) in advance with the path of “D:/Micropython_Codes”.
+Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
 
-Open “Thonny”, click “This computer” -> “D:” -> “Micropython_Codes” -> “28.1_Station_mode” and double click “Station_mode.py”. 
+Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "28.1_Station_mode" and double click "Station_mode.py". 
 
 Station_mode
 -------------------
@@ -59,7 +59,7 @@ Station_mode
 
 Because the names and passwords of routers in various places are different, before the Code runs, users need to enter the correct router’s name and password in the box as shown in the illustration above.
 
-After making sure the router name and password are entered correctly, compile and upload codes to ESP8266, wait for ESP8266 to connect to your router and print the IP address assigned by the router to ESP8266 in “Shell”. 
+After making sure the router name and password are entered correctly, compile and upload codes to ESP8266, wait for ESP8266 to connect to your router and print the IP address assigned by the router to ESP8266 in "Shell". 
 
 .. image:: ../_static/imgs/28_WiFi_Working_Modes/Chapter28_12.png
     :align: center
@@ -112,7 +112,7 @@ Wait for ESP8266 to connect to router until they connect to each other successfu
     :lines: 14-15
     :dedent:
 
-Print the IP address assigned to ESP8266 in “Shell”.
+Print the IP address assigned to ESP8266 in "Shell".
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/28.1_Station_mode/Station_mode.py
     :linenos: 
@@ -125,7 +125,7 @@ Reference
 
 .. py:function:: Class network	
     
-    Before each use of **network** , please add the statement “ **import network** ” to the top of the python file.
+    Before each use of **network** , please add the statement " **import network** " to the top of the python file.
     
     **WLAN(interface_id):** Set to WiFi mode.
     
@@ -199,9 +199,9 @@ Connect Freenove ESP8266 to the computer using the USB cable.
 Code
 ====================
 
-Move the program folder “Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes” to disk(D) in advance with the path of “D:/Micropython_Codes”.
+Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
 
-Open “Thonny”, click “This computer” -> “D:” -> “Micropython_Codes” -> “28.2_AP_mode”. and double click “AP_mode.py”. 
+Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "28.2_AP_mode". and double click "AP_mode.py". 
 
 AP_mode
 ---------------------------
@@ -211,7 +211,7 @@ AP_mode
 
 Before the Code runs, you can make any changes to the AP name and password for ESP8266 in the box as shown in the illustration above. Of course, you can leave it alone by default.
 
-Click “Run current script”, open the AP function of ESP8266 and print the access point information. 
+Click "Run current script", open the AP function of ESP8266 and print the access point information. 
 
 .. image:: ../_static/imgs/28_WiFi_Working_Modes/Chapter28_14.png
     :align: center
@@ -282,7 +282,7 @@ Reference
 
 .. py:function:: Class network	
     
-    Before each use of **network** , please add the statement “ **import network** ” to the top of the python file.
+    Before each use of **network** , please add the statement " **import network** " to the top of the python file.
     
     **WLAN(interface_id):** Set to WiFi mode.
     
@@ -355,9 +355,9 @@ Connect Freenove ESP8266 to the computer using the USB cable.
 Code
 ==========================
 
-Move the program folder “Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes” to disk(D) in advance with the path of “D:/Micropython_Codes”.
+Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
 
-Open “Thonny”, click “This computer” -> “D:” -> “Micropython_Codes” -> “28.3_AP+STA_mode”and double click “AP+STA_mode.py”. 
+Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "28.3_AP+STA_mode"and double click "AP+STA_mode.py". 
 
 AP+STA_mode
 ---------------------------
@@ -367,7 +367,7 @@ AP+STA_mode
 
 It is analogous to project 28.1 and project 28.2. Before running the Code, you need to modify ssidRouter, passwordRouter, ssidAP and passwordAP shown in the box of the illustration above.
 
-After making sure that the code is modified correctly, click “Run current script” and the “Shell” will display as follows:
+After making sure that the code is modified correctly, click "Run current script" and the "Shell" will display as follows:
 
 .. image:: ../_static/imgs/28_WiFi_Working_Modes/Chapter28_17.png
     :align: center

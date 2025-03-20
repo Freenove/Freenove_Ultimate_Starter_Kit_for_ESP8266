@@ -66,7 +66,7 @@ Select Libraries in the pop-up window.
 .. image:: ../_static/imgs/Preface/Preface55.png
     :align: center
 
-Input “ControlP5” in the searching box, and then select the option as below. Click “Install” and wait for the installation to finish.
+Input "ControlP5" in the searching box, and then select the option as below. Click "Install" and wait for the installation to finish.
 
 .. image:: ../_static/imgs/Preface/Preface56.png
     :align: center
@@ -109,7 +109,7 @@ In order to simplify and facilitate the operation, we prepared a SerialDevice cl
 
 :red:`Freenove Ultimate Starter Kit for ESP8266\\Processing\\SerialDevice\\main.py`
 
-Open Thonny, select the main.py file of the above path, right click the mouse to and select “Upload to /” to
+Open Thonny, select the main.py file of the above path, right click the mouse to and select "Upload to /" to
 
 upload the file to Pico. Run the main.py file offline, which means you need to disconnect the USB cable from Pico and then reconnect them.
 

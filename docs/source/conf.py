@@ -50,10 +50,13 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.extlinks",
     "sphinx.ext.autosectionlabel",
+    "sphinxcontrib.googleanalytics",
     # "sphinx_favicon"
 ]
 
 autosectionlabel_prefix_document = True
+googleanalytics_id="G-THC0SQQTDX"
+
 source_suffix = {
     '.rst': 'restructuredtext',
 }

@@ -425,7 +425,7 @@ RFID_Read_UID
 Click "Run current script", put the white magnetic card or blue magnetic card close to the induction area of
 the RFID module, the "Shell" window prints the read information such as card UID data.
 It also provides the option to perform regular read and write operations on the card. Press Ctrl+C or click
-“Stop/Restart backend” to exit the program.
+"Stop/Restart backend" to exit the program.
 
 In the experiment, it is recommended to place the white or blue magnetic card above the sensor area of the RFID module, and then remove it after the experiment.   This is conducive to relevant operations and prevent the occurrence of false alarms.
 
