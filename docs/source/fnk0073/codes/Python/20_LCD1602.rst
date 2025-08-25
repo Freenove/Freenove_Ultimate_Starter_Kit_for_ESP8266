@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter LCD1602
+Chapter 20 LCD1602
 ##############################################################################
 
 In this chapter, we will learn about the LCD1602 Display Screen.
 
-Project LCD1602
+Project 20.1 LCD1602
 *************************************
 
 In this section we learn how to use LCD1602 to display something.
@@ -12,19 +12,24 @@ In this section we learn how to use LCD1602 to display something.
 Component List
 =========================================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |  USB cable                            |
-|                                  |                                       |
-| |Chapter01_00|                   |   |Chapter01_01|                      |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------------------+---------------------------------------+
-| LCD1602 Module x1                | Jumper wire F/M x6                    |
-|                                  |                                       |
-| |Chapter20_00|                   |   |Chapter20_01|                      |
-+----------------------------------+---------------------------------------+
+.. table::
+    :align: center
+    :class: table-line
+    :width: 80%
+    
+    +----------------------------------+---------------------------------------+
+    | ESP8266 x1                       |  USB cable                            |
+    |                                  |                                       |
+    | |Chapter01_00|                   |   |Chapter01_01|                      |
+    +----------------------------------+---------------------------------------+
+    | Breadboard x1                                                            |
+    |                                                                          |
+    | |Chapter01_02|                                                           |
+    +----------------------------------+---------------------------------------+
+    | LCD1602 Module x1                | Jumper wire F/M x6                    |
+    |                                  |                                       |
+    | |Chapter20_00|                   |   |Chapter20_01|                      |
+    +----------------------------------+---------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -59,8 +64,8 @@ The serial-to-parallel IC chip used in this module is PCF8574T (PCF8574AT), and 
 Below is the PCF8574 pin schematic diagram and the block pin diagram:
 
 .. list-table:: 
-   :width: 100%
    :align: center
+   :class: table-line
 
    * -  PCF8574 chip pin diagram:
      -  PCF8574 chip pin diagram:
@@ -84,8 +89,9 @@ Circuit
 ===========================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter20_07|
@@ -93,19 +99,19 @@ Circuit
     
         If you need any support, please feel free to contact us via: support@freenove.com
    
-   * -  |Chapter20_08|
+   * -  |Chapter20_14|
 
 .. |Chapter20_07| image:: ../_static/imgs/20_LCD1602/Chapter20_07.png
-.. |Chapter20_08| image:: ../_static/imgs/20_LCD1602/Chapter20_08.png
+.. |Chapter20_14| image:: ../_static/imgs/20_LCD1602/Chapter20_14.png
 
 Code
 ============================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "20.1_I2C_LCD1602". Select "I2C_LCD.py"and "LCD_API.py", right click your mouse to select "Upload to /", wait for "I2C_LCD.py" and"LCD_API.py" to be uploaded to ESP8266 and then double click "I2C_LCD1602.py". 
 
-I2C_LCD1602
+20.1_I2C_LCD1602
 ----------------------------
 
 .. image:: ../_static/imgs/20_LCD1602/Chapter20_11.png
@@ -114,11 +120,6 @@ I2C_LCD1602
 Click "Run current script" and LCD1602 displays some characters. 
 
 .. image:: ../_static/imgs/20_LCD1602/Chapter20_12.png
-    :align: center
-
-If you cannot see anything on the display or the display is not clear, try rotating the white knob on back of LCD1602 slowly, which adjusts the contrast, until the screen can display clearly.
-
-.. image:: ../_static/imgs/20_LCD1602/Chapter20_13.png
     :align: center
 
 The following is the program code:
@@ -140,12 +141,14 @@ Import time, I2C and I2C_LCD modules.
 Instantiate the I2C LCD1602 screen. It should be noted here that if your LCD driver chip uses PCF8574T, set the I2C address to 0x27, and if uses PCF8574AT, set the I2C address to 0x3F.
 
 .. code-block:: python
+    :linenos:
 
     DEFAULT_I2C_ADDR = 0x27
 
 Initialize I2C pins and associate them with I2CLCD module, and then set the number of rows and columns for LCD1602.
 
 .. code-block:: python
+    :linenos:
 
     i2c = I2C(scl=Pin(14), sda=Pin(13), freq=400000)
     lcd = I2cLcd(i2c, DEFAULT_I2C_ADDR, 2, 16)
@@ -154,7 +157,7 @@ Move the cursor of LCD1602 to the first row, first column, and print out "Hello,
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/20.1_I2C_LCD1602/I2C_LCD1602.py
     :linenos: 
-    :language: python
+    :language: python  
     :lines: 15-16
     :dedent:
 

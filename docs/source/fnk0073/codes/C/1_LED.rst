@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter LED
+Chapter 1 LED
 ##############################################################################
 
 This chapter is the Start Point in the journey to build and explore ESP8266 electronic projects. We will start with simple "Blink" project.
 
-Project Blink
+Project 1.1 Blink
 *******************************
 
 In this project, we will use ESP8266 to control blinking a common LED.
@@ -12,19 +12,24 @@ In this project, we will use ESP8266 to control blinking a common LED.
 Component List
 ==================================
 
-+-------------------------+------------------------------+
-| ESP8266 x1              | USB cable                    |
-|                         |                              |
-| |Chapter01_00|          | |Chapter01_01|               |
-+-------------------------+------------------------------+
-| Breadboard x1                                          |
-|                                                        |
-| |Chapter01_02|                                         |
-+----------------+------------------+--------------------+
-| LED x1         | Resistor 220Ω x1 | Jumper wire M/M x3 |
-|                |                  |                    |
-| |Chapter01_03| | |Chapter01_04|   | |Chapter01_05|     |
-+----------------+------------------+--------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +-------------------------+------------------------------+
+    | ESP8266 x1              | USB cable                    |
+    |                         |                              |
+    | |Chapter01_00|          | |Chapter01_01|               |
+    +-------------------------+------------------------------+
+    | Breadboard x1                                          |
+    |                                                        |
+    | |Chapter01_02|                                         |
+    +----------------+------------------+--------------------+
+    | LED x1         | Resistor 220Ω x1 | Jumper wire M/M x3 |
+    |                |                  |                    |
+    | |Chapter01_03| | |Chapter01_04|   | |Chapter01_05|     |
+    +----------------+------------------+--------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -103,14 +108,15 @@ First, disconnect all power from the ESP8266. Then build the circuit according t
 CAUTION: Avoid any possible short circuits (especially connecting 5V or GND, 3.3V and GND)! WARNING: A short circuit can cause high current in your circuit, generate excessive component heat and cause permanent damage to your hardware!
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter01_11|
    * -  Hardware connection 
      
-        If you need any support, please feel free to contact us via: support@freenove.com
+        :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
    * -  |Chapter01_12|
 
@@ -124,9 +130,9 @@ According to the circuit, when the GPIO4 of ESP8266 output level is high, the LE
 
 Upload the following Sketch: 
 
-Freenove_Ultimate_Starter_Kit_for_ESP8266\\C\\Sketches\\Sketch_01.1_Blink2
+**Freenove_Ultimate_Starter_Kit_for_ESP8266\\C\\Sketches\\Sketch_01.1_Blink2**
 
-Before uploading the code, click "Tools", "Board" and select "NodeMCU 1.0(ESP-12E Module)".
+Before uploading the code, click "**Tools**", "**Board**" and select "**NodeMCU 1.0(ESP-12E Module)**".
 
 .. image:: ../_static/imgs/1_LED/Chapter01_13.png
     :align: center
@@ -138,12 +144,12 @@ Select the serial port.
 
 .. note:: 
     
-    For macOS users, if the uploading fails, please set the baud rate to 115200 before clicking "Upload Using Programmer".
+    **For macOS users, if the uploading fails, please set the baud rate to 115200 before clicking "Upload Using Programmer".**
 
 .. image:: ../_static/imgs/1_LED/Chapter01_15.png
     :align: center
 
-Sketch_Blink2 
+Sketch_01.1_Blink2 
 -----------------------------
 
 .. image:: ../_static/imgs/1_LED/Chapter01_16.png
@@ -154,7 +160,7 @@ Click "Upload", Download the code to ESP8266 and your LED in the circuit starts 
 .. image:: ../_static/imgs/1_LED/Chapter01_17.png
     :align: center
 
-:red:`If you have any concerns, please contact us via:` support@freenove.com
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com
 
 The following is the program code:
 

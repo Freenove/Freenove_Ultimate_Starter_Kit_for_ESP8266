@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Relay & Motor
+Chapter 16 Relay & Motor
 ##############################################################################
 
 In this chapter, we will learn a kind of special switch module, relay module.
 
-Project Relay & Motor
+Project 16.1 Relay & Motor
 *************************************
 
 In this project, we will use a push button switch indirectly to control the motor via a relay.
@@ -12,35 +12,40 @@ In this project, we will use a push button switch indirectly to control the moto
 Component List
 ===============================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |          USB cable                    |
-|                                  |                                       |
-| |Chapter01_00|                   |          |Chapter01_01|               |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------------------+---------------------------------------+
-| Breadboard Power module x1       | Jumper wire M/M                       |
-|                                  |                                       |
-| |Chapter16_01|                   |  |Chapter01_05|                       |
-+----------------------+-----------+-------------+-------------------------+
-| Resistor 10kΩ x2     | Resistor 1kΩ x1         | Resistor 220Ω x1        |
-|                      |                         |                         |
-| |Chapter16_02|       |  |Chapter16_03|         |     |Chapter16_04|      |
-+----------------------+-------------------------+-------------------------+
-| NPN transistor x1    | Relay x1                | Motor x1                |
-|                      |                         |                         |
-| |Chapter16_05|       |  |Chapter16_06|         |     |Chapter16_07|      |
-+----------------------+-------------------------+-------------------------+
-| Push button x1       | LED x1                  | Diode x1                |
-|                      |                         |                         |
-| |Chapter16_08|       |  |Chapter16_09|         |     |Chapter16_10|      |
-+----------------------+-------------------------+-------------------------+
-| 9V battery (prepared by yourself) & battery line                         |
-|                                                                          |
-| |Chapter16_11|                                                           |
-+--------------------------------------------------------------------------+
+.. table::
+    :align: center
+    :class: table-line
+    :width: 80%
+    
+    +----------------------------------+---------------------------------------+
+    | ESP8266 x1                       |          USB cable                    |
+    |                                  |                                       |
+    | |Chapter01_00|                   |          |Chapter01_01|               |
+    +----------------------------------+---------------------------------------+
+    | Breadboard x1                                                            |
+    |                                                                          |
+    | |Chapter01_02|                                                           |
+    +----------------------------------+---------------------------------------+
+    | Breadboard Power module x1       | Jumper wire M/M                       |
+    |                                  |                                       |
+    | |Chapter16_01|                   |  |Chapter01_05|                       |
+    +----------------------+-----------+-------------+-------------------------+
+    | Resistor 10kΩ x2     | Resistor 1kΩ x1         | Resistor 220Ω x1        |
+    |                      |                         |                         |
+    | |Chapter16_02|       |  |Chapter16_03|         |     |Chapter16_04|      |
+    +----------------------+-------------------------+-------------------------+
+    | NPN transistor x1    | Relay x1                | Motor x1                |
+    |                      |                         |                         |
+    | |Chapter16_05|       |  |Chapter16_06|         |     |Chapter16_07|      |
+    +----------------------+-------------------------+-------------------------+
+    | Push button x1       | LED x1                  | Diode x1                |
+    |                      |                         |                         |
+    | |Chapter16_08|       |  |Chapter16_09|         |     |Chapter16_10|      |
+    +----------------------+-------------------------+-------------------------+
+    | 9V battery (prepared by yourself) & battery line                         |
+    |                                                                          |
+    | |Chapter16_11|                                                           |
+    +--------------------------------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -70,8 +75,10 @@ A relay is a safe switch which can use low power circuit to control high power c
 The following is a schematic diagram of a common relay and the feature and circuit symbol of a 5V relay used in this project:
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
+   :header-rows: 1
 
    * -  Diagram 
      -  Feature
@@ -89,7 +96,7 @@ Pin 5 and pin 6 are connected to each other inside. When the coil pins 3 and 4 g
 
 Inductor
 ----------------------
-
+  
 The symbol of Inductance is "L" and the unit of inductance is the "Henry" (H). Here is an example of how this can be encountered: 1H=1000mH, 1mH=1000μH.
 
 An inductor is an energy storage device that converts electrical energy into magnetic energy. Generally, it consists of winding coil, with a certain amount of inductance. Inductors hinder the change of current passing through it.  When the current passing through it increases, it will attempt to hinder the increasing trend of current; and when the current passing through it decreases, it will attempt to hinder the decreasing trend of current. So the current passing through inductor is not transient.
@@ -120,13 +127,14 @@ Circuit
 
 In circuit of this project, the power pin of the 74HC595 IC chip is connected to 3.3V. It can also be connected to 5V to make LED matrix brighter.
 
-.. list-table:: 
-   :width: 100%
+.. list-table::
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter16_19|
-   * -  Hardware connection. 
+   * -  Hardware connection
     
         If you need any support, please feel free to contact us via: support@freenove.com
    
@@ -137,18 +145,18 @@ In circuit of this project, the power pin of the 74HC595 IC chip is connected to
 
 .. note::
     
-    the motor circuit uses A large current, about 0.2-0.3A without load. We recommend that you use a 9V battery to power your system.
+    **The motor circuit uses A large current, about 0.2-0.3A without load. We recommend that you use a 9V battery to power your system.**
 
-Code  
+Code
 ==========================
 
 Use buttons to control the relays and motors.
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "16.1_Relay_And_Motor" and double click "Relay_And_Motor.py". 
 
-Relay_And_Motor
+16.1_Relay_And_Motor
 ---------------------------
 
 .. image:: ../_static/imgs/16_Relay_&_Motor/Chapter16_23.png

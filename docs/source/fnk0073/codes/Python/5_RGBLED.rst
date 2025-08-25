@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter RGB LED
+Chapter 5 RGB LED
 ##############################################################################
 
 In this chapter, we will learn how to control a RGB LED. It can emit different colors of light. Next, we will use RGB LED to make a multicolored light.
 
-Project Random Color Light
+Project 5.1 Random Color Light
 ***********************************
 
 In this project, we will make a multicolored LED. And we can control RGB LED to switch different colors automatically.
@@ -12,19 +12,24 @@ In this project, we will make a multicolored LED. And we can control RGB LED to 
 Component List
 =========================
 
-+-------------------------+------------------------------+
-| ESP8266 x1              | USB cable                    |
-|                         |                              |
-| |Chapter01_00|          | |Chapter01_01|               |
-+-------------------------+------------------------------+
-| Breadboard x1                                          |
-|                                                        |
-| |Chapter01_02|                                         |
-+----------------+------------------+--------------------+
-| RGBLED x1      | Resistor 220Ω x3 | Jumper wire M/M x5 |
-|                |                  |                    |
-| |Chapter05_00| | |Chapter01_04|   | |Chapter01_05|     |
-+----------------+------------------+--------------------+
+.. table::
+    :align: center
+    :class: table-line
+    :width: 80%
+    
+    +-------------------------+------------------------------+
+    | ESP8266 x1              | USB cable                    |
+    |                         |                              |
+    | |Chapter01_00|          | |Chapter01_01|               |
+    +-------------------------+------------------------------+
+    | Breadboard x1                                          |
+    |                                                        |
+    | |Chapter01_02|                                         |
+    +----------------+------------------+--------------------+
+    | RGBLED x1      | Resistor 220Ω x3 | Jumper wire M/M x5 |
+    |                |                  |                    |
+    | |Chapter05_00| | |Chapter01_04|   | |Chapter01_05|     |
+    +----------------+------------------+--------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -54,8 +59,9 @@ Circuit
 This circuit is the same as the one in engineering Blink.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter05_03|
@@ -72,7 +78,7 @@ Code
 ==========================
 We need to create three PWM channels and use random duty cycle to make random RGBLED color.
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "05.1_RandomColorLight"and double click "RandomColorLight.py". 
 
@@ -84,7 +90,7 @@ Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "05.1_Ran
 
 Click "Run current script", RGBLED begins to display random colors.
 
-:red:`If you have any concerns, please contact us via:` support@freenove.com
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com
 
 The following is the program code:
 
@@ -135,6 +141,7 @@ Obtain 3 random number every 200 milliseconds and call function setColor to make
     :dedent:
 
 Reference
+----------------------
 
 .. py:function:: Class random	
 

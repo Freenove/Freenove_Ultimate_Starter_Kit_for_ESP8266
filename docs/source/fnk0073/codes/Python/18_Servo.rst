@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Servo
+Chapter 18 Servo
 ##############################################################################
 
 Previously, we learned how to control the speed and rotational direction of a motor. In this chapter, we will learn about servos which are a rotary actuator type motor that can be controlled to rotate to specific angles.
 
-Project Servo Sweep
+Project 18.1 Servo Sweep
 ****************************************
 
 First, we need to learn how to make a servo rotate.
@@ -12,19 +12,24 @@ First, we need to learn how to make a servo rotate.
 Component List
 =========================================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |  USB cable                            |
-|                                  |                                       |
-| |Chapter01_00|                   |   |Chapter01_01|                      |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------------------+---------------------------------------+
-| Servo x1                         | Jumper wire M/M x5                    |
-|                                  |                                       |
-| |Chapter18_00|                   |   |Chapter18_01|                      |
-+----------------------------------+---------------------------------------+
+.. table::
+    :align: center
+    :class: table-line
+    :width: 80%
+    
+    +----------------------------------+---------------------------------------+
+    | ESP8266 x1                       |  USB cable                            |
+    |                                  |                                       |
+    | |Chapter01_00|                   |   |Chapter01_01|                      |
+    +----------------------------------+---------------------------------------+
+    | Breadboard x1                                                            |
+    |                                                                          |
+    | |Chapter01_02|                                                           |
+    +----------------------------------+---------------------------------------+
+    | Servo x1                         | Jumper wire M/M x5                    |
+    |                                  |                                       |
+    | |Chapter18_00|                   |   |Chapter18_01|                      |
+    +----------------------------------+---------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -46,19 +51,23 @@ Servo is a compact package which consists of a DC motor, a set of reduction gear
 
 We will use a 50Hz PWM signal with a duty cycle in a certain range to drive the Servo. The lasting time of 0.5ms-2.5ms of PWM single cycle high level corresponds to the servo angle 0 degrees - 180 degree linearly. Part of the corresponding values are as follows:
 
-+-----------------+-------------+
-| High level time | Servo angle |
-+-----------------+-------------+
-| 0.5ms           | 0 degree    |
-+-----------------+-------------+
-| 1ms             | 45 degree   |
-+-----------------+-------------+
-| 1.5ms           | 0 degree    |
-+-----------------+-------------+
-| 2ms             | 45 degree   |
-+-----------------+-------------+
-| 2.5ms           | 180 degree  |
-+-----------------+-------------+
+.. table::
+    :align: center
+    :class: zebra
+    
+    +-----------------+-------------+
+    | High level time | Servo angle |
+    +=================+=============+
+    | 0.5ms           | 0 degree    |
+    +-----------------+-------------+
+    | 1ms             | 45 degree   |
+    +-----------------+-------------+
+    | 1.5ms           | 0 degree    |
+    +-----------------+-------------+
+    | 2ms             | 45 degree   |
+    +-----------------+-------------+
+    | 2.5ms           | 180 degree  |
+    +-----------------+-------------+
 
 When you change the servo signal value, the servo will rotate to the designated angle.
 
@@ -68,12 +77,13 @@ Circuit
 Use caution when supplying power to the servo, it should be 5V. Make sure you do not make any errors when connecting the servo to the power supply.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter18_03|
-   * -  Hardware connection. 
+   * -  Hardware connection
     
         If you need any support, please feel free to contact us via: support@freenove.com
    
@@ -85,11 +95,11 @@ Use caution when supplying power to the servo, it should be 5V. Make sure you do
 Code
 ===========================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "18.1_Servo_Sweep". Select "myservo.py", right click your mouse to select "Upload to /", wait for "myservo.py" to be uploaded to ESP8266 and then double click "Servo_Sweep.py". 
 
-Servo_Sweep
+18.1_Servo_Sweep
 -------------------------
 
 .. image:: ../_static/imgs/18_Servo/Chapter18_15.png
@@ -161,7 +171,7 @@ Reference
     
         **us:** Range from 500-2500, with 500 corresponding to the servo's 0 degree and 2500 corresponding to 180 degrees.
 
-Project Servo Knop
+Project 18.2 Servo Knop
 ****************************
 
 Use a potentiometer to control the servo motor to rotate at any angle.
@@ -169,19 +179,24 @@ Use a potentiometer to control the servo motor to rotate at any angle.
 Component List
 ==================================
 
-+-----------------------------------+------------------------------+
-| ESP8266 x1                        | USB cable                    |
-|                                   |                              |
-| |Chapter01_00|                    | |Chapter01_01|               |
-+-----------------------------------+------------------------------+
-| Breadboard x1                                                    |
-|                                                                  |
-| |Chapter01_02|                                                   |
-+----------------+----------------------------+--------------------+
-| Servo x1       | Rotary potentiometer x1    | Jumper wire M/M x10|
-|                |                            |                    |
-| |Chapter18_08| |  |Chapter18_09|            | |Chapter18_10|     |
-+----------------+----------------------------+--------------------+
+.. table::
+    :align: center
+    :class: table-line
+    :width: 80%
+    
+    +-----------------------------------+------------------------------+
+    | ESP8266 x1                        | USB cable                    |
+    |                                   |                              |
+    | |Chapter01_00|                    | |Chapter01_01|               |
+    +-----------------------------------+------------------------------+
+    | Breadboard x1                                                    |
+    |                                                                  |
+    | |Chapter01_02|                                                   |
+    +----------------+----------------------------+--------------------+
+    | Servo x1       | Rotary potentiometer x1    | Jumper wire M/M x10|
+    |                |                            |                    |
+    | |Chapter18_08| |  |Chapter18_10|            | |Chapter18_09|     |
+    +----------------+----------------------------+--------------------+
 
 .. |Chapter18_08| image:: ../_static/imgs/18_Servo/Chapter18_08.png
 .. |Chapter18_09| image:: ../_static/imgs/18_Servo/Chapter18_09.png
@@ -193,8 +208,9 @@ Circuit
 Use caution when supplying power to the servo, it should be 5V. Make sure you do not make any errors when connecting the servo to the power supply.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter18_11|
@@ -207,15 +223,18 @@ Use caution when supplying power to the servo, it should be 5V. Make sure you do
 .. |Chapter18_11| image:: ../_static/imgs/18_Servo/Chapter18_11.png
 .. |Chapter18_12| image:: ../_static/imgs/18_Servo/Chapter18_12.png
 
-Code
+Code  
 ==========================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "18.2_Servo_Knop". Select "myservo.py", right click your mouse to select "Upload to /", wait for "myservo.py" to be uploaded to ESP8266 and then double click "Servo_Knop.py". 
- 
-Servo_Knop
+
+18.2_Servo_Knop
 --------------------------
+
+.. image:: ../_static/imgs/18_Servo/Chapter18_17.png
+    :align: center
 
 Click "Run current script", twist the potentiometer back and forth, and the servo motor rotates accordingly.
 

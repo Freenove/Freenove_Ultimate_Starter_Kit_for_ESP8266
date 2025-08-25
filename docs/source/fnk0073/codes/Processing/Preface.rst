@@ -76,7 +76,9 @@ First Use
 
 In the editor, type the following:
 
-ellipse(50, 50, 80, 80);
+.. code-block:: c
+    
+    ellipse(50, 50, 80, 80);
 
 This line of code means "draw an ellipse, with the center 50 pixels over from the left and 50 pixels down from the top, with a width and height of 80 pixels." Click the Run button (the triangle button in the Toolbar).
 
@@ -107,7 +109,7 @@ We need to write code for control board and Processing to complete the interacti
 
 In order to simplify and facilitate the operation, we prepared a SerialDevice class for Processing to communicate with the control board. To use this class, we need to upload the below main.py file to ESP8266. 
 
-:red:`Freenove Ultimate Starter Kit for ESP8266\\Processing\\SerialDevice\\main.py`
+:combo:`red font-bolder:Freenove Ultimate Starter Kit for ESP8266\\Processing\\SerialDevice\\main.py`
 
 Open Thonny, select the main.py file of the above path, right click the mouse to and select "Upload to /" to
 

@@ -4,85 +4,82 @@ Welcome
 
 Thank you for choosing Freenove products!
 
-Getting Started
+How to Start
 *******************************
 
-First, please read the Read Me First.pdf document in the unzipped folder you created.
+When reading this, you should have downloaded the ZIP file for this product.
 
-If you have not yet downloaded the zip file, associated with this kit, please do so now and unzip it.
+Unzip it and you will get a folder containing tutorials and related files. Please start with this PDF tutorial.
 
-Get Support and Offer Input
+**!** Unzip the ZIP file instead of opening the file in the ZIP file directly.
+
+**!** Do not move, delete or rename files in the folder just unzipped.
+
+Get Support
 **********************************
 
-Freenove provides free and responsive product and technical support, including but not limited to:
+Encounter problems? Don't worry! Refer to “TroubleShooting.pdf” or contact us.
 
-- Product quality issues 
-
-- Product use and build issues
-
-- Questions regarding the technology employed in our products for learning and education
-
-- Your input and opinions are always welcome
-
-- We also encourage your ideas and suggestions for new products and product improvements
-
-For any of the above, you may send us an email to:
+When there are packaging damage, quality problems, questions encountering in use, etc., just send us an email. We will reply to you within one working day and provide a solution.
 
 support@freenove.com
 
-Safety and Precautions
+Attention
 ***********************************
 
-Please follow the following safety precautions when using or storing this product:
+Pay attention to safety when using and storing this product:
 
-- Keep this product out of the reach of children under 6 years old. 
+- This product is not suitable for children under 12 years of age because of small parts and sharp parts.
 
-- This product should be used only when there is adult supervision present as young children lack necessary judgment regarding safety and the consequences of product misuse. 
+- Minors should use this product under the supervision and guidance of adults.
 
-- This product contains small parts and parts, which are sharp. This product contains electrically conductive parts. Use caution with electrically conductive parts near or around power supplies, batteries and powered (live) circuits.
+- This product contains small and sharp parts. Do not swallow, prick and scratch to avoid injury.
 
-- When the product is turned ON, activated or tested, some parts will move or rotate. To avoid injuries to hands and fingers keep them away from any moving parts!
+- This product contains conductive parts. Do not hold them to touch power supply and other circuits.
 
-- It is possible that an improperly connected or shorted circuit may cause overheating. Should this happen, immediately disconnect the power supply or remove the batteries and do not touch anything until it cools down! When everything is safe and cool, review the product tutorial to identify the cause.
+- To avoid personal injury, do not touch parts rotating or moving while working.
 
-- Only operate the product in accordance with the instructions and guidelines of this tutorial, otherwise parts may be damaged or you could be injured.
+- The wrong operation may cause overheat. Do not touch and disconnect the power supply immediately.
 
-- Store the product in a cool dry place and avoid exposing the product to direct sunlight.
+- Operate in accordance with the requirements of the tutorial. Fail to do so may damage the parts.
 
-- After use, always turn the power OFF and remove or unplug the batteries before storing.
+- Store this product in a dry and dark environment. Keep away from children.
 
-About Freenove
+- Turn off the power of the circuit before leaving.
+
+
+About
 ***********************************
 
-Freenove provides open source electronic products and services worldwide.
+Freenove provides open source electronic products and services.
 
-Freenove is committed to assist customers in their education of robotics, programming and electronic circuits so that they may transform their creative ideas into prototypes and new and innovative products. To this end, our services include but are not limited to:
+Freenove is committed to helping customers learn programming and electronic knowledge, quickly implement product prototypes, realize their creativity and launch innovative products. Our services include:
 
-- Educational and Entertaining Project Kits for Robots, Smart Cars and Drones
+- Kits for learning programming and electronics
 
-- Educational Kits to Learn Robotic Software Systems for Arduino, Raspberry Pi and micro: bit
+- Kits compatible with Arduino®, Raspberry Pi®, micro:bit®, ESP8266®, etc.
 
-- Electronic Component Assortments, Electronic Modules and Specialized Tools
+- Kits for robots, smart cars, drones, etc.
 
-- Product Development and Customization Services
+- Components, modules and tools
 
-You can find more about Freenove and get our latest news and updates through our website:
+- Design and customization
+
+To learn more about us or get our latest information, please visit our website:
 
 http://www.freenove.com
-
-sale@freenove.com
 
 Copyright
 ***********************************
 
-All the files, materials and instructional guides provided are released under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. A copy of this license can be found in the folder containing the Tutorial and software files associated with this product.
+All the files provided in the ZIP file are released under `Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License <https://creativecommons.org/licenses/by-nc-sa/3.0/>`_. You can find a copy of the license in the ZIP file.
 
 .. image:: ../_static/imgs/Welcome/welcome00.png
     :align: center
 
-This means you can use these resource in your own derived works, in part or completely but **NOT for the intent or purpose of commercial use**.
+It means you can use these files on your own derived works, in part or completely. But not for commercial use.
 
-Freenove brand and logo are copyright of Freenove Creative Technology Co., Ltd. and cannot be used without written permission.
+Freenove® brand and logo are trademarks of Freenove Creative Technology Co., Ltd. Must not be used without permission.
 
 .. image:: ../_static/imgs/Welcome/welcome01.png
     :align: center
@@ -93,10 +90,8 @@ Arduino® is a trademark of Arduino LLC (https://www.arduino.cc/).
 
 Raspberry Pi® is a trademark of Raspberry Pi Foundation (https://www.raspberrypi.org/).
 
-Raspberry Pi Pico® is a trademark of Raspberry Pi Foundation (https://www.raspberrypi.org/).
-
 micro:bit® is a trademark of Micro:bit Educational Foundation (https://www.microbit.org/).
 
-ESPRESSIF® and ESP32® are trademarks of ESPRESSIF Systems (Shanghai) Co, Ltd
+ESPRESSIF® and ESP8266® are trademarks of ESPRESSIF Systems (Shanghai) Co., Ltd 
 
 (https://www.espressif.com/).

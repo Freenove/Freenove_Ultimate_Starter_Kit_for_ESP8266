@@ -1,5 +1,5 @@
 ##############################################################################
-Chapter Oscilloscope
+Chapter 1 Oscilloscope
 ##############################################################################
 
 In this chapter, we will make a complex virtual instrument, oscilloscope. Oscilloscope is a widely used electronic measuring instrument. It can get the electrical signals not directly observed into visible image to facilitate the analysis and study of various electrical signals change process.
@@ -12,19 +12,24 @@ Now, let's use Processing and ESP8266 board to create an oscilloscope.
 Component List
 =============================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |          USB cable                    |
-|                                  |                                       |
-| |Chapter01_00|                   |          |Chapter01_01|               |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------------------+---------------------------------------+
-| Rotary potentiometer x1          | Jumper wire M/M x5                    |
-|                                  |                                       |
-| |Chapter09_00|                   |          |Chapter06_01|               |
-+----------------------------------+---------------------------------------+
+.. table::
+    :align: center
+    :width: 80%
+    :class: table-line
+
+    +----------------------------------+---------------------------------------+
+    | ESP8266 x1                       |          USB cable                    |
+    |                                  |                                       |
+    | |Chapter01_00|                   |          |Chapter01_01|               |
+    +----------------------------------+---------------------------------------+
+    | Breadboard x1                                                            |
+    |                                                                          |
+    | |Chapter01_02|                                                           |
+    +----------------------------------+---------------------------------------+
+    | Rotary potentiometer x1          | Jumper wire M/M x5                    |
+    |                                  |                                       |
+    | |Chapter09_00|                   |          |Chapter06_01|               |
+    +----------------------------------+---------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -38,8 +43,9 @@ Circuit
 Use A0 port to detect the voltage of rotary potentiometer.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |processing_00|
@@ -54,7 +60,7 @@ Use A0 port to detect the voltage of rotary potentiometer.
 
 .. note::
     
-    :red:`The ADC of Pico can only collect voltage between 0-3.3V. The joystick here uses 3.3V.`
+    :combo:`red font-bolder:The ADC of Pico can only collect voltage between 0-3.3V. The joystick here uses 3.3V.`
 
 Sketch
 ============================

@@ -12,23 +12,28 @@ In this project, we will use two 74HC595 IC chips to control a monochrome (one c
 Component List
 ============================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       | USB cable                             |
-|                                  |                                       |
-| |Chapter01_00|                   |  |Chapter01_01|                       |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------------------+---------------------------------------+
-| 8*8 LEDMatrix x1                 | Jumper wire M/M                       |
-|                                  |                                       |
-| |Chapter15_00|                   |  |Chapter01_05|                       |
-+----------------------------------+---------------------------------------+
-| 74HC595 x2                       | Resistor 220Ω x8                      |
-|                                  |                                       |
-| |Chapter13_00|                   |  |Chapter01_04|                       |
-+----------------------------------+---------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +----------------------------------+---------------------------------------+
+    | ESP8266 x1                       | USB cable                             |
+    |                                  |                                       |
+    | |Chapter01_00|                   |  |Chapter01_01|                       |
+    +----------------------------------+---------------------------------------+
+    | Breadboard x1                                                            |
+    |                                                                          |
+    | |Chapter01_02|                                                           |
+    +----------------------------------+---------------------------------------+
+    | 8*8 LEDMatrix x1                 | Jumper wire M/M                       |
+    |                                  |                                       |
+    | |Chapter15_00|                   |  |Chapter01_05|                       |
+    +----------------------------------+---------------------------------------+
+    | 74HC595 x2                       | Resistor 220Ω x8                      |
+    |                                  |                                       |
+    | |Chapter13_00|                   |  |Chapter01_04|                       |
+    +----------------------------------+---------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -61,25 +66,29 @@ Here is how a common anode LED matrix works. First, choose 16 ports on ESP8266 b
 .. image:: ../_static/imgs/15_74HC595_&_LED_Matrix/Chapter15_03.png
     :align: center
 
-+--------+-----------+-------------+
-| Column | Binary    | Hexadecimal |
-+--------+-----------+-------------+
-| 1      | 0001 1100 | 0x1c        |
-+--------+-----------+-------------+
-| 2      | 0010 0010 | 0x22        |
-+--------+-----------+-------------+
-| 3      | 0101 0001 | 0x51        |
-+--------+-----------+-------------+
-| 4      | 0100 0101 | 0x45        |
-+--------+-----------+-------------+
-| 5      | 0100 0101 | 0x45        |
-+--------+-----------+-------------+
-| 6      | 0101 0001 | 0x51        |
-+--------+-----------+-------------+
-| 7      | 0010 0010 | 0x22        |
-+--------+-----------+-------------+
-| 8      | 0001 1100 | 0x1c        |
-+--------+-----------+-------------+
+.. table::
+    :align: center
+    :class: zebra
+    
+    +--------+-----------+-------------+
+    | Column | Binary    | Hexadecimal |
+    +========+===========+=============+
+    | 1      | 0001 1100 | 0x1c        |
+    +--------+-----------+-------------+
+    | 2      | 0010 0010 | 0x22        |
+    +--------+-----------+-------------+
+    | 3      | 0101 0001 | 0x51        |
+    +--------+-----------+-------------+
+    | 4      | 0100 0101 | 0x45        |
+    +--------+-----------+-------------+
+    | 5      | 0100 0101 | 0x45        |
+    +--------+-----------+-------------+
+    | 6      | 0101 0001 | 0x51        |
+    +--------+-----------+-------------+
+    | 7      | 0010 0010 | 0x22        |
+    +--------+-----------+-------------+
+    | 8      | 0001 1100 | 0x1c        |
+    +--------+-----------+-------------+
 
 To begin, display the first column, then turn off the first column and display the second column. (and so on) .... turn off the seventh column and display the 8th column, and then start the process over from the first column again like the control of LED bar graph project. The whole process will be repeated rapidly in a loop. Due to the principle of optical afterglow effect and the vision persistence effect in human sight, we will see a picture of a smiling face directly rather than individual columns of LEDs turned ON one column at a time (although in fact this is the reality we cannot perceive). 
 
@@ -91,7 +100,7 @@ Circuit
 In circuit of this project, the power pin of the 74HC595 IC chip is connected to 3.3V. It can also be connected to 5V to make LED matrix brighter.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
 
    * -  Schematic diagram
@@ -142,4 +151,4 @@ The second "for" loop is used to display scrolling characters "0 to F", for a to
     :lines: 57-69
     :dedent:
 
-The amount of pins of ESP8266 is limited, so you need to find ways to save pins. If you use ESP8266’s GPIO to control the lattice without using 74HC595, you need 16 pins for the use of LED matrix. In this example, we use two 74HC595 to drive the LED matrix, requiring only three pins, so that we could save the rest of 13 pins.
+The amount of pins of ESP8266 is limited, so you need to find ways to save pins. If you use ESP8266's GPIO to control the lattice without using 74HC595, you need 16 pins for the use of LED matrix. In this example, we use two 74HC595 to drive the LED matrix, requiring only three pins, so that we could save the rest of 13 pins.

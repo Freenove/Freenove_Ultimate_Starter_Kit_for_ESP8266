@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Infrared Motion Sensor
+Chapter 25 Infrared Motion Sensor
 ##############################################################################
 
 In this chapter, we will learn a widely used sensor, infrared motion sensor.
 
-Project Infrared Motion Detector with LED Indicator
+Project 25.1 Infrared Motion Detector with LED Indicator
 ***************************************************************
 
 In this project, we will make a motion detector, with the human body infrared pyroelectric sensors.
@@ -16,25 +16,30 @@ This infrared motion sensor can detect the infrared spectrum (heat signatures) e
 Component List
 =============================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |  USB cable                            |
-|                                  |                                       |
-| |Chapter01_00|                   |   |Chapter01_01|                      |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------------------+---------------------------------------+
-| HC SR501 x1                      | LED x1                                |
-|                                  |                                       |
-| |Chapter25_00|                   |   |Chapter25_01|                      |
-+----------------------------------+---------------------------------------+
-| Jumper wire F/M x3               | Resistor 220Ω x1                      |
-|                                  |                                       |
-| Jumper wire M/M x4               |                                       |
-|                                  |                                       |
-| |Chapter24_10|                   |   |Chapter25_02|                      |
-+----------------------------------+---------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +---------------------------+--------------------------+
+    | ESP8266 x1                |  USB cable               |
+    |                           |                          |
+    | |Chapter01_00|            |   |Chapter01_01|         |
+    +---------------------------+--------------------------+
+    | Breadboard x1                                        |
+    |                                                      |
+    | |Chapter01_02|                                       |
+    +---------------------------+--------------------------+
+    | HC SR501 x1               | LED x1                   |
+    |                           |                          |
+    | |Chapter25_00|            |   |Chapter25_01|         |
+    +---------------------------+--------------------------+
+    | Jumper wire F/M x3        | Resistor 220Ω x1         |
+    |                           |                          |
+    | Jumper wire M/M x4        |                          |
+    |                           |                          |
+    | |Chapter24_10|            |   |Chapter25_02|         |
+    +---------------------------+--------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -50,8 +55,9 @@ Component knowledge
 The following is the diagram of the infrared Motion sensor(HC SR-501):
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Top
      -  Bottom 
@@ -81,7 +87,7 @@ Induction block time: the induction will stay in block condition and does not in
 
 Initialization time: the module needs about 1 minute to initialize after being powered ON. During this period, it will alternately output high or low level. 
 
-One characteristic of this sensor is when a body moves close to or moves away from the sensor’s dome edge, the sensor will work at high sensitivity. When a body moves close to or moves away from the sensor’s dome in a vertical direction, the sensor cannot detect well (please take note of this deficiency). Note: The sensing range (distance before a body is detected) is adjusted by the potentiometer.
+One characteristic of this sensor is when a body moves close to or moves away from the sensor's dome edge, the sensor will work at high sensitivity. When a body moves close to or moves away from the sensor’s dome in a vertical direction, the sensor cannot detect well (please take note of this deficiency). Note: The sensing range (distance before a body is detected) is adjusted by the potentiometer.
 
 We can regard this sensor as a simple inductive switch when in use.
 
@@ -89,12 +95,13 @@ Circuit
 ===============================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter25_06|
-   * -  Hardware connection. 
+   * -  Hardware connection
     
         If you need any support, please feel free to contact us via: support@freenove.com
    
@@ -108,7 +115,7 @@ Sketch
 
 In this project, we will use the infrared motion sensor to trigger a LED, essentially making the infrared motion sensor act as a motion switch. Therefore, the code is very similar to the earlier project "push button switch and LED". The difference is that, when infrared motion sensor detects change, it will output high level; when button is pressed, it will output low level. When the sensor output high level, the LED turns ON, or it will turn OFF.
 
-Sketch_Infrared_Motion_Sensor
+Sketch_25.1_Infrared_Motion_Sensor
 -------------------------------------------
 
 .. image:: ../_static/imgs/25_Infrared_Motion_Sensor/Chapter25_08.png
@@ -124,8 +131,9 @@ You can rotate the potentiometer on the sensor to adjust the detection effect, o
 Apart from that, you can also use this sensor to control some other modules to implement different functions by reediting the code, such as the induction lamp, induction door.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Move to the Infrared Motion Sensor
    * -  |Chapter25_09|
@@ -139,15 +147,15 @@ Description:
 
 1. You can choose non repeatable trigger modes or repeatable modes.
 
-L: nonrepeatable trigger mode. The module output high level after sensing a body, then when the
+    L: nonrepeatable trigger mode. The module output high level after sensing a body, then when the
 
-delay time is over, the module will output low level. During high level time, the sensor no longer actively
+    delay time is over, the module will output low level. During high level time, the sensor no longer actively
 
-senses bodies.
+    senses bodies.
 
-H: repeatable trigger mode. The distinction from the L mode is that it can sense a body until that body
+    H: repeatable trigger mode. The distinction from the L mode is that it can sense a body until that body
 
-leaves. After this, it starts to time and output low level after delaying T time.
+    leaves. After this, it starts to time and output low level after delaying T time.
 
 2. R1 is used to adjust HIGH level last ing time when sensor detect s human motion , 1.2 s 320 s
 
@@ -161,4 +169,3 @@ It need some time between two detections.
 
 .. image:: ../_static/imgs/25_Infrared_Motion_Sensor/Chapter25_11.png
     :align: center
-

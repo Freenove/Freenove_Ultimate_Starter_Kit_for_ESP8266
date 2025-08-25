@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Thermistor
+Chapter 12 Thermistor
 ##############################################################################
 
 In this chapter, we will learn about thermistors which are another kind of resistor
 
-Project Thermometer
+Project 12.1 Thermometer
 *******************************
 
 A thermistor is a type of resistor whose resistance value is dependent on temperature and changes in temperature. Therefore, we can take advantage of this characteristic to make a thermometer.
@@ -12,19 +12,24 @@ A thermistor is a type of resistor whose resistance value is dependent on temper
 Component List
 ==================================
 
-+-------------------------+------------------------------+
-| ESP8266 x1              | USB cable                    |
-|                         |                              |
-| |Chapter01_00|          | |Chapter01_01|               |
-+-------------------------+------------------------------+
-| Breadboard x1                                          |
-|                                                        |
-| |Chapter01_02|                                         |
-+----------------+------------------+--------------------+
-| Thermistor x1  | Resistor 10kΩ x1 | Jumper wire M/M x4 |
-|                |                  |                    |
-| |Chapter12_00| | |Chapter12_01|   | |Chapter01_05|     |
-+----------------+------------------+--------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +-------------------------+------------------------------+
+    | ESP8266 x1              | USB cable                    |
+    |                         |                              |
+    | |Chapter01_00|          | |Chapter01_01|               |
+    +-------------------------+------------------------------+
+    | Breadboard x1                                          |
+    |                                                        |
+    | |Chapter01_02|                                         |
+    +----------------+------------------+--------------------+
+    | Thermistor x1  | Resistor 10kΩ x1 | Jumper wire M/M x4 |
+    |                |                  |                    |
+    | |Chapter12_00| | |Chapter12_01|   | |Chapter01_05|     |
+    +----------------+------------------+--------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -79,8 +84,9 @@ Circuit
 The circuit of this project is similar to project Soft Light. The only difference is that the input signal is changed from a potentiometer to a combination of a photoresistor and a resistor.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter12_05|
@@ -96,7 +102,7 @@ The circuit of this project is similar to project Soft Light. The only differenc
 Sketch
 ===========================
 
-Sketch_Thermometer
+Sketch_12.1_Thermometer
 ---------------------------
 
 .. image:: ../_static/imgs/12_Thermistor/Chapter12_07.png
@@ -104,7 +110,7 @@ Sketch_Thermometer
 
 Download the code to ESP8266, the terminal window will display the current ADC value, voltage value and temperature value. Try to "pinch" the thermistor (without touching the leads) with your index finger and thumb for a brief time, you should see that the temperature value increases.
 
-:red:`If you have any concerns, please contact us via:` support@freenove.com
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com
 
 .. image:: ../_static/imgs/12_Thermistor/Chapter12_08.png
     :align: center

@@ -1,5 +1,5 @@
 ##############################################################################
-Chapter LCD1602
+Chapter 20 LCD1602
 ##############################################################################
 
 In this chapter, we will learn about the LCD1602 Display Screen.
@@ -12,19 +12,24 @@ In this section we learn how to use LCD1602 to display something.
 Component List
 =========================================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |  USB cable                            |
-|                                  |                                       |
-| |Chapter01_00|                   |   |Chapter01_01|                      |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------------------+---------------------------------------+
-| LCD1602 Module x1                | Jumper wire F/M x6                    |
-|                                  |                                       |
-| |Chapter20_00|                   |   |Chapter20_01|                      |
-+----------------------------------+---------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +----------------------------------+---------------------+
+    | ESP8266 x1                       |  USB cable          |
+    |                                  |                     |
+    | |Chapter01_00|                   |   |Chapter01_01|    |
+    +----------------------------------+---------------------+
+    | Breadboard x1                                          |
+    |                                                        |
+    | |Chapter01_02|                                         |
+    +----------------------------------+---------------------+
+    | LCD1602 Module x1                | Jumper wire F/M x6  |
+    |                                  |                     |
+    | |Chapter20_00|                   |   |Chapter20_01|    |
+    +----------------------------------+---------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -59,8 +64,9 @@ The serial-to-parallel IC chip used in this module is PCF8574T (PCF8574AT), and 
 Below is the PCF8574 pin schematic diagram and the block pin diagram:
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  PCF8574 chip pin diagram:
      -  PCF8574 chip pin diagram:
@@ -83,20 +89,21 @@ In this project, we will use the I2C LCD1602 to display some static characters a
 Circuit
 ===========================
 
-.. list-table:: 
-   :width: 100%
+.. list-table::
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter20_07|
-   * -  Hardware connection. 
-    
+   * -  Hardware connection
+
         If you need any support, please feel free to contact us via: support@freenove.com
-   
-   * -  |Chapter20_08|
+
+   * -  |Chapter20_14|
 
 .. |Chapter20_07| image:: ../_static/imgs/20_LCD1602/Chapter20_07.png
-.. |Chapter20_08| image:: ../_static/imgs/20_LCD1602/Chapter20_08.png
+.. |Chapter20_14| image:: ../_static/imgs/20_LCD1602/Chapter20_14.png
 
 Sketch
 ============================
@@ -111,7 +118,7 @@ We use the third party library LiquidCrystal I2C. If you haven't installed it ye
 
 Use I2C LCD 1602 to display characters and variables.
 
-Sketch_Display_the_string_on_LCD1602
+Sketch_20.1_Display_the_string_on_LCD1602
 -------------------------------------------------
 
 .. image:: ../_static/imgs/20_LCD1602/Chapter20_09.png
@@ -149,6 +156,7 @@ Instantiate the I2C LCD1602 screen. It should be noted here that if your LCD dri
 Initialize I2C and set its pins as 13,14. And then initialize LCD1602 and turn on the backlight of LCD.
 
 .. code-block:: c
+    :linenos:
 
     Wire.begin(SDA, SCL);           // attach the IIC pin
     lcd.init();                     // LCD driver initialization

@@ -13,8 +13,9 @@ Component List
 ==============================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  ESP8266 x1
      -  USB cable
@@ -42,7 +43,7 @@ According to the circuit, when the GPIO2 of ESP8266 output level is high, the LE
 
 Upload the following Sketch: 
 
-Freenove_Ultimate_Starter_Kit_for_ESP8266\\C\\Sketches\\Sketch_01.1_Blink
+**Freenove_Ultimate_Starter_Kit_for_ESP8266\\C\\Sketches\\Sketch_01.1_Blink**
 
 Before uploading the code, click "Tools", "Board" and select " NodeMCU 1.0(ESP-12E Module)".
 
@@ -72,7 +73,7 @@ Click "Upload", Download the code to ESP8266 and your LED in the circuit starts 
 .. image:: ../_static/imgs/0_LED/Chapter00_07.png
     :align: center
 
-:red:`If you have any concerns, please contact us via:` support@freenove.com
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com
 
 The following is the program code:
 

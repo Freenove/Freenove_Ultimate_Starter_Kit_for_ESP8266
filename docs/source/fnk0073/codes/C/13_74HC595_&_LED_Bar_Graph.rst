@@ -1,12 +1,12 @@
 .. _Led_bar:
 
 ##############################################################################
-Chapter 74HC595 & LED Bar Graph
+Chapter 13 74HC595 & LED Bar Graph
 ##############################################################################
 
 We have used LED bar graph to make a flowing water light, in which 10 GPIO ports of ESP8266 is occupied. More GPIO ports mean that more peripherals can be connected to ESP8266, so GPIO resource is very precious. Can we make flowing water light with less GPIO? In this chapter, we will learn a component, 74HC595, which can achieve the target.
 
-Project Flowing Water Light
+Project 13.1 Flowing Water Light
 ****************************************
 
 Now let's learn how to use the 74HC595 IC chip to make a flowing water light using less GPIO.
@@ -14,23 +14,28 @@ Now let's learn how to use the 74HC595 IC chip to make a flowing water light usi
 Component List
 =============================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |          USB cable                    |
-|                                  |                                       |
-| |Chapter01_00|                   |          |Chapter01_01|               |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------------------+---------------------------------------+
-| LED Bar Graph x1                 | Jumper wire M/M x17                   |
-|                                  |                                       |
-| |Chapter13_09|                   |  |Chapter01_05|                       |
-+----------------------------------+---------------------------------------+
-| 74HC595 x1                       | Resistor 220Ω x8                      |
-|                                  |                                       |
-| |Chapter13_00|                   |  |Chapter01_04|                       |
-+----------------------------------+---------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +----------------------------------+---------------------------------------+
+    | ESP8266 x1                       |          USB cable                    |
+    |                                  |                                       |
+    | |Chapter01_00|                   |          |Chapter01_01|               |
+    +----------------------------------+---------------------------------------+
+    | Breadboard x1                                                            |
+    |                                                                          |
+    | |Chapter01_02|                                                           |
+    +----------------------------------+---------------------------------------+
+    | LED Bar Graph x1                 | Jumper wire M/M x17                   |
+    |                                  |                                       |
+    | |Chapter13_09|                   |  |Chapter01_05|                       |
+    +----------------------------------+---------------------------------------+
+    | 74HC595 x1                       | Resistor 220Ω x8                      |
+    |                                  |                                       |
+    | |Chapter13_00|                   |  |Chapter01_04|                       |
+    +----------------------------------+---------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -53,31 +58,36 @@ A 74HC595 chip is used to convert serial data into parallel data. A 74HC595 chip
 
 The ports of the 74HC595 chip are described as follows:
 
-+----------+-------------+-------------------------------------------------------------------------------------------------------+
-| Pin name | GPIO number | Description                                                                                           |
-+==========+=============+=======================================================================================================+
-| Q0-Q7    | 15, 1-7     | Parallel data output                                                                                  |
-+----------+-------------+-------------------------------------------------------------------------------------------------------+
-| VCC      | 16          | The positive electrode of power supply, the voltage is 2~6V                                           |
-+----------+-------------+-------------------------------------------------------------------------------------------------------+
-| GND      | 8           | The negative electrode of power supply                                                                |
-+----------+-------------+-------------------------------------------------------------------------------------------------------+
-| DS       | 14          | Serial data Input                                                                                     |
-+----------+-------------+-------------------------------------------------------------------------------------------------------+
-|          |             | Enable output,                                                                                        |
-|          |             |                                                                                                       |
-| OE       | 13          | When this pin is in high level, Q0-Q7 is in high resistance state                                     |
-|          |             |                                                                                                       |
-|          |             | When this pin is in low level, Q0-Q7 is in output mode                                                |
-+----------+-------------+-------------------------------------------------------------------------------------------------------+
-| ST_CP    | 12          | Parallel Update Output: when its electrical level is rising, it will update the parallel data output. |
-+----------+-------------+-------------------------------------------------------------------------------------------------------+
-| SH_CP    | 11          | Serial shift clock: when its electrical level is rising, serial data input register will do a shift.  |
-+----------+-------------+-------------------------------------------------------------------------------------------------------+
-| MR       | 10          | Remove shift register: When this pin is in low level, the content in shift register will be cleared.  |
-+----------+-------------+-------------------------------------------------------------------------------------------------------+
-| Q7'      | 9           | Serial data output: it can be connected to more 74HC595 in series.                                    |
-+----------+-------------+-------------------------------------------------------------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: zebra
+    
+    +----------+-------------+-------------------------------------------------------------------------------------------------------+
+    | Pin name | GPIO number | Description                                                                                           |
+    +==========+=============+=======================================================================================================+
+    | Q0-Q7    | 15, 1-7     | Parallel data output                                                                                  |
+    +----------+-------------+-------------------------------------------------------------------------------------------------------+
+    | VCC      | 16          | The positive electrode of power supply, the voltage is 2~6V                                           |
+    +----------+-------------+-------------------------------------------------------------------------------------------------------+
+    | GND      | 8           | The negative electrode of power supply                                                                |
+    +----------+-------------+-------------------------------------------------------------------------------------------------------+
+    | DS       | 14          | Serial data Input                                                                                     |
+    +----------+-------------+-------------------------------------------------------------------------------------------------------+
+    |          |             | Enable output,                                                                                        |
+    |          |             |                                                                                                       |
+    | OE       | 13          | When this pin is in high level, Q0-Q7 is in high resistance state                                     |
+    |          |             |                                                                                                       |
+    |          |             | When this pin is in low level, Q0-Q7 is in output mode                                                |
+    +----------+-------------+-------------------------------------------------------------------------------------------------------+
+    | ST_CP    | 12          | Parallel Update Output: when its electrical level is rising, it will update the parallel data output. |
+    +----------+-------------+-------------------------------------------------------------------------------------------------------+
+    | SH_CP    | 11          | Serial shift clock: when its electrical level is rising, serial data input register will do a shift.  |
+    +----------+-------------+-------------------------------------------------------------------------------------------------------+
+    | MR       | 10          | Remove shift register: When this pin is in low level, the content in shift register will be cleared.  |
+    +----------+-------------+-------------------------------------------------------------------------------------------------------+
+    | Q7'      | 9           | Serial data output: it can be connected to more 74HC595 in series.                                    |
+    +----------+-------------+-------------------------------------------------------------------------------------------------------+
 
 For more detail, please refer to the datasheet on the 74HC595 chip.
 
@@ -85,8 +95,9 @@ Circuit
 ===========================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter13_02|
@@ -104,7 +115,7 @@ Sketch
 
 In this project, we will make a flowing water light with a 74HC595 chip to learn about its functions.
 
-Sketch_FlowingLight02
+Sketch_13.1_FlowingLight02
 -------------------------------
 
 .. image:: ../_static/imgs/13_74HC595_&_LED_Bar_Graph/Chapter13_04.png
@@ -112,7 +123,7 @@ Sketch_FlowingLight02
 
 Download the code to ESP8266. You will see that LED bar graph starts with the flowing water pattern flashing from left to right and then back from right to left.
 
-:red:`If you have any concerns, please contact us via:` support@freenove.com
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com
 
 The following is the program code:
 

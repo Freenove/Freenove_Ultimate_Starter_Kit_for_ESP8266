@@ -1,10 +1,8 @@
 ##############################################################################
-Chapter Motor & Driver
+Chapter 17 Motor & Driver
 ##############################################################################
 
-In this chapter, we will learn about DC motors and DC motor drivers and how to control the speed and direction of a DC motor.
-
-Project Control Motor with Potentiometer
+Project 17.1 Control Motor with Potentiometer
 ***************************************************
 
 Control the direction and speed of the motor with a potentiometer.
@@ -12,27 +10,32 @@ Control the direction and speed of the motor with a potentiometer.
 Component List
 ============================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       | USB cable                             |
-|                                  |                                       |
-| |Chapter01_00|                   |  |Chapter01_01|                       |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                    | Breadboard Power module x1            |
-|                                  |                                       |
-| |Chapter17_00|                   |  |Chapter17_01|                       |
-+----------------------------------+---------------------------------------+
-| Jumper wire M/M x12              | Rotary potentiometer x1               |
-|                                  |                                       |
-| |Chapter17_02|                   |  |Chapter17_04|                       |
-+----------------------------------+---------------------------------------+
-| Motor x1                         | L293D                                 |
-|                                  |                                       |
-| |Chapter17_05|                   |  |Chapter17_06|                       |
-+----------------------------------+---------------------------------------+
-| 9V battery (prepared by yourself) & battery line                         |
-|                                                                          |
-| |Chapter17_03|                                                           |
-+--------------------------------------------------------------------------+
+.. table::
+    :align: center
+    :class: table-line
+    :width: 80%
+    
+    +----------------------------------+---------------------------------------+
+    | ESP8266 x1                       | USB cable                             |
+    |                                  |                                       |
+    | |Chapter01_00|                   |  |Chapter01_01|                       |
+    +----------------------------------+---------------------------------------+
+    | Breadboard x1                    | Breadboard Power module x1            |
+    |                                  |                                       |
+    | |Chapter17_00|                   |  |Chapter17_01|                       |
+    +----------------------------------+---------------------------------------+
+    | Jumper wire M/M x12              | Rotary potentiometer x1               |
+    |                                  |                                       |
+    | |Chapter17_02|                   |  |Chapter17_04|                       |
+    +----------------------------------+---------------------------------------+
+    | Motor x1                         | L293D                                 |
+    |                                  |                                       |
+    | |Chapter17_05|                   |  |Chapter17_06|                       |
+    +----------------------------------+---------------------------------------+
+    | 9V battery (prepared by yourself) & battery line                         |
+    |                                                                          |
+    | |Chapter17_03|                                                           |
+    +--------------------------------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -57,23 +60,27 @@ L293D is an IC chip (Integrated Circuit Chip) with a 4-channel motor drive. You 
 
 Port description of L293D module is as follows:
 
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| Pin name | Pin number   | Description                                                                                                   |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| In x     | 2, 7, 10, 15 | Channel x digital signal input pin                                                                            |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| Out x    | 3, 6, 11, 14 | Channel x output pin, input high or low level according to In x pin, get connected to +Vmotor or 0V           |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| Enable1  | 1            | Channel 1 and channel 2 enable pin, high level enable                                                         |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| Enable2  | 9            | Channel 3 and channel 4 enable pin, high level enable                                                         |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| 0V       | 4, 5, 12, 13 | Power cathode (GND)                                                                                           |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| +V       | 16           | Positive electrode (VCC) of power supply, supply voltage 3.0~36V                                              |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| +Vmotor  | 8            | Positive electrode of load power supply, provide power supply for the Out pin x, the supply voltage is +V~36V |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
+.. table::
+    :align: center
+    :class: zebra
+    
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    | Pin name | Pin number   | Description                                                                                                   |
+    +==========+==============+===============================================================================================================+
+    | In x     | 2, 7, 10, 15 | Channel x digital signal input pin                                                                            |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    | Out x    | 3, 6, 11, 14 | Channel x output pin, input high or low level according to In x pin, get connected to +Vmotor or 0V           |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    | Enable1  | 1            | Channel 1 and channel 2 enable pin, high level enable                                                         |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    | Enable2  | 9            | Channel 3 and channel 4 enable pin, high level enable                                                         |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    | 0V       | 4, 5, 12, 13 | Power cathode (GND)                                                                                           |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    | +V       | 16           | Positive electrode (VCC) of power supply, supply voltage 3.0~36V                                              |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    | +Vmotor  | 8            | Positive electrode of load power supply, provide power supply for the Out pin x, the supply voltage is +V~36V |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
 
 For more detail, please refer to the datasheet for this IC Chip.
 
@@ -94,11 +101,12 @@ In practical use the motor is usually connected to channel 1 and 2 by outputting
 Circuit
 =========================
 
-Use caution when connecting this circuit because the DC Motor is a high-power component. :red:`Do not use the power provided by the ESP8266 to power the motor directly, as this may cause permanent damage to your RPi!` The logic circuit can be powered by the ESP8266's power or an external power supply, which should share a common ground with ESP8266.
+Use caution when connecting this circuit because the DC Motor is a high-power component. :combo:`red font-bolder:Do not use the power provided by the ESP8266 to power the motor directly, as this may cause permanent damage to your RPi!` The logic circuit can be powered by the ESP8266's power or an external power supply, which should share a common ground with ESP8266.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter17_10|
@@ -114,11 +122,11 @@ Use caution when connecting this circuit because the DC Motor is a high-power co
 Code
 ========================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "17.1_Motor_And_Driver" and double click "Motor_And_Driver.py". 
 
-Motor_And_Driver
+17.1_Motor_And_Driver
 ------------------------
 
 .. image:: ../_static/imgs/17_Motor_&_Driver/Chapter17_15.png
@@ -161,7 +169,7 @@ Initialize ADC pins, set the range of voltage to 0-3.3V and the acquisition widt
     :lines: 10-10
     :dedent:
 
-Function driveMotor is used to control the rotation direction and speed of the motor. The dir represents direction while spd refers to speed.
+Function driveMotor is used to control the rotation direction and speed of the motor. The dir represents direction while **spd** refers to speed.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/17.1_Motor_And_Driver/Motor_And_Driver.py
     :linenos: 

@@ -1,5 +1,5 @@
 ##############################################################################
-Chapter Pick Apples
+Chapter 3 Pick Apples
 ##############################################################################
 
 In this chapter, we prepare pick apples game.You can pick apples with four buttons.
@@ -12,19 +12,24 @@ Now, let's use Processing and ESP8266 board to achieve the game.
 Component list
 ================================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |          USB cable                    |
-|                                  |                                       |
-| |Chapter01_00|                   |          |Chapter01_01|               |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+---------------------+----------------------+-----------------------------+
-| Push button x4      |  Resistor 10kΩ x4    | Jumper wire M/M x5          |
-|                     |                      |                             |
-| |Chapter02_00|      |   |Chapter02_01|     |   |Chapter02_02|            |
-+---------------------+----------------------+-----------------------------+
+.. table::
+    :align: center
+    :width: 80%
+    :class: table-line
+
+    +----------------------------------+---------------------------------------+
+    | ESP8266 x1                       |          USB cable                    |
+    |                                  |                                       |
+    | |Chapter01_00|                   |          |Chapter01_01|               |
+    +----------------------------------+---------------------------------------+
+    | Breadboard x1                                                            |
+    |                                                                          |
+    | |Chapter01_02|                                                           |
+    +---------------------+----------------------+-----------------------------+
+    | Push button x4      |  Resistor 10kΩ x4    | Jumper wire M/M x5          |
+    |                     |                      |                             |
+    | |Chapter02_00|      |   |Chapter02_01|     |   |Chapter02_02|            |
+    +---------------------+----------------------+-----------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -37,8 +42,9 @@ Circuit
 ===============================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter02_03|

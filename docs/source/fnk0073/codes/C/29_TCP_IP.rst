@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter TCP/IP
+Chapter 29 TCP/IP
 ##############################################################################
 
 In this chapter, we will introduce how ESP8266 implements network communications based on TCP/IP protocol. There are two roles in TCP/IP communication, namely Server and Client, which will be implemented respectively with two projects in this chapter.
 
-Project As Client
+Project 29.1 As Client
 ******************************
 
 In this section, ESP8266 is used as Client to connect Server on the same LAN and communicate with it.
@@ -13,8 +13,9 @@ Component List
 =================================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  ESP8266 x1
      -  USB cable
@@ -67,7 +68,7 @@ Unzip the downloaded file to your computer. Click "processing.exe" as the figure
 Use Server mode for communication
 --------------------------------------
 
-Open the "Freenove_Ultimate_Starter_Kit_for_ESP8266\\C\\Sketches\\Sketch_29.1_WiFiClient\\sketchWiFi\sketchWiFi.pde", and click "Run".
+Open the "Freenove_Ultimate_Starter_Kit_for_ESP8266\\C\\Sketches\\Sketch_29.1_WiFiClient\\sketchWiFi\\sketchWiFi.pde", and click "Run".
 
 .. image:: ../_static/imgs/29_TCP_IP/Chapter29_04.png
     :align: center
@@ -88,15 +89,23 @@ When sketchWiFi selects TCP CLIENT mode, the LOCAL IP and LOCAL PORT of sketchWi
 
 **Mode selection:** select **Server mode/Client mode.**
 
-**IP address:** In server mode, this option does not need to be filled in, and the computer will automatically obtain the IP address.
+**IP address:** 
 
-In client mode, fill in the remote IP address to be connected.
+    In server mode, this option does not need to be filled in, and the computer will automatically obtain the IP address.
 
-**Port number:** In server mode, fill in a port number for client devices to make an access connection. 
-In client mode, fill in port number given by the Server devices to make an access connection.
+    In client mode, fill in the remote IP address to be connected.
 
-**Start button:** In server mode, push the button, then the computer will serve as server and open a port number for client to make access connection. During this period, the computer will keep monitoring.
-In client mode, before pushing the button, please make sure the server is on, remote IP address and remote port number is correct; push the button, and the computer will make access connection to the remote port number of the remote IP as a client. 
+**Port number:** 
+
+    In server mode, fill in a port number for client devices to make an access connection. 
+
+    In client mode, fill in port number given by the Server devices to make an access connection.
+
+**Start button:** 
+    
+    In server mode, push the button, then the computer will serve as server and open a port number for client to make access connection. During this period, the computer will keep monitoring.
+
+    In client mode, before pushing the button, please make sure the server is on, remote IP address and remote port number is correct; push the button, and the computer will make access connection to the remote port number of the remote IP as a client. 
 
 **clear receive:** clear out the content in the receiving text box
 
@@ -142,7 +151,7 @@ You can also click Add Library under 'Import Library' under 'Sketch'.
 .. image:: ../_static/imgs/29_TCP_IP/Chapter29_11.png
     :align: center
 
-Sketch_As_Client
+Sketch_29.1_As_Client
 ---------------------------
 
 Before running the Sketch, please open "sketchWiFi.pde." first, and click "Run". 
@@ -268,7 +277,7 @@ Reference
 
     **readString():** read string in receive buffer 
 
-Project As Server 
+Project 29.2 As Server 
 **************************************
 
 In this section, ESP8266 is used as a server to wait for the connection and communication of client on the same LAN.
@@ -277,8 +286,9 @@ Component List
 =================================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  ESP8266 x1
      -  USB cable

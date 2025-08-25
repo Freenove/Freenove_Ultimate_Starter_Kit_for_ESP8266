@@ -1,16 +1,44 @@
 ##############################################################################
-Chapter Attitude Sensor MPU6050
+Chapter 26 Attitude Sensor MPU6050
 ##############################################################################
 
 In this chapter, we will learn about a MPU6050 attitude sensor which integrates an accelerometer and gyroscope.
 
-Project Read a MPU6050 Sensor Module
+Project 26.1 Read a MPU6050 Sensor Module
 ************************************************
 
 In this project, we will read acceleration and gyroscope data of the MPU6050 sensor
 
 Component List
 ================================
+
+.. table::
+    :align: center
+    :class: table-line
+    :width: 80%
+    
+    +----------------------------------+---------------------------------------+
+    | ESP8266 x1                       |  USB cable                            |
+    |                                  |                                       |
+    | |Chapter01_00|                   |   |Chapter01_01|                      |
+    +----------------------------------+---------------------------------------+
+    | Breadboard x1                                                            |
+    |                                                                          |
+    | |Chapter01_02|                                                           |
+    +----------------------------------+---------------------------------------+
+    | Jumper wire F/M x6               | MPU6050 x1                            |
+    |                                  |                                       |
+    | |Chapter24_10|                   |   |Chapter26_08|                      |
+    +----------------------------------+---------------------------------------+
+
+.. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
+.. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
+.. |Chapter01_02| image:: ../_static/imgs/1_LED/Chapter01_02.png
+.. |Chapter24_10| image:: ../_static/imgs/24_Hygrothermograph_DHT11/Chapter24_10.png
+.. |Chapter26_08| image:: ../_static/imgs/26_Attitude_Sensor_MPU6050/Chapter26_08.png
+
+Component knowledge
+===========================================
 
 MPU6050
 -----------------------------
@@ -24,29 +52,34 @@ MPU6050 is widely used to assist with balancing vehicles, robots and aircraft, m
 
 The port description of the MPU6050 module is as follows:
 
-+----------+------------+-------------------------------------------------------------+
-| Pin name | Pin number | Description                                                 |
-+----------+------------+-------------------------------------------------------------+
-| VCC      | 1          | Positive pole of power supply with voltage 5V               |
-+----------+------------+-------------------------------------------------------------+
-| GND      | 2          | Negative pole of power supply                               |
-+----------+------------+-------------------------------------------------------------+
-| SCL      | 3          | I2C communication clock pin                                 |
-+----------+------------+-------------------------------------------------------------+
-| SDA      | 4          | I2C communication clock pin                                 |
-+----------+------------+-------------------------------------------------------------+
-| XDA      | 5          | I2C host data pin which can be connected to other devices.  |
-+----------+------------+-------------------------------------------------------------+
-| XCL      | 6          | I2C host clock pin which can be connected to other devices. |
-+----------+------------+-------------------------------------------------------------+
-|          |            | I2C address bit control pin.                                |
-|          |            |                                                             |
-| AD0      | 7          | Low level: the device address is 0x68                       |
-|          |            |                                                             |
-|          |            | High level: the device address is 0x69                      |
-+----------+------------+-------------------------------------------------------------+
-| INT      | 8          | Output interrupt pin                                        |
-+----------+------------+-------------------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: zebra
+    
+    +----------+------------+-------------------------------------------------------------+
+    | Pin name | Pin number | Description                                                 |
+    +==========+============+=============================================================+
+    | VCC      | 1          | Positive pole of power supply with voltage 5V               |
+    +----------+------------+-------------------------------------------------------------+
+    | GND      | 2          | Negative pole of power supply                               |
+    +----------+------------+-------------------------------------------------------------+
+    | SCL      | 3          | I2C communication clock pin                                 |
+    +----------+------------+-------------------------------------------------------------+
+    | SDA      | 4          | I2C communication clock pin                                 |
+    +----------+------------+-------------------------------------------------------------+
+    | XDA      | 5          | I2C host data pin which can be connected to other devices.  |
+    +----------+------------+-------------------------------------------------------------+
+    | XCL      | 6          | I2C host clock pin which can be connected to other devices. |
+    +----------+------------+-------------------------------------------------------------+
+    |          |            | I2C address bit control pin.                                |
+    |          |            |                                                             |
+    | AD0      | 7          | Low level: the device address is 0x68                       |
+    |          |            |                                                             |
+    |          |            | High level: the device address is 0x69                      |
+    +----------+------------+-------------------------------------------------------------+
+    | INT      | 8          | Output interrupt pin                                        |
+    +----------+------------+-------------------------------------------------------------+
 
 For more detail, please refer to datasheet.
 
@@ -58,8 +91,9 @@ Circuit
     the power supply voltage for MPU6050 module is 3.3V in the circuit.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter26_01|
@@ -87,7 +121,7 @@ Refer to the following operations:
 .. image:: ../_static/imgs/26_Attitude_Sensor_MPU6050/Chapter26_03.png
     :align: center
 
-Sketch_Acceleration_Detection
+Sketch_26.1_Acceleration_Detection
 ----------------------------------------
 
 .. image:: ../_static/imgs/26_Attitude_Sensor_MPU6050/Chapter26_04.png

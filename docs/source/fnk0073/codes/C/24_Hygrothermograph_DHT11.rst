@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Hygrothermograph DHT11
+Chapter 24 Hygrothermograph DHT11
 ##############################################################################
 
 In this chapter, we will learn about a commonly used sensor called a Hygrothermograph DHT11.
 
-Project Hygrothermograph
+Project 24.1 Hygrothermograph
 ************************************
 
 Hygrothermograph is an important tool in our lives to give us data on the temperature and humidity in our environment. In this project, we will use the ESP8266 to read temperature and humidity data of the DHT11 Module.
@@ -12,19 +12,24 @@ Hygrothermograph is an important tool in our lives to give us data on the temper
 Component List
 =======================================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |  USB cable                            |
-|                                  |                                       |
-| |Chapter01_00|                   |   |Chapter01_01|                      |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------+-------------------------+-------------------------+
-| Resistor 10kΩ x1     | Infrared Remote x1      | Jumper wire M/M x6      |
-|                      |                         |                         |
-| |Chapter24_02|       |  |Chapter24_01|         |     |Chapter24_00|      |
-+----------------------+-------------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +----------------------------------+---------------------------------------+
+    | ESP8266 x1                       |  USB cable                            |
+    |                                  |                                       |
+    | |Chapter01_00|                   |   |Chapter01_01|                      |
+    +----------------------------------+---------------------------------------+
+    | Breadboard x1                                                            |
+    |                                                                          |
+    | |Chapter01_02|                                                           |
+    +----------------------+-------------------------+-------------------------+
+    | Resistor 10kΩ x1     | Infrared Remote x1      | Jumper wire M/M x6      |
+    |                      |                         |                         |
+    | |Chapter24_02|       |  |Chapter24_01|         |     |Chapter24_00|      |
+    +----------------------+-------------------------+-------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -53,12 +58,13 @@ Circuit
 ===============================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter24_04|
-   * -  Hardware connection. 
+   * -  Hardware connection
     
         If you need any support, please feel free to contact us via: support@freenove.com
    
@@ -158,25 +164,30 @@ In this project, we use L2C-LCD1602 to display data collected by DHT11.
 Component List
 =============================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |  USB cable                            |
-|                                  |                                       |
-| |Chapter01_00|                   |   |Chapter01_01|                      |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------------------+---------------------------------------+
-| LCD1602 Module x1                | Resistor 10kΩ x1                      |
-|                                  |                                       |
-| |Chapter24_08|                   |   |Chapter24_09|                      |
-+----------------------------------+---------------------------------------+
-| Jumper wire F/M x4               | DHT11 x1                              |
-|                                  |                                       |
-| Jumper wire M/M x8               |                                       |
-|                                  |                                       |
-| |Chapter24_10|                   |   |Chapter24_11|                      |
-+----------------------------------+---------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +----------------------------------+-------------------------+
+    | ESP8266 x1                       |  USB cable              |
+    |                                  |                         |
+    | |Chapter01_00|                   |   |Chapter01_01|        |
+    +----------------------------------+-------------------------+
+    | Breadboard x1                                              |
+    |                                                            |
+    | |Chapter01_02|                                             |
+    +----------------------------------+-------------------------+
+    | LCD1602 Module x1                | Resistor 10kΩ x1        |
+    |                                  |                         |
+    | |Chapter24_08|                   |   |Chapter24_09|        |
+    +----------------------------------+-------------------------+
+    | Jumper wire F/M x4               | DHT11 x1                |
+    |                                  |                         |
+    | Jumper wire M/M x8               |                         |
+    |                                  |                         |
+    | |Chapter24_10|                   |   |Chapter24_11|        |
+    +----------------------------------+-------------------------+
 
 .. |Chapter24_08| image:: ../_static/imgs/24_Hygrothermograph_DHT11/Chapter24_08.png
 .. |Chapter24_09| image:: ../_static/imgs/24_Hygrothermograph_DHT11/Chapter24_09.png
@@ -187,8 +198,9 @@ Circuit
 ===============================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter24_12|
@@ -206,7 +218,7 @@ Sketch
 
 This code uses the DHTesp and LiquidCrystal_I2C libraries, so make sure the relevant library files are added before writing the program.
 
-Sketch_Temperature_and_Humidity_Sensor
+Sketch_24.1_Temperature_and_Humidity_Sensor
 -------------------------------------------------
 
 .. image:: ../_static/imgs/24_Hygrothermograph_DHT11/Chapter24_14.png

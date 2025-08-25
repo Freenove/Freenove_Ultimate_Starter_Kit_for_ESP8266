@@ -37,8 +37,9 @@ The hardware interfaces of ESP8266 are distributed as follows:
 Compare the left and right images. We've boxed off the resources on the ESP8266 in different colors to facilitate your understanding of the ESP8266 development board.
 
 .. list-table:: 
-   :width: 100%
    :align: center
+   :class: table-line
+   :header-rows: 1
 
    * -  Box color 
      -  Corresponding resources introduction
@@ -60,51 +61,59 @@ Compare the left and right images. We've boxed off the resources on the ESP8266 
 .. |Preface05| image:: ../_static/imgs/Preface/Preface05.png
 .. |Preface06| image:: ../_static/imgs/Preface/Preface06.png
 
-+-----+----------+-----------------------------------------------------------------------+
-| NO. | Pin Name | Functional Description                                                |
-+-----+----------+-----------------------------------------------------------------------+
-| 1   | RST      | Reset Pin, Active Low                                                 |
-+-----+----------+-----------------------------------------------------------------------+
-| 2   | ADC      | AD conversion, Input voltage range 0~3.3V, the value range is 0~1024. |
-+-----+----------+-----------------------------------------------------------------------+
-| 3   | EN       | Chip Enabled Pin, Active High                                         |
-+-----+----------+-----------------------------------------------------------------------+
-| 4   | IO16     | Connect with RST pin to wake up Deep Slee                             |
-+-----+----------+-----------------------------------------------------------------------+
-| 5   | IO14     | GPIO14; HSPI_CLK                                                      |
-+-----+----------+-----------------------------------------------------------------------+
-| 6   | IO12     | GPIO12; HSPI_MISO                                                     |
-+-----+----------+-----------------------------------------------------------------------+
-| 7   | IO13     | GPIO13; HSPI_MOSI; UART0_CTS                                          |
-+-----+----------+-----------------------------------------------------------------------+
-| 8   | VCC      | Module power supply pin, Voltage 3.0V ~ 3.6V                          |
-+-----+----------+-----------------------------------------------------------------------+
-| 9   | GND      | GND                                                                   |
-+-----+----------+-----------------------------------------------------------------------+
-| 10  | IO15     | GPIO15; MTDO; HSPICS; UART0                                           |
-+-----+----------+-----------------------------------------------------------------------+
-| 11  | IO2      | GPIO2; UART1_TXD                                                      |
-+-----+----------+-----------------------------------------------------------------------+
-| 12  | IO0      | GPIO0; UART1_RXD                                                      |
-+-----+----------+-----------------------------------------------------------------------+
-| 13  | IO4      | GPIO4                                                                 |
-+-----+----------+-----------------------------------------------------------------------+
-| 14  | IO5      | GPIO5;IR_R                                                            |
-+-----+----------+-----------------------------------------------------------------------+
-| 15  | RXD      | UART0_RXD; GPIO3                                                      |
-+-----+----------+-----------------------------------------------------------------------+
-| 16  | TXD      | UART0_TXD; GPIO1                                                      |
-+-----+----------+-----------------------------------------------------------------------+
+.. table::
+    :align: center
+    :class: zebra
+    
+    +-----+----------+-----------------------------------------------------------------------+
+    | NO. | Pin Name | Functional Description                                                |
+    +=====+==========+=======================================================================+
+    | 1   | RST      | Reset Pin, Active Low                                                 |
+    +-----+----------+-----------------------------------------------------------------------+
+    | 2   | ADC      | AD conversion, Input voltage range 0~3.3V, the value range is 0~1024. |
+    +-----+----------+-----------------------------------------------------------------------+
+    | 3   | EN       | Chip Enabled Pin, Active High                                         |
+    +-----+----------+-----------------------------------------------------------------------+
+    | 4   | IO16     | Connect with RST pin to wake up Deep Slee                             |
+    +-----+----------+-----------------------------------------------------------------------+
+    | 5   | IO14     | GPIO14; HSPI_CLK                                                      |
+    +-----+----------+-----------------------------------------------------------------------+
+    | 6   | IO12     | GPIO12; HSPI_MISO                                                     |
+    +-----+----------+-----------------------------------------------------------------------+
+    | 7   | IO13     | GPIO13; HSPI_MOSI; UART0_CTS                                          |
+    +-----+----------+-----------------------------------------------------------------------+
+    | 8   | VCC      | Module power supply pin, Voltage 3.0V ~ 3.6V                          |
+    +-----+----------+-----------------------------------------------------------------------+
+    | 9   | GND      | GND                                                                   |
+    +-----+----------+-----------------------------------------------------------------------+
+    | 10  | IO15     | GPIO15; MTDO; HSPICS; UART0                                           |
+    +-----+----------+-----------------------------------------------------------------------+
+    | 11  | IO2      | GPIO2; UART1_TXD                                                      |
+    +-----+----------+-----------------------------------------------------------------------+
+    | 12  | IO0      | GPIO0; UART1_RXD                                                      |
+    +-----+----------+-----------------------------------------------------------------------+
+    | 13  | IO4      | GPIO4                                                                 |
+    +-----+----------+-----------------------------------------------------------------------+
+    | 14  | IO5      | GPIO5;IR_R                                                            |
+    +-----+----------+-----------------------------------------------------------------------+
+    | 15  | RXD      | UART0_RXD; GPIO3                                                      |
+    +-----+----------+-----------------------------------------------------------------------+
+    | 16  | TXD      | UART0_TXD; GPIO1                                                      |
+    +-----+----------+-----------------------------------------------------------------------+
 
 Description of the ESP8266 series module boot mode:
 
-+---------------+-----------+------+--------+-------+-------+------+
-| Mode          | CH_PD(EN) | RST  | GPIO15 | GPIO0 | GPIO2 | TXD0 |
-+---------------+-----------+------+--------+-------+-------+------+
-| Download mode | high      | high | low    | low   | high  | high |
-+---------------+-----------+------+--------+-------+-------+------+
-| Running mode  | high      | high | low    | high  | high  | high |
-+---------------+-----------+------+--------+-------+-------+------+
+.. table::
+    :align: center
+    :class: zebra
+    
+    +---------------+-----------+------+--------+-------+-------+------+
+    | Mode          | CH_PD(EN) | RST  | GPIO15 | GPIO0 | GPIO2 | TXD0 |
+    +===============+===========+======+========+=======+=======+======+
+    | Download mode | high      | high | low    | low   | high  | high |
+    +---------------+-----------+------+--------+-------+-------+------+
+    | Running mode  | high      | high | low    | high  | high  | high |
+    +---------------+-----------+------+--------+-------+-------+------+
 
 Notes: Some of the pins inside the module have been pulled or pulled down.
 
@@ -125,17 +134,17 @@ Windows
 Check whether CH340 has been installed
 ---------------------------------------------
 
-1.	Connect your computer and ESP8266 with a USB cable.
+1. Connect your computer and ESP8266 with a USB cable.
 
 .. image:: ../_static/imgs/Preface/Preface07.png
     :align: center
 
-2.	Turn to the main interface of your computer, select "This PC" and right-click to select "Manage".
+2. Turn to the main interface of your computer, select "This PC" and right-click to select "Manage".
 
 .. image:: ../_static/imgs/Preface/Preface08.png
     :align: center
 
-3.	Click "Device Manager". If your computer has installed CH340, you can see"USB-SERIAL CH340 (COMx)". And you can click :ref:`here <programming>` to move to the next step.
+3. Click "Device Manager". If your computer has installed CH340, you can see"USB-SERIAL CH340 (COMx)". And you can click :ref:`here <programming>` to move to the next step.
 
 .. image:: ../_static/imgs/Preface/Preface09.png
     :align: center
@@ -143,7 +152,7 @@ Check whether CH340 has been installed
 Installing CH340
 -------------------------------
 
-1.	First, download CH340 driver, click http://www.wch-ic.com/search?q=CH340&t=downloads to download the appropriate one based on 
+1. First, download CH340 driver, click http://www.wch-ic.com/search?q=CH340&t=downloads to download the appropriate one based on 
 
 your operating system.
 
@@ -255,11 +264,11 @@ The interface of Arduino Software is as follows:
 .. image:: ../_static/imgs/Preface/Preface27.png
     :align: center
 
-Programs written with Arduino Software (IDE) are called sketches. These sketches are written in the text editor and saved with the file extension.ino. The editor has features for cutting/pasting and searching/replacing text. The message area gives feedback while saving and exporting and also displays errors. The console displays text output by the Arduino Software (IDE), including complete error messages and other information. The bottom right-hand corner of the window displays the configured board and serial port. The toolbar buttons allow you to verify and upload programs, create, open, and save sketches, and open the serial monitor.
+Programs written with Arduino Software (IDE) are called **sketches** . These sketches are written in the text editor and saved with the file extension **.ino** . The editor has features for cutting/pasting and searching/replacing text. The message area gives feedback while saving and exporting and also displays errors. The console displays text output by the Arduino Software (IDE), including complete error messages and other information. The bottom right-hand corner of the window displays the configured board and serial port. The toolbar buttons allow you to verify and upload programs, create, open, and save sketches, and open the serial monitor.
 
 .. list-table:: 
-   :width: 100%
    :align: center
+   :class: table-line
 
    * -  |Preface28|
      -  Verify 

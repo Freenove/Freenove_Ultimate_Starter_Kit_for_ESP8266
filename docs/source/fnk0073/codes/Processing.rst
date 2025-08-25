@@ -19,7 +19,6 @@ Processing language
 .. toctree::
    :maxdepth: 1
    :caption: projects
-   :numbered:
    :glob:
    
    Processing/1_Oscilloscope

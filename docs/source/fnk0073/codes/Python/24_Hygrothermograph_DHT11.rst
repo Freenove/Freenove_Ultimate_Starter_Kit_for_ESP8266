@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Hygrothermograph DHT11
+Chapter 24 Hygrothermograph DHT11
 ##############################################################################
 
 In this chapter, we will learn about a commonly used sensor called a Hygrothermograph DHT11.
 
-Project Hygrothermograph
+Project 24.1 Hygrothermograph
 ************************************
 
 Hygrothermograph is an important tool in our lives to give us data on the temperature and humidity in our environment. In this project, we will use the ESP8266 to read temperature and humidity data of the DHT11 Module.
@@ -12,19 +12,24 @@ Hygrothermograph is an important tool in our lives to give us data on the temper
 Component List
 =======================================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |  USB cable                            |
-|                                  |                                       |
-| |Chapter01_00|                   |   |Chapter01_01|                      |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------+-------------------------+-------------------------+
-| Resistor 10kΩ x1     | Infrared Remote x1      | Jumper wire M/M x6      |
-|                      |                         |                         |
-| |Chapter24_02|       |  |Chapter24_01|         |     |Chapter24_00|      |
-+----------------------+-------------------------+-------------------------+
+.. table::
+    :align: center
+    :class: table-line
+    :width: 80%
+    
+    +----------------------------------+---------------------------------------+
+    | ESP8266 x1                       |  USB cable                            |
+    |                                  |                                       |
+    | |Chapter01_00|                   |   |Chapter01_01|                      |
+    +----------------------------------+---------------------------------------+
+    | Breadboard x1                                                            |
+    |                                                                          |
+    | |Chapter01_02|                                                           |
+    +----------------------+-------------------------+-------------------------+
+    | Resistor 10kΩ x1     | Infrared Remote x1      | Jumper wire M/M x6      |
+    |                      |                         |                         |
+    | |Chapter24_02|       |  |Chapter24_01|         |     |Chapter24_00|      |
+    +----------------------+-------------------------+-------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -53,8 +58,9 @@ Circuit
 ===============================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter24_04|
@@ -70,7 +76,7 @@ Circuit
 Code
 ===============================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "24.1_Hygrothermograph" and double click  "Hygrothermograph.py".
 
@@ -161,7 +167,7 @@ Reference
     
     **DHT12.humidity():** Return humidity data obtained by DHT12.
 
-Project Hygrothermograph
+Project 24.2 Hygrothermograph
 **************************************
 
 In this project, we use L2C-LCD1602 to display data collected by DHT11.
@@ -169,25 +175,30 @@ In this project, we use L2C-LCD1602 to display data collected by DHT11.
 Component List
 =============================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |  USB cable                            |
-|                                  |                                       |
-| |Chapter01_00|                   |   |Chapter01_01|                      |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------------------+---------------------------------------+
-| LCD1602 Module x1                | Resistor 10kΩ x1                      |
-|                                  |                                       |
-| |Chapter24_08|                   |   |Chapter24_09|                      |
-+----------------------------------+---------------------------------------+
-| Jumper wire F/M x4               | DHT11 x1                              |
-|                                  |                                       |
-| Jumper wire M/M x8               |                                       |
-|                                  |                                       |
-| |Chapter24_10|                   |   |Chapter24_11|                      |
-+----------------------------------+---------------------------------------+
+.. table::
+    :align: center
+    :class: table-line
+    :width: 80%
+    
+    +----------------------------------+---------------------------------------+
+    | ESP8266 x1                       |  USB cable                            |
+    |                                  |                                       |
+    | |Chapter01_00|                   |   |Chapter01_01|                      |
+    +----------------------------------+---------------------------------------+
+    | Breadboard x1                                                            |
+    |                                                                          |
+    | |Chapter01_02|                                                           |
+    +----------------------------------+---------------------------------------+
+    | LCD1602 Module x1                | Resistor 10kΩ x1                      |
+    |                                  |                                       |
+    | |Chapter24_08|                   |   |Chapter24_09|                      |
+    +----------------------------------+---------------------------------------+
+    | Jumper wire F/M x4               | DHT11 x1                              |
+    |                                  |                                       |
+    | Jumper wire M/M x8               |                                       |
+    |                                  |                                       |
+    | |Chapter24_10|                   |   |Chapter24_11|                      |
+    +----------------------------------+---------------------------------------+
 
 .. |Chapter24_08| image:: ../_static/imgs/24_Hygrothermograph_DHT11/Chapter24_08.png
 .. |Chapter24_09| image:: ../_static/imgs/24_Hygrothermograph_DHT11/Chapter24_09.png
@@ -198,8 +209,9 @@ Circuit
 ===============================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter24_12|
@@ -217,8 +229,8 @@ Code
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> 24.2_Hygrothermograph". Select "I2C_LCD.py" and "LCD_API.py", right click your mouse to select "Upload to /", wait for "I2C_LCD.py" and "LCD_API.py" to be uploaded to ESP8266 and then double click "Hygrothermograph.py".
 
-Hygrothermograph
--------------------
+24.2_Hygrothermograph
+--------------------------
 
 .. image:: ../_static/imgs/24_Hygrothermograph_DHT11/Chapter24_19.png
     :align: center

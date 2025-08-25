@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter LED Bar
+Chapter 3 LED Bar
 ##############################################################################
 
 We have learned how to control a LED blinking, next we will learn how to control a number of LEDs.
 
-Project Flowing Light
+Project 3.1 Flowing Light
 ***********************************
 
 In this project, we use a number of LEDs to make a flowing light.
@@ -12,19 +12,24 @@ In this project, we use a number of LEDs to make a flowing light.
 Component List
 ==================================
 
-+-------------------------+------------------------------+
-| ESP8266 x1              | USB cable                    |
-|                         |                              |
-| |Chapter01_00|          | |Chapter01_01|               |
-+-------------------------+------------------------------+
-| Breadboard x1                                          |
-|                                                        |
-| |Chapter01_02|                                         |
-+----------------+------------------+--------------------+
-|LED bar graph x1| Resistor 220Ω x1 | Jumper wire M/M x3 |
-|                |                  |                    |
-| |Chapter03_00| | |Chapter01_04|   | |Chapter01_05|     |
-+----------------+------------------+--------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +-------------------------+------------------------------+
+    | ESP8266 x1              | USB cable                    |
+    |                         |                              |
+    | |Chapter01_00|          | |Chapter01_01|               |
+    +-------------------------+------------------------------+
+    | Breadboard x1                                          |
+    |                                                        |
+    | |Chapter01_02|                                         |
+    +----------------+------------------+--------------------+
+    |LED bar graph x1| Resistor 220Ω x1 | Jumper wire M/M x3 |
+    |                |                  |                    |
+    | |Chapter03_00| | |Chapter01_04|   | |Chapter01_05|     |
+    +----------------+------------------+--------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -50,21 +55,22 @@ Circuit
 ===========================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter03_02|
    * -  Hardware connection 
      
-        If you need any support, please feel free to contact us via: support@freenove.com
+        :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
    * -  |Chapter03_03|
 
 .. |Chapter03_02| image:: ../_static/imgs/3_LED_Bar/Chapter03_02.png
 .. |Chapter03_03| image:: ../_static/imgs/3_LED_Bar/Chapter03_03.png
 
-:red:`If LED bar does not work, try to rotate it for 180°. The label is random.`
+:combo:`red font-bolder:If LED bar does not work, try to rotate it for 180°. The label is random.`
 
 Sketch
 =========================
@@ -73,9 +79,9 @@ This project is designed to make a flowing water lamp. Which are these actions: 
 
 Upload following sketch:
 
-**Freenove_Ultimate_Starter_Kit_for_ESP8266\C\Sketches\Sketch_03.1_FlowingLight**
+**Freenove_Ultimate_Starter_Kit_for_ESP8266\\C\Sketches\\Sketch_03.1_FlowingLight**
 
-Sketch_FlowingLight
+Sketch_03.1_FlowingLight
 -----------------------------------
 
 .. image:: ../_static/imgs/3_LED_Bar/Chapter03_04.png

@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter LED Bar
+Chapter 3 LED Bar
 ##############################################################################
 
 We have learned how to control a LED blinking, next we will learn how to control a number of LEDs.
 
-Project Flowing Light
+Project 3.1 Flowing Light
 ***********************************
 
 In this project, we use a number of LEDs to make a flowing light.
@@ -12,19 +12,24 @@ In this project, we use a number of LEDs to make a flowing light.
 Component List
 ==================================
 
-+-------------------------+------------------------------+
-| ESP8266 x1              | USB cable                    |
-|                         |                              |
-| |Chapter01_00|          | |Chapter01_01|               |
-+-------------------------+------------------------------+
-| Breadboard x1                                          |
-|                                                        |
-| |Chapter01_02|                                         |
-+----------------+------------------+--------------------+
-|LED bar graph x1| Resistor 220Ω x1 | Jumper wire M/M x3 |
-|                |                  |                    |
-| |Chapter03_00| | |Chapter01_04|   | |Chapter01_05|     |
-+----------------+------------------+--------------------+
+.. table::
+    :align: center
+    :class: table-line
+    :width: 80%
+    
+    +-------------------------+------------------------------+
+    | ESP8266 x1              | USB cable                    |
+    |                         |                              |
+    | |Chapter01_00|          | |Chapter01_01|               |
+    +-------------------------+------------------------------+
+    | Breadboard x1                                          |
+    |                                                        |
+    | |Chapter01_02|                                         |
+    +----------------+------------------+--------------------+
+    |LED bar graph x1| Resistor 220Ω x1 | Jumper wire M/M x3 |
+    |                |                  |                    |
+    | |Chapter03_00| | |Chapter01_04|   | |Chapter01_05|     |
+    +----------------+------------------+--------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -50,8 +55,9 @@ Circuit
 ===========================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter03_02|
@@ -64,7 +70,7 @@ Circuit
 .. |Chapter03_02| image:: ../_static/imgs/3_LED_Bar/Chapter03_02.png
 .. |Chapter03_03| image:: ../_static/imgs/3_LED_Bar/Chapter03_03.png
 
-:red:`If LED bar does not work, try to rotate it for 180°. The label is random.`
+:combo:`red font-bolder:If LED bar does not work, try to rotate it for 180°. The label is random.`
 
 Code
 =========================
@@ -74,7 +80,7 @@ This project is designed to make a flowing water lamp. Which are these actions: 
 03.1_FlowingLight
 ------------------------
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "03.1_FlowingLight" and double click "FlowingLight.py".
 
@@ -88,7 +94,7 @@ Click "Run current script" shown in the box above, LED Bar Graph will light up f
 
 Press the "RST" button on the ESP8266 development board and exit the program. You can also click "Run current script" again. 
 
-:red:`If you have any concerns, please contact us via:` support@freenove.com
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com
 
 .. image:: ../_static/imgs/3_LED_Bar/Chapter03_08.png
     :align: center

@@ -1,20 +1,21 @@
 ##############################################################################
-Chapter WiFi Working Modes
+Chapter 28 WiFi Working Modes
 ##############################################################################
 
 In this chapter, we'll focus on the WiFi infrastructure for ESP8266. 
 
 ESP8266 has 3 different WiFi operating modes: station mode, AP mode and AP+station mode. All WiFi programming projects must be configured with WiFi operating mode before using WiFi, otherwise WiFi cannot be used.
 
-Project Station mode
+Project 28.1 Station mode
 *************************************
 
 Component List
 =================================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  ESP8266 x1
      -  USB cable
@@ -47,21 +48,21 @@ Connect Freenove ESP8266 to the computer using the USB cable.
 Code
 ========================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "28.1_Station_mode" and double click "Station_mode.py". 
 
-Station_mode
+28.1_Station_mode
 -------------------
 
 .. image:: ../_static/imgs/28_WiFi_Working_Modes/Chapter28_11.png
     :align: center
 
-Because the names and passwords of routers in various places are different, before the Code runs, users need to enter the correct router’s name and password in the box as shown in the illustration above.
+Because the names and passwords of routers in various places are different, before the Code runs, users need to enter the correct router's name and password in the box as shown in the illustration above.
 
 After making sure the router name and password are entered correctly, compile and upload codes to ESP8266, wait for ESP8266 to connect to your router and print the IP address assigned by the router to ESP8266 in "Shell". 
 
-.. image:: ../_static/imgs/28_WiFi_Working_Modes/Chapter28_12.png
+.. image:: ../_static/imgs/28_WiFi_Working_Modes/Chapter28_19.png
     :align: center
 
 The following is the program code:
@@ -169,7 +170,7 @@ Reference
     
     **disconnect():** Disconnect from the currently connected wireless network.
 
-Project AP mode
+Project 28.2 AP mode
 *********************************
 
 Component List & Circuit
@@ -199,11 +200,11 @@ Connect Freenove ESP8266 to the computer using the USB cable.
 Code
 ====================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "28.2_AP_mode". and double click "AP_mode.py". 
 
-AP_mode
+28.2_AP_mode
 ---------------------------
 
 .. image:: ../_static/imgs/28_WiFi_Working_Modes/Chapter28_13.png
@@ -320,15 +321,16 @@ Reference
     
     **status():** Return the current status of the wireless connection
 
-Project AP+Station mode
+Project 28.3 AP+Station mode
 *****************************************
 
 Component List
 =======================================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  ESP8266 x1
      -  USB cable
@@ -355,11 +357,11 @@ Connect Freenove ESP8266 to the computer using the USB cable.
 Code
 ==========================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "28.3_AP+STA_mode"and double click "AP+STA_mode.py". 
 
-AP+STA_mode
+28.3_AP+STA_mode
 ---------------------------
 
 .. image:: ../_static/imgs/28_WiFi_Working_Modes/Chapter28_16.png

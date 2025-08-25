@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Photoresistor & LED
+Chapter 11 Photoresistor & LED
 ##############################################################################
 
 In this chapter, we will learn how to use a photoresistor.
 
-Project NightLamp
+Project 11.1 NightLamp
 *********************************
 
 A photoresistor is very sensitive to the amount of light present. We can take advantage of the characteristic to make a nightlight with the following function: when the ambient light is less (darker environment) the LED will automatically become brighter to compensate and when the ambient light is greater (brighter environment) the LED will automatically dim to compensate.
@@ -12,23 +12,28 @@ A photoresistor is very sensitive to the amount of light present. We can take ad
 Component List
 =============================
 
-+----------------------------------+-------------------------------+
-| ESP8266 x1                       |          USB cable            |
-|                                  |                               |
-| |Chapter01_00|                   |          |Chapter01_01|       |
-+----------------------------------+-------------------------------+
-| Breadboard x1                                                    |
-|                                                                  |
-| |Chapter01_02|                                                   |
-+----------------------------------+-------------------------------+
-| Photoresistor x1                 | Jumper wire M/M x7            |
-|                                  |                               |
-| |Chapter11_00|                   |          |Chapter01_05|       |
-+----------------+-----------------+-------------------------------+
-|Resistor 220Ω x1| Resistor 10kΩ x1| LED x1                        |
-|                |                 |                               |
-| |Chapter01_04| | |Chapter11_01|  |          |Chapter01_03|       |
-+----------------+-----------------+-------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +----------------------------------+-------------------------------+
+    | ESP8266 x1                       |          USB cable            |
+    |                                  |                               |
+    | |Chapter01_00|                   |          |Chapter01_01|       |
+    +----------------------------------+-------------------------------+
+    | Breadboard x1                                                    |
+    |                                                                  |
+    | |Chapter01_02|                                                   |
+    +----------------------------------+-------------------------------+
+    | Photoresistor x1                 | Jumper wire M/M x7            |
+    |                                  |                               |
+    | |Chapter11_00|                   |          |Chapter01_05|       |
+    +----------------+-----------------+-------------------------------+
+    |Resistor 220Ω x1| Resistor 10kΩ x1| LED x1                        |
+    |                |                 |                               |
+    | |Chapter01_04| | |Chapter11_01|  |          |Chapter01_03|       |
+    +----------------+-----------------+-------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -63,7 +68,7 @@ Circuit
 The circuit of this project is similar to project Soft Light. The only difference is that the input signal is changed from a potentiometer to a combination of a photoresistor and a resistor.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
 
    * -  Schematic diagram
@@ -82,7 +87,7 @@ Sketch
 
 The circuit used is similar to the project Soft Light. The only difference is that the input signal of the A0 pin of ADC changes from a potentiometer to a combination of a photoresistor and a resistor.
 
-Sketch_Nightlamp
+Sketch_11.1_Nightlamp
 -----------------------------
 
 .. image:: ../_static/imgs/11_Photoresistor_&_LED/Chapter11_06.png
@@ -90,7 +95,7 @@ Sketch_Nightlamp
 
 Download the code to ESP8266, if you cover the photoresistor or increase the light shining on it, the brightness of the LED changes accordingly. 
 
-:red:`If you have any concerns, please contact us via:` support@freenove.com
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com
 
 The following is the program code:
 

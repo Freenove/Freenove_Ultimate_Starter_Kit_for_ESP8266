@@ -1,8 +1,8 @@
 ##############################################################################
-Chapter Soldering Circuit Board
+Chapter 33 Soldering Circuit Board
 ##############################################################################
 
-Project Soldering a Buzzer
+Project 33.1 Soldering a Buzzer
 ***************************************
 
 We have tried to use a buzzer in a previous chapter, and now we will solder a circuit that when the button is pressed, the buzzer sounds.
@@ -14,15 +14,20 @@ You can install it on your bike, bedroom door or any other places where it is ne
 Component List
 ===============================
 
-+----------------------+----------------+------------------+------------------+----------------+
-| Pin header x2        | LED x1         | Resistor 220Ω x1 | Active buzzer x1 | Push button x1 |
-|                      |                |                  |                  |                |
-| |Chapter33_00|       | |Chapter33_01| | |Chapter33_02|   | |Chapter33_03|   | |Chapter33_04| |
-+----------------------+----------------+------------------+------------------+----------------+
-| AA Battery Holder x1                                                                         |
-|                                                                                              |
-| |Chapter33_05|                                                                               |
-+----------------------------------------------------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +----------------------+----------------+------------------+------------------+----------------+
+    | Pin header x2        | LED x1         | Resistor 220Ω x1 | Active buzzer x1 | Push button x1 |
+    |                      |                |                  |                  |                |
+    | |Chapter33_00|       | |Chapter33_01| | |Chapter33_02|   | |Chapter33_03|   | |Chapter33_04| |
+    +----------------------+----------------+------------------+------------------+----------------+
+    | AA Battery Holder x1                                                                         |
+    |                                                                                              |
+    | |Chapter33_05|                                                                               |
+    +----------------------------------------------------------------------------------------------+
 
 .. |Chapter33_00| image:: ../_static/imgs/33_Soldering_Circuit_Board/Chapter33_00.png
 .. |Chapter33_01| image:: ../_static/imgs/33_Soldering_Circuit_Board/Chapter33_01.png
@@ -37,16 +42,16 @@ Circuit
 We will solder the following circuit on the main board.
 
 .. list-table:: 
-   :width: 70%
    :align: center
+   :class: table-line
+   :header-rows: 1
 
    * -  Schematic diagram
-   * -  |Chapter33_06|
-   * -  Hardware connection. 
+     -  Hardware connection. 
     
         If you need any support, please feel free to contact us via: support@freenove.com
-   
-   * -  |Chapter33_07|
+   * -  |Chapter33_06|
+     -  |Chapter33_07|
 
 .. |Chapter33_06| image:: ../_static/imgs/33_Soldering_Circuit_Board/Chapter33_06.png
 .. |Chapter33_07| image:: ../_static/imgs/33_Soldering_Circuit_Board/Chapter33_07.png
@@ -62,8 +67,9 @@ Insert the components on the main board and solder the circuit on its back.
 rendering after soldering:
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Front
      -  Back
@@ -92,8 +98,9 @@ Component List
 ===============================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Pin header x5
      -  Resistor 220Ω x8
@@ -116,16 +123,16 @@ Circuit
 Solder the following circuit on the main board.
 
 .. list-table:: 
-   :width: 70%
    :align: center
+   :class: table-line
+   :header-rows: 1
 
    * -  Schematic diagram
-   * -  |Chapter33_16|
-   * -  Hardware connection. 
+     -  Hardware connection
     
         If you need any support, please feel free to contact us via: support@freenove.com
-   
-   * -  |Chapter33_17|
+   * -  |Chapter33_16|
+     -  |Chapter33_17|
 
 .. |Chapter33_16| image:: ../_static/imgs/33_Soldering_Circuit_Board/Chapter33_16.png
 .. |Chapter33_17| image:: ../_static/imgs/33_Soldering_Circuit_Board/Chapter33_17.png
@@ -141,8 +148,8 @@ Insert the components on the main board and solder the circuit on its back.
 Rendering after soldering:
 
 .. list-table:: 
-   :width: 100%
    :align: center
+   :class: table-line
 
    * -  Front
      -  Back

@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter ADC Converter
+Chapter 9 ADC Converter
 ##############################################################################
 
 We have learned how to control the brightness of LED through PWM and understood that PWM is not the real analog before. In this chapter, we will learn how to read analog, convert it into digital. That is, ADC.
 
-Project Read the Voltage of Potentiometer 
+Project 9.1 Read the Voltage of Potentiometer 
 *******************************************************
 
 In this project, ADC is used to convert analog signals into digital signals. Control chip on the control board has integrated this function. Now let us try to use this function to convert analog signals into digital signals.
@@ -12,19 +12,24 @@ In this project, ADC is used to convert analog signals into digital signals. Con
 Component List
 =============================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |          USB cable                    |
-|                                  |                                       |
-| |Chapter01_00|                   |          |Chapter01_01|               |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------------------+---------------------------------------+
-| Rotary potentiometer x1          | Jumper wire M/M x3                    |
-|                                  |                                       |
-| |Chapter09_00|                   |          |Chapter06_01|               |
-+----------------------------------+---------------------------------------+
+.. table::
+    :align: center
+    :class: table-line
+    :width: 80%
+    
+    +----------------------------------+---------------------------------------+
+    | ESP8266 x1                       |          USB cable                    |
+    |                                  |                                       |
+    | |Chapter01_00|                   |          |Chapter01_01|               |
+    +----------------------------------+---------------------------------------+
+    | Breadboard x1                                                            |
+    |                                                                          |
+    | |Chapter01_02|                                                           |
+    +----------------------------------+---------------------------------------+
+    | Rotary potentiometer x1          | Jumper wire M/M x3                    |
+    |                                  |                                       |
+    | |Chapter09_00|                   |          |Chapter06_01|               |
+    +----------------------------------+---------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -106,8 +111,9 @@ Circuit
 Use pin A0 on the control board to detect the voltage of rotary potentiometer.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter09_06|
@@ -123,11 +129,11 @@ Use pin A0 on the control board to detect the voltage of rotary potentiometer.
 Code
 ===========================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "09.1_AnalogRead and then click "AnalogRead.py". 
 
-AnalogRead 
+09.1_AnalogRead 
 ---------------------
 
 .. image:: ../_static/imgs/9_ADC_Converter/Chapter09_10.png

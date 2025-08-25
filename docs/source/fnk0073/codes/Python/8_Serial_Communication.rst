@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Serial Communication
+Chapter 8 Serial Communication
 ##############################################################################
 
 Serial Communication is a means of communication between different devices/devices. This section describes ESP8266's Serial Communication.
 
-Project Serial Print
+Project 8.1 Serial Print
 ***********************************
 
 This project uses ESP8266's serial communicator to send data to the computer and print it on the serial monitor.
@@ -13,8 +13,9 @@ Component List
 ==========================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  ESP8266 x1
      -  USB cable
@@ -57,11 +58,11 @@ Connect Freenove ESP8266 to the computer with USB cable.
 Code
 ===========================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "08.1_Serial_Print" and double "Serial_Print.py". 
 
-Serial_Print
+08.1_Serial_Print
 ----------------------------
 
 .. image:: ../_static/imgs/8_Serial_Communication/Chapter08_14.png
@@ -133,7 +134,7 @@ Reference
     
     **UART.any():** Determine whether there is data in serial ports. If yes, return the number of bytes; Otherwise, return 0.
 
-Project Serial Read and Write
+Project 8.2 Serial Read and Write
 ***************************************
 
 From last section, we use Serial port on Freenove ESP8266 to send data to a computer, now we will use that to receive data from computer.

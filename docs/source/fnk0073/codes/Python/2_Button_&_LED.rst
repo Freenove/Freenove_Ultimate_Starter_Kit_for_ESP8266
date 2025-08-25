@@ -1,5 +1,5 @@
 ##############################################################################
-Chapter Button & LED
+Chapter 2 Button & LED
 ##############################################################################
 
 Usually, there are three essential parts in a complete automatic control device: INPUT, OUTPUT, and CONTROL. In last section, the LED module was the output part and ESP8266 was the control part. In practical applications, we not only make LEDs flash, but also make a device sense the surrounding environment, receive instructions and then take the appropriate action such as LEDs light up, make a buzzer turn ON and so on.
@@ -9,7 +9,7 @@ Usually, there are three essential parts in a complete automatic control device:
 
 Next, we will build a simple control system to control a LED through a push button switch.
 
-Project Button & LED
+Project 2.1 Button & LED
 *********************************
 
 In the project, we will control the LED state through a Push Button Switch. When the button is pressed, our LED will turn ON, and when it is released, the LED will turn OFF. 
@@ -17,23 +17,28 @@ In the project, we will control the LED state through a Push Button Switch. When
 Component List
 ==================================
 
-+-------------------------+------------------------------+
-| ESP8266 x1              | USB cable                    |
-|                         |                              |
-| |Chapter01_00|          | |Chapter01_01|               |
-+-------------------------+------------------------------+
-| Breadboard x1                                          |
-|                                                        |
-| |Chapter01_02|                                         |
-+----------------+------------------+--------------------+
-| LED x1         | Resistor 220Ω x1 | Jumper wire M/M x6 |
-|                |                  |                    |
-| |Chapter01_03| | |Chapter01_04|   | |Chapter01_05|     |
-+----------------+--------+---------+--------------------+
-| Resistor 10kΩ x2        | Push button x1               |
-|                         |                              |
-| |Chapter02_01|          | |Chapter02_02|               |
-+-------------------------+------------------------------+
+.. table::
+    :align: center
+    :class: table-line
+    :width: 80%
+    
+    +-------------------------+------------------------------+
+    | ESP8266 x1              | USB cable                    |
+    |                         |                              |
+    | |Chapter01_00|          | |Chapter01_01|               |
+    +-------------------------+------------------------------+
+    | Breadboard x1                                          |
+    |                                                        |
+    | |Chapter01_02|                                         |
+    +----------------+------------------+--------------------+
+    | LED x1         | Resistor 220Ω x1 | Jumper wire M/M x6 |
+    |                |                  |                    |
+    | |Chapter01_03| | |Chapter01_04|   | |Chapter01_05|     |
+    +----------------+--------+---------+--------------------+
+    | Resistor 10kΩ x2        | Push button x1               |
+    |                         |                              |
+    | |Chapter02_01|          | |Chapter02_02|               |
+    +-------------------------+------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -61,7 +66,7 @@ Circuit
 ==============================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
 
    * -  Schematic diagram
@@ -80,7 +85,7 @@ Code
 
 This project is designed to learn to control an LED with a push button switch. First, we need to read the state of the switch and then decide whether the LED is turned on or not based on it.
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "02.1_ButtonAndLed" and double click "ButtonAndLed.py".
 
@@ -181,7 +186,7 @@ Code
 02.2_Tablelamp
 ----------------------------
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "02.2_TableLamp"and double click "TableLamp.py".
 
@@ -193,7 +198,7 @@ Click "Run current script" shown in the box of the above illustration, press the
 .. image:: ../_static/imgs/2_Button_&_LED/Chapter02_17.png
     :align: center
 
-:red:`If you have any concerns, please contact us via:` support@freenove.com
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com
 
 Upload code to ESP8266
 -------------------------------

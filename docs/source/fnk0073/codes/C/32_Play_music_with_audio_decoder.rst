@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Play music with audio decoder
+Chapter 32 Play music with audio decoder
 ##############################################################################
 
 In the previous section, we used the ESP8266 to output the audio signal, obviously with some distortion in the sound quality.In this section, you will enjoy higher quality music with the help of the ES7148 chip.
 
-Project Play_music_with_audio_decoder
+Project 32.1 Play_music_with_audio_decoder
 **************************************************
 
 In this project,we will use ES7148 chip to transcode and output audio data.
@@ -12,21 +12,26 @@ In this project,we will use ES7148 chip to transcode and output audio data.
 Component List
 ============================
 
-+-----------------------------+-------------------+
-| ESP8266 x1                  | Micro USB Wire x1 |
-|                             |                   |
-|  |Chapter00_00|             | |Chapter00_01|    |
-+-----------------------------+-------------------+
-| Audio Converter & Amplifier | Speaker*1         |
-|                             |                   |
-|  |Chapter32_00|             | |Chapter31_01|    |
-+-----------------------------+-------------------+
-| Jumper wire F/M x5                              |
-|                                                 |
-| Jumper wire M/M x2                              |
-|                                                 |
-|  |Chapter32_01|                                 |
-+-------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +-----------------------------+-------------------+
+    | ESP8266 x1                  | Micro USB Wire x1 |
+    |                             |                   |
+    |  |Chapter00_00|             | |Chapter00_01|    |
+    +-----------------------------+-------------------+
+    | Audio Converter & Amplifier | Speaker*1         |
+    |                             |                   |
+    |  |Chapter32_00|             | |Chapter31_01|    |
+    +-----------------------------+-------------------+
+    | Jumper wire F/M x5                              |
+    |                                                 |
+    | Jumper wire M/M x2                              |
+    |                                                 |
+    |  |Chapter32_01|                                 |
+    +-------------------------------------------------+
 
 .. |Chapter00_00| image:: ../_static/imgs/0_LED/Chapter00_00.png
 .. |Chapter00_01| image:: ../_static/imgs/0_LED/Chapter00_01.png
@@ -40,8 +45,9 @@ Component knowledge
 The front view of Audio Converter & Amplifier module.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  front view
      -  schematic diagram
@@ -54,37 +60,41 @@ The front view of Audio Converter & Amplifier module.
 
 Interface description for Audio Converter & Amplifier module
 
-+-----+------+-------------------------------------+
-| Pin | Name | Introductions                       |
-+-----+------+-------------------------------------+
-| 1   | SCK  | System clock input                  |
-+-----+------+-------------------------------------+
-| 2   | BCK  | Audio data bit clock input          |
-+-----+------+-------------------------------------+
-| 3   | DIN  | Audio data input                    |
-+-----+------+-------------------------------------+
-| 4   | LCK  | Audio data word clock input         |
-+-----+------+-------------------------------------+
-| 5   | VCC  | Power input, 3.3V~5.0V              |
-+-----+------+-------------------------------------+
-| 6   | GND  | Power Ground                        |
-+-----+------+-------------------------------------+
-| 7   | L    | External audio left channel input   |
-+-----+------+-------------------------------------+
-| 8   | G    | Power Ground                        |
-+-----+------+-------------------------------------+
-| 9   | R    | External audio right channel input  |
-+-----+------+-------------------------------------+
-| 10  | G    | Power Ground                        |
-+-----+------+-------------------------------------+
-| 11  | R+   | Positive pole of right channel horn |
-+-----+------+-------------------------------------+
-| 12  | R-   | Negative pole of right channel horn |
-+-----+------+-------------------------------------+
-| 13  | L+   | Positive pole of left channel horn  |
-+-----+------+-------------------------------------+
-| 14  | L-   | Negative pole of left channel horn  |
-+-----+------+-------------------------------------+
+.. table::
+    :align: center
+    :class: zebra
+    
+    +-----+------+-------------------------------------+
+    | Pin | Name | Introductions                       |
+    +=====+======+=====================================+
+    | 1   | SCK  | System clock input                  |
+    +-----+------+-------------------------------------+
+    | 2   | BCK  | Audio data bit clock input          |
+    +-----+------+-------------------------------------+
+    | 3   | DIN  | Audio data input                    |
+    +-----+------+-------------------------------------+
+    | 4   | LCK  | Audio data word clock input         |
+    +-----+------+-------------------------------------+
+    | 5   | VCC  | Power input, 3.3V~5.0V              |
+    +-----+------+-------------------------------------+
+    | 6   | GND  | Power Ground                        |
+    +-----+------+-------------------------------------+
+    | 7   | L    | External audio left channel input   |
+    +-----+------+-------------------------------------+
+    | 8   | G    | Power Ground                        |
+    +-----+------+-------------------------------------+
+    | 9   | R    | External audio right channel input  |
+    +-----+------+-------------------------------------+
+    | 10  | G    | Power Ground                        |
+    +-----+------+-------------------------------------+
+    | 11  | R+   | Positive pole of right channel horn |
+    +-----+------+-------------------------------------+
+    | 12  | R-   | Negative pole of right channel horn |
+    +-----+------+-------------------------------------+
+    | 13  | L+   | Positive pole of left channel horn  |
+    +-----+------+-------------------------------------+
+    | 14  | L-   | Negative pole of left channel horn  |
+    +-----+------+-------------------------------------+
 
 .. image:: ../_static/imgs/32_Play_music_with_audio_decoder/Chapter32_04.png
     :align: center
@@ -102,11 +112,12 @@ Power interface: connect to external power supply. External power supply selecti
 Circuit
 =======================
 
-:red:`In this section, you need to perform operations in the following sequence: Upload audio data in the first step, upload code in the second step, disconnect the power supply in the third step, connect hardware in the fourth step as follows, and connect power supply in the fifth step.  Make sure you do this in order to avoid permanent damage to your hardware.`
+:combo:`red font-bolder:In this section, you need to perform operations in the following sequence: Upload audio data in the first step, upload code in the second step, disconnect the power supply in the third step, connect hardware in the fourth step as follows, and connect power supply in the fifth step.  Make sure you do this in order to avoid permanent damage to your hardware.`
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter32_05|
@@ -125,7 +136,7 @@ Sketch
 How to install the library
 ----------------------------------
 
-This code is used to play music.We use the third-party library ESP8266Audio.If you haven't already installed it, install it now.The steps to add third-party libraries are as follows:The first way,Open Arduino ->Sketch->Include library -> Manage library.Type ESP8266Audio in the search bar and select ESP8266Audio to install.
+This code is used to play music.We use the third-party library **ESP8266Audio**.If you haven't already installed it, install it now.The steps to add third-party libraries are as follows:The first way,Open Arduino ->Sketch->Include library -> Manage library.Type ESP8266Audio in the search bar and select ESP8266Audio to install.
 
 Refer to the following operations:
 
@@ -135,8 +146,9 @@ Refer to the following operations:
 The second way, open Arduino IDE, click Sketch -> Include Library -> Add .ZIP Library, In the pop-up window, find the file named "./Libraries/ESP8266Audio.Zip" which locates in this directory, and click OPEN.
 
 Install the Arduino IDE plug-in Arduino-ESP8266Fs-Plugin
+--------------------------------------------------------------------
 
-In this tutorial, find a folder named "./Sketches/ Sketch_31.1_play_music/tools" under that directory and copy that folder into the Arduino IDE environment directory.
+In this tutorial, find a folder named "./Sketches/Sketch_31.1_play_music/tools" under that directory and copy that folder into the Arduino IDE environment directory.
 
 The details are as follows:
 
@@ -150,7 +162,7 @@ Find the Arduino IDE environment directory location.
 .. image:: ../_static/imgs/32_Play_music_with_audio_decoder/Chapter32_09.png
     :align: center
 
-Copy "tools" folder to this directory. 
+Copy "**tools**" folder to this directory. 
 
 .. image:: ../_static/imgs/32_Play_music_with_audio_decoder/Chapter32_10.png
     :align: center
@@ -160,7 +172,7 @@ Finally, restart the Arduino IED
 Upload music
 ----------------------
 
-Before uploading the music file, in the path ". /Sketches/ Sketch_31.1_play_music/ playmp3fromSpiffs-IIS \data" folder, save the music file that needs to be uploaded and make sure the file content is not empty.
+Before uploading the music file, in the path ". /Sketches/ Sketch_31.1_play_music/ playmp3fromSpiffs-IIS \\data" folder, save the music file that needs to be uploaded and make sure the file content is not empty.
 
 If you do not have a" data" folder, you need to create a" data" folder and put MP3 or WAV files in the "data" folder. In addition, the audio file size cannot exceed the selected FlashSize. 
 
@@ -193,7 +205,7 @@ Upload following sketch:
 
 **\\PlayMP3FromSPIFFS-IIS**
 
-Sketch_Play_music_with_audio_decoder
+Sketch_32.1_Play_music_with_audio_decoder
 ----------------------------------------------
 
 .. image:: ../_static/imgs/32_Play_music_with_audio_decoder/Chapter32_16.png

@@ -1,5 +1,5 @@
 ##############################################################################
-Chapter Relay & Motor
+Chapter 16 Relay & Motor
 ##############################################################################
 
 In this chapter, we will learn a kind of special switch module, relay module.
@@ -12,35 +12,39 @@ In this project, we will use a push button switch indirectly to control the moto
 Component List
 ===============================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |          USB cable                    |
-|                                  |                                       |
-| |Chapter01_00|                   |          |Chapter01_01|               |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------------------+---------------------------------------+
-| Breadboard Power module x1       | Jumper wire M/M                       |
-|                                  |                                       |
-| |Chapter16_01|                   |  |Chapter01_05|                       |
-+----------------------+-----------+-------------+-------------------------+
-| Resistor 10kΩ x2     | Resistor 1kΩ x1         | Resistor 220Ω x1        |
-|                      |                         |                         |
-| |Chapter16_02|       |  |Chapter16_03|         |     |Chapter16_04|      |
-+----------------------+-------------------------+-------------------------+
-| NPN transistor x1    | Relay x1                | Motor x1                |
-|                      |                         |                         |
-| |Chapter16_05|       |  |Chapter16_06|         |     |Chapter16_07|      |
-+----------------------+-------------------------+-------------------------+
-| Push button x1       | LED x1                  | Diode x1                |
-|                      |                         |                         |
-| |Chapter16_08|       |  |Chapter16_09|         |     |Chapter16_10|      |
-+----------------------+-------------------------+-------------------------+
-| 9V battery (prepared by yourself) & battery line                         |
-|                                                                          |
-| |Chapter16_11|                                                           |
-+--------------------------------------------------------------------------+
+.. table::
+    :align: center
+    :class: table-line
+    
+    +----------------------------------+---------------------------------+
+    | ESP8266 x1                       | USB cable                       |
+    |                                  |                                 |
+    | |Chapter01_00|                   |  |Chapter01_01|                 |
+    +----------------------------------+---------------------------------+
+    | Breadboard x1                                                      |
+    |                                                                    |
+    | |Chapter01_02|                                                     |
+    +----------------------------------+---------------------------------+
+    | Breadboard Power module x1       | Jumper wire M/M                 |
+    |                                  |                                 |
+    | |Chapter16_01|                   |  |Chapter01_05|                 |
+    +----------------------+-----------+-------------+-------------------+
+    | Resistor 10kΩ x2     | Resistor 1kΩ x1         | Resistor 220Ω x1  |
+    |                      |                         |                   |
+    | |Chapter16_02|       |  |Chapter16_03|         |  |Chapter16_04|   |
+    +----------------------+-------------------------+-------------------+
+    | NPN transistor x1    | Relay x1                | Motor x1          |
+    |                      |                         |                   |
+    | |Chapter16_05|       |  |Chapter16_06|         |  |Chapter16_07|   |
+    +----------------------+-------------------------+-------------------+
+    | Push button x1       | LED x1                  | Diode x1          |
+    |                      |                         |                   |
+    | |Chapter16_08|       |  |Chapter16_09|         |  |Chapter16_10|   |
+    +----------------------+-------------------------+-------------------+
+    | 9V battery (prepared by yourself) & battery line                   |
+    |                                                                    |
+    | |Chapter16_11|                                                     |
+    +--------------------------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -70,8 +74,8 @@ A relay is a safe switch which can use low power circuit to control high power c
 The following is a schematic diagram of a common relay and the feature and circuit symbol of a 5V relay used in this project:
 
 .. list-table:: 
-   :width: 100%
    :align: center
+   :class: zebra
 
    * -  Diagram 
      -  Feature
@@ -121,8 +125,9 @@ Circuit
 In circuit of this project, the power pin of the 74HC595 IC chip is connected to 3.3V. It can also be connected to 5V to make LED matrix brighter.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter16_19|
@@ -144,7 +149,7 @@ Sketch
 
 Use buttons to control the relays and motors.
 
-Sketch_Control_Motor_by_Relay
+Sketch_16.1_Control_Motor_by_Relay
 ------------------------------------------
 
 .. image:: ../_static/imgs/16_Relay_&_Motor/Chapter16_21.png

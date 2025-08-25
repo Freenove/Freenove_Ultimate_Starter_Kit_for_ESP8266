@@ -1,12 +1,12 @@
 ##############################################################################
-Chapter Analog & PWM
+Chapter 4 Analog & PWM
 ##############################################################################
 
 In previous study, we have known that one button has two states: pressed and released, and LED has light-on/off state, then how to enter a middle state? How to output an intermediate state to let LED "semi bright"?  That's what we're going to learn.
 
 First, let's learn how to control the brightness of a LED.
 
-Project Breathing LED
+Project 4.1 Breathing LED
 ************************************
 
 Breathing light, that is, LED is turned from off to on gradually, and gradually from on to off, just like "breathing". So, how to control the brightness of a LED?  We will use PWM to achieve this target.
@@ -14,19 +14,24 @@ Breathing light, that is, LED is turned from off to on gradually, and gradually 
 Component List
 ==================================
 
-+-------------------------+------------------------------+
-| ESP8266 x1              | USB cable                    |
-|                         |                              |
-| |Chapter01_00|          | |Chapter01_01|               |
-+-------------------------+------------------------------+
-| Breadboard x1                                          |
-|                                                        |
-| |Chapter01_02|                                         |
-+----------------+------------------+--------------------+
-| LED x1         | Resistor 220Ω x1 | Jumper wire M/M x3 |
-|                |                  |                    |
-| |Chapter01_03| | |Chapter01_04|   | |Chapter01_05|     |
-+----------------+------------------+--------------------+
+.. table::
+    :align: center
+    :class: table-line
+    :width: 80%
+    
+    +-------------------------+------------------------------+
+    | ESP8266 x1              | USB cable                    |
+    |                         |                              |
+    | |Chapter01_00|          | |Chapter01_01|               |
+    +-------------------------+------------------------------+
+    | Breadboard x1                                          |
+    |                                                        |
+    | |Chapter01_02|                                         |
+    +----------------+------------------+--------------------+
+    | LED x1         | Resistor 220Ω x1 | Jumper wire M/M x3 |
+    |                |                  |                    |
+    | |Chapter01_03| | |Chapter01_04|   | |Chapter01_05|     |
+    +----------------+------------------+--------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -48,7 +53,7 @@ Their differences can more easily be seen when compared when graphed as below.
 .. image:: ../_static/imgs/4_Analog_&_PWM/Chapter04_00.png
     :align: center
 
-In practical application, we often use binary as the digital signal, that is a series of 0’s and 1’s. Since a binary signal only has two values (0 or 1), it has great stability and reliability. Lastly, both analog and digital signals can be converted into the other.
+In practical application, we often use binary as the digital signal, that is a series of 0's and 1's. Since a binary signal only has two values (0 or 1), it has great stability and reliability. Lastly, both analog and digital signals can be converted into the other.
 
 PWM
 --------------------------------------------
@@ -82,7 +87,7 @@ Circuit
 This circuit is the same as the one in engineering Blink.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
 
    * -  Schematic diagram
@@ -101,7 +106,7 @@ Code
 
 This project is designed to make PWM output GPIO4 with pulse width increasing from 0% to 100%, and then reducing from 100% to 0% gradually.
 
-Move the program folder " **Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes** " to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder " **Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes** " to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click"This computer" -> "D:" -> "Micropython_Codes" -> "04.1_BreatheLight" and double click "BreatheLight.py". 
 
@@ -181,19 +186,24 @@ After learning about PWM, we can use it to control LED Bar Graph and realize a c
 Component List
 ===============================
 
-+-------------------------+------------------------------+
-| ESP8266 x1              | USB cable                    |
-|                         |                              |
-| |Chapter01_00|          | |Chapter01_01|               |
-+-------------------------+------------------------------+
-| Breadboard x1                                          |
-|                                                        |
-| |Chapter01_02|                                         |
-+----------------+------------------+--------------------+
-|LED bar graph x1| Resistor 220Ω x8 | Jumper wire M/M x9 |
-|                |                  |                    |
-| |Chapter03_00| | |Chapter01_04|   | |Chapter01_05|     |
-+----------------+------------------+--------------------+
+.. table::
+    :align: center
+    :class: table-line
+    :width: 80%
+    
+    +-------------------------+------------------------------+
+    | ESP8266 x1              | USB cable                    |
+    |                         |                              |
+    | |Chapter01_00|          | |Chapter01_01|               |
+    +-------------------------+------------------------------+
+    | Breadboard x1                                          |
+    |                                                        |
+    | |Chapter01_02|                                         |
+    +----------------+------------------+--------------------+
+    |LED bar graph x1| Resistor 220Ω x8 | Jumper wire M/M x9 |
+    |                |                  |                    |
+    | |Chapter03_00| | |Chapter01_04|   | |Chapter01_05|     |
+    +----------------+------------------+--------------------+
 
 .. |Chapter03_00| image:: ../_static/imgs/3_LED_Bar/Chapter03_00.png
 
@@ -201,8 +211,9 @@ Circuit
 ===========================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter04_13|
@@ -215,7 +226,7 @@ Circuit
 .. |Chapter04_13| image:: ../_static/imgs/4_Analog_&_PWM/Chapter04_13.png
 .. |Chapter04_14| image:: ../_static/imgs/4_Analog_&_PWM/Chapter04_14.png
 
-:red:`If LEDbar doesn't work, try to rotate LEDbar for 180°. The label is random.`
+:combo:`red font-bolder:If LEDbar doesn't work, try to rotate LEDbar for 180°. The label is random.`
 
 Code
 ===========================
@@ -243,6 +254,7 @@ The following is the program code:
 Import the object myPWM from pwm.py and set corresponding pins for PWM channel.
 
 .. code-block:: python
+    :linenos:
 
     from machine import Pin,PWM
 

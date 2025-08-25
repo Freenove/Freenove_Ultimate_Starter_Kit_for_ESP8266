@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter LEDPixel
+Chapter 6 LEDPixel
 ##############################################################################
 
 This chapter will help you learn to use a more convenient RGB LED lamp, which requires only one GPIO control and can be connected in infinite series in theory. Each LED can be controlled independently.
 
-Project LEDPixel
+Project 6.1 LEDPixel
 ***************************
 
 Learn the basic usage of LEDPixel and use it to flash red, green, blue and white.
@@ -12,19 +12,24 @@ Learn the basic usage of LEDPixel and use it to flash red, green, blue and white
 Component List
 =========================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |          USB cable                    |
-|                                  |                                       |
-| |Chapter01_00|                   |          |Chapter01_01|               |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------------------+---------------------------------------+
-| Freenove 8 RGB LED Module x1     | Jumper wire F/M x4                    |
-|                                  |                                       |
-| |Chapter06_00|                   |          |Chapter06_01|               |
-+----------------------------------+---------------------------------------+
+.. table::
+    :align: center
+    :class: table-line
+    :width: 80%
+    
+    +----------------------------------+---------------------------------------+
+    | ESP8266 x1                       |          USB cable                    |
+    |                                  |                                       |
+    | |Chapter01_00|                   |          |Chapter01_01|               |
+    +----------------------------------+---------------------------------------+
+    | Breadboard x1                                                            |
+    |                                                                          |
+    | |Chapter01_02|                                                           |
+    +----------------------------------+---------------------------------------+
+    | Freenove 8 RGB LED Module x1     | Jumper wire F/M x4                    |
+    |                                  |                                       |
+    | |Chapter06_00|                   |          |Chapter06_01|               |
+    +----------------------------------+---------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -54,17 +59,22 @@ And you can also control many modules at the same time. Just connect OUT pin of 
 
 :orange:`Pin description:` 
 
-+---------------------------------------+---------------------------------------+
-|                 (IN)                  | (OUT)                                 |
-+--------+------------------------------+--------+------------------------------+
-| symbol | Function                     | symbol | Function                     |
-+--------+------------------------------+--------+------------------------------+
-| S      | Input control signal         | S      | Output control signal        |
-+--------+------------------------------+--------+------------------------------+
-| V      | Power supply pin, +3.5V~5.5V | V      | Power supply pin, +3.5V~5.5V |
-+--------+------------------------------+--------+------------------------------+
-| G      | GND                          | G      | GND                          |
-+--------+------------------------------+--------+------------------------------+
+.. table::
+    :align: center
+    :class: table-line
+    :width: 80%
+    
+    +---------------------------------------+---------------------------------------+
+    |                 (IN)                  | (OUT)                                 |
+    +--------+------------------------------+--------+------------------------------+
+    | symbol | Function                     | symbol | Function                     |
+    +--------+------------------------------+--------+------------------------------+
+    | S      | Input control signal         | S      | Output control signal        |
+    +--------+------------------------------+--------+------------------------------+
+    | V      | Power supply pin, +3.5V~5.5V | V      | Power supply pin, +3.5V~5.5V |
+    +--------+------------------------------+--------+------------------------------+
+    | G      | GND                          | G      | GND                          |
+    +--------+------------------------------+--------+------------------------------+
 
 Circuit
 ===========================
@@ -72,8 +82,9 @@ Circuit
 This circuit is the same as the one in engineering Blink.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter06_04|
@@ -89,11 +100,11 @@ This circuit is the same as the one in engineering Blink.
 Code
 ============================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "06.1_Neopixel" and double click "Neopixel.py". 
 
-Neopixel
+06.1_Neopixel
 ----------------------------
 
 .. image:: ../_static/imgs/6_LEDPixel/Chapter06_13.png
@@ -169,7 +180,7 @@ Before each usr of **neopixel module** , please add the statement " **import neo
 
 .. _rainbow:
 
-Project Rainbow Light
+Project 6.2 Rainbow Light
 *********************************
 
 In the previous project, we have mastered the usage of NeoPixel. This project will realize a slightly complicated Rainbow Light. The component list and the circuit are exactly the same as the project fashionable Light.
@@ -182,11 +193,11 @@ Continue to use the following color model to equalize the color distribution of 
 .. image:: ../_static/imgs/6_LEDPixel/Chapter06_15.png
     :align: center
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "06.2_Rainbow_light" and then double click "Rainbow_light.py". 
 
-Rainbow_light 
+06.2_Rainbow_light 
 ------------------------
 
 .. image:: ../_static/imgs/6_LEDPixel/Chapter06_16.png

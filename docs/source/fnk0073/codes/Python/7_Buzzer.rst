@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Buzzer
+Chapter 7 Buzzer
 ##############################################################################
 
 In this chapter, we will learn about buzzers that can make sounds.
 
-Project Doorbell
+Project 7.1 Doorbell
 ******************************
 
 We will make this kind of doorbell: when the button is pressed, the buzzer sounds; and when the button is released, the buzzer stops sounding.
@@ -12,29 +12,34 @@ We will make this kind of doorbell: when the button is pressed, the buzzer sound
 Component List
 ==================================
 
-+-----------------------------------+------------------------------+
-| ESP8266 x1                        | USB cable                    |
-|                                   |                              |
-| |Chapter01_00|                    | |Chapter01_01|               |
-+-----------------------------------+------------------------------+
-| Breadboard x1                                                    |
-|                                                                  |
-| |Chapter01_02|                                                   |
-+--------------------------+------------------+--------------------+
-| NPN transistorx1         | Resistor 1kΩ x1  | Active buzzer x1   |
-|                          |                  |                    |
-| (S8050)                  |                  |                    |
-|                          |                  |                    |
-| |Chapter07_00|           | |Chapter07_03|   | |Chapter07_01|     |
-+--------------------------+--------+---------+--------------------+
-| Resistor 10kΩ x2                  | Push button x1               |
-|                                   |                              |
-| |Chapter02_01|                    | |Chapter07_02|               |
-+-----------------------------------+------------------------------+
-| Jumper wire M/M x9                                               |
-|                                                                  |
-| |Chapter07_04|                                                   |
-+------------------------------------------------------------------+
+.. table::
+    :align: center
+    :class: table-line
+    :width: 80%
+    
+    +-----------------------------------+------------------------------+
+    | ESP8266 x1                        | USB cable                    |
+    |                                   |                              |
+    | |Chapter01_00|                    | |Chapter01_01|               |
+    +-----------------------------------+------------------------------+
+    | Breadboard x1                                                    |
+    |                                                                  |
+    | |Chapter01_02|                                                   |
+    +--------------------------+------------------+--------------------+
+    | NPN transistorx1         | Resistor 1kΩ x1  | Active buzzer x1   |
+    |                          |                  |                    |
+    | (S8050)                  |                  |                    |
+    |                          |                  |                    |
+    | |Chapter07_00|           | |Chapter07_03|   | |Chapter07_01|     |
+    +--------------------------+--------+---------+--------------------+
+    | Resistor 10kΩ x2                  | Push button x1               |
+    |                                   |                              |
+    | |Chapter02_01|                    | |Chapter07_02|               |
+    +-----------------------------------+------------------------------+
+    | Jumper wire M/M x9                                               |
+    |                                                                  |
+    | |Chapter07_04|                                                   |
+    +------------------------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -83,7 +88,7 @@ Transistor, the full name: semiconductor transistor, is a semiconductor device t
 .. image:: ../_static/imgs/7_Buzzer/Chapter07_07.png
     :align: center
 
-:red:`In our kit, the PNP transistor is marked with 8550, and the NPN transistor is marked with 8050.`
+:combo:`red font-bolder:In our kit, the PNP transistor is marked with 8550, and the NPN transistor is marked with 8050.`
 
 Based on the transistor's characteristics, it is often used as a switch in digital circuits. As micro-controller's capacity to output current is very weak, we will use transistor to amplify current and drive large-current components.
 
@@ -92,8 +97,10 @@ When use NPN transistor to drive buzzer, we often adopt the following method. If
 When use PNP transistor to drive buzzer, we often adopt the following method. If GPIO outputs low level, current will flow through R1, the transistor will get conducted, and the buzzer will sound. If GPIO outputs high level, no current flows through R1, the transistor will not be conducted, and buzzer will not sound.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :header-rows: 1
+   :class: table-line
 
    * -  NPN transistor to drive buzzer
      -  NPN transistor to drive buzzer
@@ -108,8 +115,9 @@ Circuit
 =======================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter07_10|
@@ -131,11 +139,11 @@ Code
 
 In this project, a buzzer will be controlled by a push button switch. When the button switch is pressed, the buzzer sounds and when the button is released, the buzzer stops. It is analogous to our earlier project that controlled an LED ON and OFF.
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "07.1_Doorbell" and double click "Doorbell.py". 
 
-Doorbell
+07.1_Doorbell
 -------------------------
 
 .. image:: ../_static/imgs/7_Buzzer/Chapter07_16.png

@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter LEDPixel
+Chapter 6 LEDPixel
 ##############################################################################
 
 This chapter will help you learn to use a more convenient RGB LED lamp, which requires only one GPIO control and can be connected in infinite series in theory. Each LED can be controlled independently.
 
-Project LEDPixel
+Project 6.1 LEDPixel
 ***************************
 
 Learn the basic usage of LEDPixel and use it to flash red, green, blue and white.
@@ -12,19 +12,24 @@ Learn the basic usage of LEDPixel and use it to flash red, green, blue and white
 Component List
 =========================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |          USB cable                    |
-|                                  |                                       |
-| |Chapter01_00|                   |          |Chapter01_01|               |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------------------+---------------------------------------+
-| Freenove 8 RGB LED Module x1     | Jumper wire F/M x4                    |
-|                                  |                                       |
-| |Chapter06_00|                   |          |Chapter06_01|               |
-+----------------------------------+---------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +----------------------------------+---------------------+
+    | ESP8266 x1                       | USB cable           |
+    |                                  |                     |
+    | |Chapter01_00|                   | |Chapter01_01|      |
+    +----------------------------------+---------------------+
+    | Breadboard x1                                          |
+    |                                                        |
+    | |Chapter01_02|                                         |
+    +----------------------------------+---------------------+
+    | Freenove 8 RGB LED Module x1     | Jumper wire F/M x4  |
+    |                                  |                     |
+    | |Chapter06_00|                   | |Chapter06_01|      |
+    +----------------------------------+---------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -35,7 +40,7 @@ Component List
 Related knowledge
 ============================
 
-Freenove 8 RGB LED Module  
+Freenove 8 RGB LED Module
 -------------------------------
 
 The Freenove 8 RGB LED Module is as below. 
@@ -54,17 +59,21 @@ And you can also control many modules at the same time. Just connect OUT pin of 
 
 :orange:`Pin description:` 
 
-+---------------------------------------+---------------------------------------+
-|                 (IN)                  | (OUT)                                 |
-+--------+------------------------------+--------+------------------------------+
-| symbol | Function                     | symbol | Function                     |
-+--------+------------------------------+--------+------------------------------+
-| S      | Input control signal         | S      | Output control signal        |
-+--------+------------------------------+--------+------------------------------+
-| V      | Power supply pin, +3.5V~5.5V | V      | Power supply pin, +3.5V~5.5V |
-+--------+------------------------------+--------+------------------------------+
-| G      | GND                          | G      | GND                          |
-+--------+------------------------------+--------+------------------------------+
+.. table::
+    :align: center
+    :class: zebra text-center
+    
+    +---------------------------------------+---------------------------------------+
+    |                 (IN)                  | (OUT)                                 |
+    +========+==============================+========+==============================+
+    | symbol | Function                     | symbol | Function                     |
+    +--------+------------------------------+--------+------------------------------+
+    | S      | Input control signal         | S      | Output control signal        |
+    +--------+------------------------------+--------+------------------------------+
+    | V      | Power supply pin, +3.5V~5.5V | V      | Power supply pin, +3.5V~5.5V |
+    +--------+------------------------------+--------+------------------------------+
+    | G      | GND                          | G      | GND                          |
+    +--------+------------------------------+--------+------------------------------+
 
 Circuit
 ===========================
@@ -72,14 +81,15 @@ Circuit
 This circuit is the same as the one in engineering Blink.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter06_04|
    * -  Hardware connection 
      
-        If you need any support, please feel free to contact us via: support@freenove.com
+        :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
    * -  |Chapter06_05|
 
@@ -98,7 +108,7 @@ How to install the library
 
 There are two ways to add libraries.
 
-The first way, open the Arduino IDE, click Tools -> Manager Libraries.
+The first way, open the Arduino IDE, click Tools **->** Manager Libraries.
 
 .. image:: ../_static/imgs/6_LEDPixel/Chapter06_06.png
     :align: center
@@ -108,7 +118,7 @@ In the pop-up window, Library Manager, search for the name of the Library, "Adaf
 .. image:: ../_static/imgs/6_LEDPixel/Chapter06_07.png
     :align: center
 
-The second way, open Arduino IDE, click Sketch -> Include Library -> Add .ZIP Library, In the pop-up window, find the file named "./Libraries/Adafruit_NeoPixel.Zip" which locates in this directory, and click OPEN.
+The second way, open Arduino IDE, click Sketch **->** Include Library **->** Add .ZIP Library, In the pop-up window, find the file named "./Libraries/Adafruit_NeoPixel.Zip" which locates in this directory, and click OPEN.
 
 .. image:: ../_static/imgs/6_LEDPixel/Chapter06_08.png
     :align: center
@@ -117,7 +127,7 @@ Upload following sketch:
 
 **Freenove_Ultimate_Starter_Kit_for_ESP8266\\C\\Sketches\\Sketch_06.1_LEDPixel**
 
-Sketch_LEDPixel
+Sketch_06.1_LEDPixel
 -------------------------------
 
 .. image:: ../_static/imgs/6_LEDPixel/Chapter06_09.png
@@ -232,7 +242,7 @@ Reference
 
 .. _c_rainbow:
 
-Project Rainbow Light
+Project 6.2 Rainbow Light
 *********************************
 
 In the previous project, we have mastered the use of LEDPixel. This project will realize a slightly complicated rainbow light. The component list and the circuit are exactly the same as the project fashionable light.
@@ -242,11 +252,14 @@ Sketch
 
 Continue to use the following color model to equalize the color distribution of the 8 LEDs and gradually change.  
 
+.. image:: ../_static/imgs/5_RGB_LED/Chapter05_06.png
+    :align: center
+
 Upload following sketch:
 
-**Freenove_Ultimate_Starter_Kit_for_ESP8266\C\Sketches\Sketch_06.2_RainbowLight**
+**Freenove_Ultimate_Starter_Kit_for_ESP8266\\C\\Sketches\\Sketch_06.2_RainbowLight**
 
-Sketch_RainbowLight
+Sketch_06.2_RainbowLight
 ------------------------------
 
 .. image:: ../_static/imgs/6_LEDPixel/Chapter06_11.png

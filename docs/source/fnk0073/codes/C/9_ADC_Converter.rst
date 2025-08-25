@@ -1,5 +1,5 @@
 ##############################################################################
-Chapter ADC Converter
+Chapter 9 ADC Converter
 ##############################################################################
 
 We have learned how to control the brightness of LED through PWM and understood that PWM is not the real analog before. In this chapter, we will learn how to read analog, convert it into digital. That is, ADC.
@@ -12,19 +12,24 @@ In this project, ADC is used to convert analog signals into digital signals. Con
 Component List
 =============================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |          USB cable                    |
-|                                  |                                       |
-| |Chapter01_00|                   |          |Chapter01_01|               |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------------------+---------------------------------------+
-| Rotary potentiometer x1          | Jumper wire M/M x3                    |
-|                                  |                                       |
-| |Chapter09_00|                   |          |Chapter06_01|               |
-+----------------------------------+---------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +---------------------------+----------------------------+
+    | ESP8266 x1                | USB cable                  |
+    |                           |                            |
+    | |Chapter01_00|            | |Chapter01_01|             |
+    +---------------------------+----------------------------+
+    | Breadboard x1                                          |
+    |                                                        |
+    | |Chapter01_02|                                         |
+    +---------------------------+----------------------------+
+    | Rotary potentiometer x1   | Jumper wire M/M x3         |
+    |                           |                            |
+    | |Chapter09_00|            |  |Chapter06_01|            |
+    +---------------------------+----------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -66,8 +71,9 @@ ESP8266 has one digital analog converters with successive approximations of 10-b
 Do not exceed this voltage range when you use the ADC function. Exceeding this voltage range can cause permanent damage to your hardware!
 
 .. list-table:: 
-   :width: 30%
    :align: center
+   :header-rows: 1
+   :class: zebra text-center
 
    * -  Pin number in ESP8266 
    * -  A0
@@ -106,8 +112,9 @@ Circuit
 Use pin A0 on the control board to detect the voltage of rotary potentiometer.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter09_06|
@@ -123,7 +130,7 @@ Use pin A0 on the control board to detect the voltage of rotary potentiometer.
 Sketch
 ===========================
 
-Sketch_ADC
+Sketch_09.1_ADC
 --------------------------
 
 .. image:: ../_static/imgs/9_ADC_Converter/Chapter09_08.png

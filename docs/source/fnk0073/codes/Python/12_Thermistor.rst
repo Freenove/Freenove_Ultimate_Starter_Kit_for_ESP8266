@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Thermistor
+Chapter 12 Thermistor
 ##############################################################################
 
 In this chapter, we will learn about thermistors which are another kind of resistor
 
-Project Thermometer
+Project 12.1 Thermometer
 *******************************
 
 A thermistor is a type of resistor whose resistance value is dependent on temperature and changes in temperature. Therefore, we can take advantage of this characteristic to make a thermometer.
@@ -12,19 +12,24 @@ A thermistor is a type of resistor whose resistance value is dependent on temper
 Component List
 ==================================
 
-+-------------------------+------------------------------+
-| ESP8266 x1              | USB cable                    |
-|                         |                              |
-| |Chapter01_00|          | |Chapter01_01|               |
-+-------------------------+------------------------------+
-| Breadboard x1                                          |
-|                                                        |
-| |Chapter01_02|                                         |
-+----------------+------------------+--------------------+
-| Thermistor x1  | Resistor 10kΩ x1 | Jumper wire M/M x4 |
-|                |                  |                    |
-| |Chapter12_00| | |Chapter12_01|   | |Chapter01_05|     |
-+----------------+------------------+--------------------+
+.. table::
+    :align: center
+    :class: table-line
+    :width: 80%
+    
+    +-------------------------+------------------------------+
+    | ESP8266 x1              | USB cable                    |
+    |                         |                              |
+    | |Chapter01_00|          | |Chapter01_01|               |
+    +-------------------------+------------------------------+
+    | Breadboard x1                                          |
+    |                                                        |
+    | |Chapter01_02|                                         |
+    +----------------+------------------+--------------------+
+    | Thermistor x1  | Resistor 10kΩ x1 | Jumper wire M/M x4 |
+    |                |                  |                    |
+    | |Chapter12_00| | |Chapter12_01|   | |Chapter01_05|     |
+    +----------------+------------------+--------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -36,7 +41,7 @@ Component List
 Component knowledge
 =============================
 
-Thermistor
+12.1_Thermistor
 -----------------------------
 
 A thermistor is a temperature sensitive resistor. When it senses a change in temperature, the resistance of the thermistor will change. We can take advantage of this characteristic by using a thermistor to detect temperature intensity. A thermistor and its electronic symbol are shown below.
@@ -79,8 +84,9 @@ Circuit
 The circuit of this project is similar to project Soft Light. The only difference is that the input signal is changed from a potentiometer to a combination of a photoresistor and a resistor.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter12_05|
@@ -96,7 +102,7 @@ The circuit of this project is similar to project Soft Light. The only differenc
 Code
 ===========================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "12.1_Thermometer" and double click "Thermometer.py". 
 
@@ -108,7 +114,7 @@ Thermometer
 
 Click "Run current script" and "Shell" will constantly display the current ADC value, voltage value and temperature value. Try to "pinch" the thermistor (without touching the leads) with your index finger and thumb for a brief time, you should see that the temperature value increases.
 
-:red:`If you have any concerns, please contact us via:` support@freenove.com
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com
 
 .. image:: ../_static/imgs/12_Thermistor/Chapter12_10.png
     :align: center

@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter RFID
+Chapter 27 RFID
 ##############################################################################
 
 Now, we will learn to use the RFID (Radio Frequency Identification) wireless communication technology.
 
-Project 27.1RFID read UID
+Project 27.1 RFID read UID
 **********************************
 
 In this project, we will read the unique ID number (UID) of the RFID card, recognize the type of the RFID card and display the information through serial port.
@@ -12,23 +12,28 @@ In this project, we will read the unique ID number (UID) of the RFID card, recog
 Component List
 =====================================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |  USB cable                            |
-|                                  |                                       |
-| |Chapter01_00|                   |   |Chapter01_01|                      |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------------------+---------------------------------------+
-| RC522 module x1                  | Jumper wire M/M x8                    |
-|                                  |                                       |
-| |Chapter27_00|                   |   |Chapter22_00|                      |
-+----------------------------------+---------------------------------------+
-| Mifare1 S50 Standard card x1     | Mifare1 S50 Non-standard card x1      |
-|                                  |                                       |
-| |Chapter27_01|                   |   |Chapter27_02|                      |
-+----------------------------------+---------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +----------------------------------+---------------------------------------+
+    | ESP8266 x1                       |  USB cable                            |
+    |                                  |                                       |
+    | |Chapter01_00|                   |   |Chapter01_01|                      |
+    +----------------------------------+---------------------------------------+
+    | Breadboard x1                                                            |
+    |                                                                          |
+    | |Chapter01_02|                                                           |
+    +----------------------------------+---------------------------------------+
+    | RC522 module x1                  | Jumper wire M/M x8                    |
+    |                                  |                                       |
+    | |Chapter27_00|                   |   |Chapter22_00|                      |
+    +----------------------------------+---------------------------------------+
+    | Mifare1 S50 Standard card x1     | Mifare1 S50 Non-standard card x1      |
+    |                                  |                                       |
+    | |Chapter27_01|                   |   |Chapter27_02|                      |
+    +----------------------------------+---------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -75,29 +80,34 @@ interface.
 
 Technical specs:
 
-+-----------------------+-----------------------------------------------+
-| Operating Voltage     | 13-26mA(DC)\3.3V                              |
-+-----------------------+-----------------------------------------------+
-| Idle current          | 10-13mA(DC)\3.3V                              |
-+-----------------------+-----------------------------------------------+
-| Sleep current in the  | <80uA                                         |
-+-----------------------+-----------------------------------------------+
-| Peak current          | <30mA                                         |
-+-----------------------+-----------------------------------------------+
-| Operating frequency   | 13.56MHz                                      |
-+-----------------------+-----------------------------------------------+
-|                       | Mifare1 S50、Mifare1 S70、Mifare Ultralight、 |
-| Supported card type   |                                               |
-|                       | Mifare Pro、Mifare Desfire                    |
-+-----------------------+-----------------------------------------------+
-| Size                  | 40mmX60mm                                     |
-+-----------------------+-----------------------------------------------+
-| Operation temperature | 20-80 degrees(Celsius)                        |
-+-----------------------+-----------------------------------------------+
-| Storage temperature   | 40-85 degrees (Celsius)                       |
-+-----------------------+-----------------------------------------------+
-| Operation humidity    | 5%-95%(Relative humidity)                     |
-+-----------------------+-----------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +-----------------------+-----------------------------------------------+
+    | Operating Voltage     | 13-26mA(DC)\\3.3V                             |
+    +-----------------------+-----------------------------------------------+
+    | Idle current          | 10-13mA(DC)\\3.3V                             |
+    +-----------------------+-----------------------------------------------+
+    | Sleep current in the  | <80uA                                         |
+    +-----------------------+-----------------------------------------------+
+    | Peak current          | <30mA                                         |
+    +-----------------------+-----------------------------------------------+
+    | Operating frequency   | 13.56MHz                                      |
+    +-----------------------+-----------------------------------------------+
+    |                       | Mifare1 S50、Mifare1 S70、Mifare Ultralight、 |
+    | Supported card type   |                                               |
+    |                       | Mifare Pro、Mifare Desfire                    |
+    +-----------------------+-----------------------------------------------+
+    | Size                  | 40mmX60mm                                     |
+    +-----------------------+-----------------------------------------------+
+    | Operation temperature | 20-80 degrees(Celsius)                        |
+    +-----------------------+-----------------------------------------------+
+    | Storage temperature   | 40-85 degrees (Celsius)                       |
+    +-----------------------+-----------------------------------------------+
+    | Operation humidity    | 5%-95%(Relative humidity)                     |
+    +-----------------------+-----------------------------------------------+
 
 Mifare1 S50 Card
 -----------------------------
@@ -108,35 +118,40 @@ equipped for this kit are shown below.
 The Mifare S50 capacity (1K byte) is divided into 16 sectors (Sector0-Sector15). Each sector contains 4 data block (Block0-Block3. 64 blocks of 16 sectors will be numbered according absolute address, from 0 to 63). 
 And each block contains 16 bytes (Byte0-Byte15), 64*16=1024. As is shown in the following table:
 
-+------------+-----------+--------------------------------------+---------------+--------------------+
-| Sector No. | Block No. | Storage area                         | Block type    | Absolute block No. |
-+------------+-----------+--------------------------------------+---------------+--------------------+
-|            | block 0   | vendor code                          | vendor block  | 0                  |
-|            +-----------+--------------------------------------+---------------+--------------------+
-|            | block 1   |                                      | data block    | 1                  |
-|            +-----------+--------------------------------------+---------------+--------------------+
-| sector 0   | block 2   |                                      | data block    | 2                  |
-|            +-----------+--------------------------------------+---------------+--------------------+
-|            | block 3   | Password A-access control-password B | control block | 3                  |
-+------------+-----------+--------------------------------------+---------------+--------------------+
-|            | block 0   |                                      | data block    | 4                  |
-|            +-----------+--------------------------------------+---------------+--------------------+
-| sector 1   | block 1   |                                      | data block    | 5                  |
-|            +-----------+--------------------------------------+---------------+--------------------+
-|            | block 2   |                                      | data block    | 6                  |
-|            +-----------+--------------------------------------+---------------+--------------------+
-|            | block 3   | Password A-access control-password B | control block | 7                  |
-+------------+-----------+--------------------------------------+---------------+--------------------+
-| ...        | ...       | ...                                  | ...           |                    |
-+------------+-----------+--------------------------------------+---------------+--------------------+
-|            | block 0   |                                      | data block    | 60                 |
-|            +-----------+--------------------------------------+---------------+--------------------+
-| sector 15  | block 1   |                                      | data block    | 61                 |
-|            +-----------+--------------------------------------+---------------+--------------------+
-|            | block 2   |                                      | data block    | 62                 |
-|            +-----------+--------------------------------------+---------------+--------------------+
-|            | block 3   | Password A-access control-password B | control block | 63                 |
-+------------+-----------+--------------------------------------+---------------+--------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: zebra
+    
+    +------------+-----------+--------------------------------------+---------------+--------------------+
+    | Sector No. | Block No. | Storage area                         | Block type    | Absolute block No. |
+    +============+===========+======================================+===============+====================+
+    |            | block 0   | vendor code                          | vendor block  | 0                  |
+    |            +-----------+--------------------------------------+---------------+--------------------+
+    |            | block 1   |                                      | data block    | 1                  |
+    |            +-----------+--------------------------------------+---------------+--------------------+
+    | sector 0   | block 2   |                                      | data block    | 2                  |
+    |            +-----------+--------------------------------------+---------------+--------------------+
+    |            | block 3   | Password A-access control-password B | control block | 3                  |
+    +------------+-----------+--------------------------------------+---------------+--------------------+
+    |            | block 0   |                                      | data block    | 4                  |
+    |            +-----------+--------------------------------------+---------------+--------------------+
+    | sector 1   | block 1   |                                      | data block    | 5                  |
+    |            +-----------+--------------------------------------+---------------+--------------------+
+    |            | block 2   |                                      | data block    | 6                  |
+    |            +-----------+--------------------------------------+---------------+--------------------+
+    |            | block 3   | Password A-access control-password B | control block | 7                  |
+    +------------+-----------+--------------------------------------+---------------+--------------------+
+    | ...        | ...       | ...                                  | ...           | ...                |
+    +------------+-----------+--------------------------------------+---------------+--------------------+
+    |            | block 0   |                                      | data block    | 60                 |
+    |            +-----------+--------------------------------------+---------------+--------------------+
+    | sector 15  | block 1   |                                      | data block    | 61                 |
+    |            +-----------+--------------------------------------+---------------+--------------------+
+    |            | block 2   |                                      | data block    | 62                 |
+    |            +-----------+--------------------------------------+---------------+--------------------+
+    |            | block 3   | Password A-access control-password B | control block | 63                 |
+    +------------+-----------+--------------------------------------+---------------+--------------------+
 
 Each sector has a set of independent password and access control put in its last block, that is, Block 3, which is also known as sector trailer. Sector 0, block 0 (namely absolute address 0) of S50 is used to store the card serial number and vendor code, which has been solidified and can’t be changed. Except the manufacturer and the control block, the rest of the cards are data blocks, which can be used to store data. Data block can be used for two kinds of applications:
 
@@ -146,11 +161,16 @@ Each sector has a set of independent password and access control put in its last
 
 The sector trailer block in each sector is the control block, including a 6-byte password A, a 4-byte access control and a 6-byte password B. For example, the control block of a brand new card is as follows:
 
-+-------------------+----------------+-------------------+
-| A0 A1 A2 A3 A4 A5 | FF 07 80 69    | B0 B1 B2 B3 B4 B5 |
-+-------------------+----------------+-------------------+
-| password A        | access control | password B        |
-+-------------------+----------------+-------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +-------------------+----------------+-------------------+
+    | A0 A1 A2 A3 A4 A5 | FF 07 80 69    | B0 B1 B2 B3 B4 B5 |
+    +-------------------+----------------+-------------------+
+    | password A        | access control | password B        |
+    +-------------------+----------------+-------------------+
 
 The default password of a brand new card is generally 0A1A2A3A4A5 for password A and B0B1B2B3B4B5 for password B, or both the password A and password B are 6 FF. Access control is used to set the access conditions for each block (including the control block itself) in a sector.
 
@@ -158,7 +178,7 @@ Blocks of S50 are divided into data blocks and control blocks. There are four op
 
 For more details about how to set data blocks and control blocks, please refer to Datasheet.
 
-By default, after verifying password A or password B, we can do reading or writing operation to data blocks. And after verifying password A, we can do reading or writing operation to control blocks. But password A can never be read, so if you choose to verify password A but forget the password A, the block will never be able to read again. :red:`It is highly recommended that beginners should not try to change the contents of control blocks.`
+By default, after verifying password A or password B, we can do reading or writing operation to data blocks. And after verifying password A, we can do reading or writing operation to control blocks. But password A can never be read, so if you choose to verify password A but forget the password A, the block will never be able to read again. :combo:`red font-bolder:It is highly recommended that beginners should not try to change the contents of control blocks.`
 
 For Mifare1 S50 card equipped in Freenove RFID Kit, the default password A and B are both FFFFFFFFFFFF. 
 
@@ -168,12 +188,13 @@ Circuit
 The connection of control board and RFID module is shown below.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter27_03|
-   * -  Hardware connection. 
+   * -  Hardware connection
     
         If you need any support, please feel free to contact us via: support@freenove.com
    
@@ -185,7 +206,7 @@ The connection of control board and RFID module is shown below.
 Sketch
 =============================
 
-Sketch_RFID_Read_UID
+Sketch_27.1_RFID_Read_UID
 ------------------------------------
 
 Before writing code, we need to import the library needed.
@@ -266,7 +287,7 @@ Same with last section.
 Sketch
 =====================================
 
-Sketch_RFID_Read_And_Write
+Sketch_27.2_RFID_Read_And_Write
 ----------------------------------------
 
 In this sketch, first read the data in particular location of the S50 M1 Card, then write data in that position and read it out. Display these data through the serial port.

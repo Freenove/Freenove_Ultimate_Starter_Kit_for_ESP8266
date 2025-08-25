@@ -1,5 +1,5 @@
 ##############################################################################
-Chapter Serial Communication
+Chapter 8 Serial Communication
 ##############################################################################
 
 Serial Communication is a means of communication between different devices/devices. This section describes ESP8266's Serial Communication.
@@ -13,8 +13,9 @@ Component List
 ==========================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  ESP8266 x1
      -  USB cable
@@ -157,7 +158,7 @@ Then type characters like 'ABCDEG' into the data sent at the top and click the S
 
 The following is the program code:
 
-.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_08.1_SerialPrinter/Sketch_08.1_SerialPrinter.ino
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_08.2_SerialRW/Sketch_08.2_SerialRW.ino
     :linenos: 
     :language: c
     :lines: 1-30

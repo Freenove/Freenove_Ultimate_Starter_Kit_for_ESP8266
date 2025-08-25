@@ -1,5 +1,5 @@
 ##############################################################################
-Chapter Tetris
+Chapter 5 Tetris
 ##############################################################################
 
 In this chapter, we prepare a tetris game for you. You can play the game by pressing the buttons.
@@ -12,19 +12,24 @@ Now, let's use Processing and ESP8266 board to achieve the tetris game.
 Component list
 =============================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |          USB cable                    |
-|                                  |                                       |
-| |Chapter01_00|                   |          |Chapter01_01|               |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+---------------------+----------------------+-----------------------------+
-| Push button x4      |  Resistor 10kΩ x4    | Jumper wire M/M x5          |
-|                     |                      |                             |
-| |Chapter02_00|      |   |Chapter02_01|     |   |Chapter02_02|            |
-+---------------------+----------------------+-----------------------------+
+.. table::
+    :align: center
+    :width: 80%
+    :class: table-line
+
+    +----------------------------------+---------------------------------------+
+    | ESP8266 x1                       |          USB cable                    |
+    |                                  |                                       |
+    | |Chapter01_00|                   |          |Chapter01_01|               |
+    +----------------------------------+---------------------------------------+
+    | Breadboard x1                                                            |
+    |                                                                          |
+    | |Chapter01_02|                                                           |
+    +---------------------+----------------------+-----------------------------+
+    | Push button x4      |  Resistor 10kΩ x4    | Jumper wire M/M x5          |
+    |                     |                      |                             |
+    | |Chapter02_00|      |   |Chapter02_01|     |   |Chapter02_02|            |
+    +---------------------+----------------------+-----------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -39,8 +44,9 @@ Circuit
 Use Pin5, Pin14, Pin12, Pin13 port on ESP8266 board to control the movement of the block.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter05_00|

@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Matrix Keypad
+Chapter 22 Matrix Keypad
 ##############################################################################
 
 Earlier we learned about a single push button switch. In this chapter, we will learn about matrix keyboards, which integrates a number of push button switches as keys for the purposes of input.
 
-Project Matrix Keypad
+Project 22.1 Matrix Keypad
 ************************************
 
 In this project, we will attempt to get every key code on the matrix keypad to work.
@@ -12,19 +12,24 @@ In this project, we will attempt to get every key code on the matrix keypad to w
 Component List
 =========================================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |  USB cable                            |
-|                                  |                                       |
-| |Chapter01_00|                   |   |Chapter01_01|                      |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------------------+---------------------------------------+
-| 4x4 Matrix Keypad x1             | Jumper wire M/M x8                    |
-|                                  |                                       |
-| |Chapter22_01|                   |   |Chapter22_00|                      |
-+----------------------------------+---------------------------------------+
+.. table::
+    :align: center
+    :class: table-line
+    :width: 80%
+    
+    +----------------------------------+---------------------------------------+
+    | ESP8266 x1                       |  USB cable                            |
+    |                                  |                                       |
+    | |Chapter01_00|                   |   |Chapter01_01|                      |
+    +----------------------------------+---------------------------------------+
+    | Breadboard x1                                                            |
+    |                                                                          |
+    | |Chapter01_02|                                                           |
+    +----------------------------------+---------------------------------------+
+    | 4x4 Matrix Keypad x1             | Jumper wire M/M x8                    |
+    |                                  |                                       |
+    | |Chapter22_01|                   |   |Chapter22_00|                      |
+    +----------------------------------+---------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -49,16 +54,15 @@ Similar to the integration of a LED matrix, the 4x4 keypad matrix has each row o
 .. image:: ../_static/imgs/22_Matrix_Keypad/Chapter22_03.png
     :align: center
 
-The usage is similar to the LED matrix, using a row or column scanning method to detect the state of each key' s position by column and row. Take column scanning method as an example, send low level to the first 1 column (Pin1), detect level state of row 5, 6, 7, 8 to judge whether the key A, B, C, D are pressed. Then send low level to column 2, 3, 4 in turn to detect whether other keys are pressed. Therefore, you can get the state of all of the keys.
+The method of usage is similar to the Matrix LED, by using a row or column scanning method to detect the state of each key’s position by column and row. Take column scanning method as an example, send low level to the first 1 column (Pin1), detect level state of row 5, 6, 7, 8 to judge whether the key A, B, C, D are pressed. Then send low level to column 2, 3, 4 in turn to detect whether other keys are pressed. By this means, you can get the state of all of the keys.
 
 Circuit
 ========================
 
-Note that the voltage of ultrasonic module is 5V in the circuit.
-
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter22_04|
@@ -76,11 +80,11 @@ Code
 
 This code is used to obtain all key codes of the 4x4 Matrix Keypad, when one of the keys is pressed, the key code will be printed out via serial port.
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" ->  "22.1_Matrix_Keypad". Select"keypad.py", right click your mouse to select "Upload to /", wait for "keypad.py" to be uploaded to ESP8266 and then double click "Matrix_Keypad.py". 
 
-Matrix_Keypad
+22.1_Matrix_Keypad
 -------------------------------
 
 .. image:: ../_static/imgs/22_Matrix_Keypad/Chapter22_10.png

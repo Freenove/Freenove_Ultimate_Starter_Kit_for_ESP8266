@@ -1,5 +1,5 @@
 ##############################################################################
-Chapter Matrix Keypad
+Chapter 22 Matrix Keypad
 ##############################################################################
 
 Earlier we learned about a single push button switch. In this chapter, we will learn about matrix keyboards, which integrates a number of push button switches as keys for the purposes of input.
@@ -12,19 +12,24 @@ In this project, we will attempt to get every key code on the matrix keypad to w
 Component List
 =========================================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |  USB cable                            |
-|                                  |                                       |
-| |Chapter01_00|                   |   |Chapter01_01|                      |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------------------+---------------------------------------+
-| 4x4 Matrix Keypad x1             | Jumper wire M/M x8                    |
-|                                  |                                       |
-| |Chapter22_01|                   |   |Chapter22_00|                      |
-+----------------------------------+---------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------+-----------------------+
+    | ESP8266 x1             |  USB cable            |
+    |                        |                       |
+    | |Chapter01_00|         |   |Chapter01_01|      |
+    +------------------------+-----------------------+
+    | Breadboard x1                                  |
+    |                                                |
+    | |Chapter01_02|                                 |
+    +------------------------+-----------------------+
+    | 4x4 Matrix Keypad x1   | Jumper wire M/M x8    |
+    |                        |                       |
+    | |Chapter22_01|         |   |Chapter22_00|      |
+    +------------------------+-----------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -57,12 +62,13 @@ Circuit
 Note that the voltage of ultrasonic module is 5V in the circuit.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter22_04|
-   * -  Hardware connection. 
+   * -  Hardware connection
     
         If you need any support, please feel free to contact us via: support@freenove.com
    
@@ -93,7 +99,7 @@ In addition, you can import Keypad libraries in another way.Open Arduino IDE, cl
 .. image:: ../_static/imgs/22_Matrix_Keypad/Chapter22_07.png
     :align: center
 
-Sketch_Get_Input_Characters
+Sketch_22.1_Get_Input_Characters
 ----------------------------------------
 
 .. image:: ../_static/imgs/22_Matrix_Keypad/Chapter22_08.png
@@ -115,6 +121,7 @@ The following is the program code:
 First, add header file, define 4*4 matrix keyboard key value and the matrix keyboard pin. 
 
 .. code-block:: c
+    :linenos:
 
     #include <Keypad.h>
     // define the symbols on the buttons of the keypad

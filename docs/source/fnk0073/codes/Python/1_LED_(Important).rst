@@ -1,5 +1,5 @@
 ##############################################################################
-Chapter LED (Important)
+Chapter 1 LED (Important)
 ##############################################################################
 
 This chapter is the Start Point in the journey to build and explore ESP8266 electronic projects. We will start with simple "Blink" project.
@@ -19,8 +19,9 @@ Component List
 ==============================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :classL: tanle-op0kkkkkkkkkkkkkkkkkkkkkkkkkkkk
 
    * -  ESP8266 x1
      -  USB cable
@@ -103,7 +104,7 @@ Press the reset key of ESP8266 and you can see LED is ON for one second and then
 .. image:: ../_static/imgs/1_LED/Chapter01_27.png
     :align: center
 
-:red:`If you have any concerns, please contact us via:` support@freenove.com
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com
 
 The following is the program code:
 
@@ -310,19 +311,24 @@ In this project, we will use ESP8266 to control blinking a common LED.
 Component List
 ==================================
 
-+-------------------------+------------------------------+
-| ESP8266 x1              | USB cable                    |
-|                         |                              |
-| |Chapter01_00|          | |Chapter01_01|               |
-+-------------------------+------------------------------+
-| Breadboard x1                                          |
-|                                                        |
-| |Chapter01_02|                                         |
-+----------------+------------------+--------------------+
-| LED x1         | Resistor 220Ω x1 | Jumper wire M/M x3 |
-|                |                  |                    |
-| |Chapter01_03| | |Chapter01_04|   | |Chapter01_05|     |
-+----------------+------------------+--------------------+
+.. table::
+    :align: center
+    :class: table-line
+    :width: 80%
+    
+    +-------------------------+------------------------------+
+    | ESP8266 x1              | USB cable                    |
+    |                         |                              |
+    | |Chapter01_00|          | |Chapter01_01|               |
+    +-------------------------+------------------------------+
+    | Breadboard x1                                          |
+    |                                                        |
+    | |Chapter01_02|                                         |
+    +----------------+------------------+--------------------+
+    | LED x1         | Resistor 220Ω x1 | Jumper wire M/M x3 |
+    |                |                  |                    |
+    | |Chapter01_03| | |Chapter01_04|   | |Chapter01_05|     |
+    +----------------+------------------+--------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -401,7 +407,7 @@ First, disconnect all power from the ESP8266. Then build the circuit according t
 CAUTION: Avoid any possible short circuits (especially connecting 5V or GND, 3.3V and GND)! WARNING: A short circuit can cause high current in your circuit, generate excessive component heat and cause permanent damage to your hardware!
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
 
    * -  Schematic diagram
@@ -419,7 +425,7 @@ Code
 ==========================
 
 Codes used in this tutorial are saved in "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/
-Python_Codes". You can move the codes to any location. For example, we save the codes in Disk(D) with the path of "D:/Micropython_Codes".
+Python_Codes". You can move the codes to any location. For example, we save the codes in Disk(D) with the path of "**D:/Micropython_Codes**".
 
 Blink
 ---------------------------
@@ -476,7 +482,7 @@ Codes here is run offline. If you want to stop :ref:`running online<offline>` an
 .. image:: ../_static/imgs/1_LED/Chapter01_39.png
     :align: center
 
-:red:`If you have any concerns, please contact us via:` support@freenove.com
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com
 
 The following is the program code:
 

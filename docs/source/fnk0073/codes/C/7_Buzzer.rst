@@ -1,5 +1,5 @@
 ##############################################################################
-Chapter Buzzer
+Chapter 7 Buzzer
 ##############################################################################
 
 In this chapter, we will learn about buzzers that can make sounds.
@@ -12,29 +12,34 @@ We will make this kind of doorbell: when the button is pressed, the buzzer sound
 Component List
 ==================================
 
-+-----------------------------------+------------------------------+
-| ESP8266 x1                        | USB cable                    |
-|                                   |                              |
-| |Chapter01_00|                    | |Chapter01_01|               |
-+-----------------------------------+------------------------------+
-| Breadboard x1                                                    |
-|                                                                  |
-| |Chapter01_02|                                                   |
-+--------------------------+------------------+--------------------+
-| NPN transistorx1         | Resistor 1kΩ x1  | Active buzzer x1   |
-|                          |                  |                    |
-| (S8050)                  |                  |                    |
-|                          |                  |                    |
-| |Chapter07_00|           | |Chapter07_03|   | |Chapter07_01|     |
-+--------------------------+--------+---------+--------------------+
-| Resistor 10kΩ x2                  | Push button x1               |
-|                                   |                              |
-| |Chapter02_01|                    | |Chapter07_02|               |
-+-----------------------------------+------------------------------+
-| Jumper wire M/M x9                                               |
-|                                                                  |
-| |Chapter07_04|                                                   |
-+------------------------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +-----------------------------------+------------------------------+
+    | ESP8266 x1                        | USB cable                    |
+    |                                   |                              |
+    | |Chapter01_00|                    | |Chapter01_01|               |
+    +-----------------------------------+------------------------------+
+    | Breadboard x1                                                    |
+    |                                                                  |
+    | |Chapter01_02|                                                   |
+    +--------------------------+------------------+--------------------+
+    | NPN transistorx1         | Resistor 1kΩ x1  | Active buzzer x1   |
+    |                          |                  |                    |
+    | (S8050)                  |                  |                    |
+    |                          |                  |                    |
+    | |Chapter07_00|           | |Chapter07_03|   | |Chapter07_01|     |
+    +--------------------------+--------+---------+--------------------+
+    | Resistor 10kΩ x2                  | Push button x1               |
+    |                                   |                              |
+    | |Chapter02_01|                    | |Chapter07_02|               |
+    +-----------------------------------+------------------------------+
+    | Jumper wire M/M x9                                               |
+    |                                                                  |
+    | |Chapter07_04|                                                   |
+    +------------------------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -64,7 +69,7 @@ Active buzzer is easy to use. Generally, it can only make a specific frequency o
 
 Next, we will use an active buzzer to make a doorbell and a passive buzzer to make an alarm.
 
-How to identify active and passive buzzer?
+:combo:`red font-bolder:How to identify active and passive buzzer?`
 
 1.	Usually, there is a label on the surface of active buzzer covering the vocal hole, but this is not an absolute judgment method.
 
@@ -83,7 +88,7 @@ Transistor, the full name: semiconductor transistor, is a semiconductor device t
 .. image:: ../_static/imgs/7_Buzzer/Chapter07_07.png
     :align: center
 
-:red:`In our kit, the PNP transistor is marked with 8550, and the NPN transistor is marked with 8050.`
+:combo:`red font-bolder:In our kit, the PNP transistor is marked with 8550, and the NPN transistor is marked with 8050.`
 
 Based on the transistor's characteristics, it is often used as a switch in digital circuits. As micro-controller's capacity to output current is very weak, we will use transistor to amplify current and drive large-current components.
 
@@ -92,8 +97,9 @@ When use NPN transistor to drive buzzer, we often adopt the following method. If
 When use PNP transistor to drive buzzer, we often adopt the following method. If GPIO outputs low level, current will flow through R1, the transistor will get conducted, and the buzzer will sound. If GPIO outputs high level, no current flows through R1, the transistor will not be conducted, and buzzer will not sound.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  NPN transistor to drive buzzer
      -  NPN transistor to drive buzzer
@@ -108,8 +114,9 @@ Circuit
 =======================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter07_10|
@@ -133,9 +140,9 @@ In this project, a buzzer will be controlled by a push button switch. When the b
 
 Upload following sketch:
 
-**Freenove_Ultimate_Starter_Kit_for_ESP8266\C\Sketches\Sketch_07.1_Doorbell**
+**Freenove_Ultimate_Starter_Kit_for_ESP8266\\C\\Sketches\\Sketch_07.1_Doorbell**
 
-Sketch_Doorbell
+Sketch_07.1_Doorbell
 ---------------------------
 
 .. image:: ../_static/imgs/7_Buzzer/Chapter07_12.png
@@ -156,7 +163,7 @@ The following is the program code:
 
 The code is logically the same as using button to control LED. 
 
-Project Alertor
+Project 7.2 Alertor
 *******************************
 
 Next, we will use a passive buzzer to make an alarm.
@@ -168,7 +175,7 @@ Sketch
 
 In this project, the buzzer alarm is controlled by the button. Press the button, then buzzer sounds. If you release the button, the buzzer will stop sounding. It is logically the same as using button to control LED, but in the control method, passive buzzer requires PWM of certain frequency to sound.
 
-Sketch_Alertor
+Sketch_07.2_Alertor
 -------------------------------
 
 .. image:: ../_static/imgs/7_Buzzer/Chapter07_14.png

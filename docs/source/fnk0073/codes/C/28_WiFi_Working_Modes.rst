@@ -1,20 +1,21 @@
 ##############################################################################
-Chapter WiFi Working Modes
+Chapter 28 WiFi Working Modes
 ##############################################################################
 
 In this chapter, we'll focus on the WiFi infrastructure for ESP8266. 
 
 ESP8266 has 3 different WiFi operating modes: station mode, AP mode and AP+station mode. All WiFi programming projects must be configured with WiFi operating mode before using WiFi, otherwise WiFi cannot be used.
 
-Project Station mode
+Project 28.1 Station mode
 *************************************
 
 Component List
 =================================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  ESP8266 x1
      -  USB cable
@@ -47,7 +48,7 @@ Connect Freenove ESP8266 to the computer using the USB cable.
 Sketch
 ========================
 
-Sketch_Station_mode
+Sketch_28.1_Station_mode
 -------------------------------
 
 .. image:: ../_static/imgs/28_WiFi_Working_Modes/Chapter28_02.png
@@ -147,7 +148,7 @@ Reference
     
     **setAutoReconnect(boolen):** set automatic reconnection Every time ESP8266 disconnects WiFi, it will reconnect to WiFi automatically.
 
-Project AP mode
+Project 28.2 AP mode
 *********************************
 
 Component List & Circuit
@@ -177,7 +178,7 @@ Connect Freenove ESP8266 to the computer using the USB cable.
 Sketch
 ====================
 
-Sketch_AP_mode
+Sketch_28.2_AP_mode
 ----------------------
 
 .. image:: ../_static/imgs/28_WiFi_Working_Modes/Chapter28_05.png
@@ -230,12 +231,14 @@ Set ESP8266 in AP mode.
 Configure IP address, gateway and subnet mask for ESP8266.
 
 .. code-block:: c
+    :linenos:
 
     WiFi.softAPConfig(local_IP, gateway, subnet);
 
 Turn on an AP in ESP8266, whose name is set by ssid_AP and password is set by password_AP.
 
 .. code-block:: c
+    :linenos:
 
     WiFi.softAP(ssid_AP, password_AP);
 
@@ -278,15 +281,16 @@ Reference
     
     **softAPdisconnect ():** disconnect AP mode.
 
-Project AP+Station mode
+Project 28.3 AP+Station mode
 *****************************************
 
 Component List
 =======================================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  ESP8266 x1
      -  USB cable
@@ -313,7 +317,7 @@ Connect Freenove ESP8266 to the computer using the USB cable.
 Sketch
 ==========================
 
-Sketch_AP_Station_mode
+Sketch_28.3_AP_Station_mode
 --------------------------------
 
 .. image:: ../_static/imgs/28_WiFi_Working_Modes/Chapter28_08.png

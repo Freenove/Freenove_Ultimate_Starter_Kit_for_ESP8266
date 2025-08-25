@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Infrared Remote
+Chapter 23 Infrared Remote
 ##############################################################################
 
 In this chapter, we'll learn how to use an infrared remote control, and control a LED.
 
-Project Infrared Remote Control
+Project 23.1 Infrared Remote Control
 *****************************************************
 
 First, we need to understand how infrared remote control works, then get the command sent from infrared remote control.
@@ -12,25 +12,30 @@ First, we need to understand how infrared remote control works, then get the com
 Component List
 =======================================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |  USB cable                            |
-|                                  |                                       |
-| |Chapter01_00|                   |   |Chapter01_01|                      |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------+-------------------------+-------------------------+
-| Resistor 10kΩ x1     | Infrared Remote x1      | Jumper wire M/M x6      |
-|                      |                         |                         |
-| |Chapter23_02|       |  |Chapter23_01|         |     |Chapter23_00|      |
-+----------------------+-------------------------+-------------------------+
-| Infrared Remote x1                                                       |
-|                                                                          |
-| (May need CR2025 battery x1, please check the holder)                    |
-|                                                                          |
-| |Chapter23_03|                                                           |
-+--------------------------------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +----------------------------------+----------------------------------+
+    | ESP8266 x1                       |  USB cable                       |
+    |                                  |                                  |
+    | |Chapter01_00|                   |   |Chapter01_01|                 |
+    +----------------------------------+----------------------------------+
+    | Breadboard x1                                                       |
+    |                                                                     |
+    | |Chapter01_02|                                                      |
+    +----------------------+-------------------------+--------------------+
+    | Resistor 10kΩ x1     | Infrared Remote x1      | Jumper wire M/M x6 |
+    |                      |                         |                    |
+    | |Chapter23_02|       |  |Chapter23_01|         |     |Chapter23_00| |
+    +----------------------+-------------------------+--------------------+
+    | Infrared Remote x1                                                  |
+    |                                                                     |
+    | (May need CR2025 battery x1, please check the holder)               |
+    |                                                                     |
+    | |Chapter23_03|                                                      |
+    +---------------------------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -70,8 +75,9 @@ Circuit
 ===============================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter23_19|
@@ -99,7 +105,7 @@ Refer to the following operations:
 .. image:: ../_static/imgs/23_Infrared_Remote/Chapter23_07.png
     :align: center
 
-Sketch_Infrared_Remote_Control
+Sketch_23.1_Infrared_Remote_Control
 -------------------------------------------
 
 .. image:: ../_static/imgs/23_Infrared_Remote/Chapter23_08.png
@@ -219,7 +225,7 @@ Circuit
 ===============================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
 
    * -  Schematic diagram

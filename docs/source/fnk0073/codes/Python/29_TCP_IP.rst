@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter TCP/IP
+Chapter 29 TCP/IP
 ##############################################################################
 
 In this chapter, we will introduce how ESP8266 implements network communications based on TCP/IP protocol. There are two roles in TCP/IP communication, namely Server and Client, which will be implemented respectively with two projects in this chapter.
 
-Project As Client
+Project 29.1 As Client
 ******************************
 
 In this section, ESP8266 is used as Client to connect Server on the same LAN and communicate with it.
@@ -13,8 +13,9 @@ Component List
 =================================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  ESP8266 x1
      -  USB cable
@@ -67,7 +68,7 @@ Unzip the downloaded file to your computer. Click "processing.exe" as the figure
 Use Server mode for communication
 --------------------------------------
 
-Open the "Freenove_Ultimate_Starter_Kit_for_ESP8266\\C\\Sketches\\Sketch_29.1_WiFiClient\\sketchWiFi\sketchWiFi.pde", and click "Run".
+Open the "**Freenove_Ultimate_Starter_Kit_for_ESP8266\\C\\Sketches\\Sketch_29.1_WiFiClient\\sketchWiFi\sketchWiFi.pde**", and click "Run".
 
 .. image:: ../_static/imgs/29_TCP_IP/Chapter29_04.png
     :align: center
@@ -149,7 +150,7 @@ The newly pop up window will use the computer's IP address by default and open a
 .. image:: ../_static/imgs/29_TCP_IP/Chapter29_27.png
     :align: center
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "29.1_TCP_as_Client" and double click "TCP_as_Client.py". 
 
@@ -290,7 +291,7 @@ Reference
     
 To learn more please visit: http://docs.micropython.org/en/latest/
 
-Project As Server 
+Project 29.2 As Server 
 **************************************
 
 In this section, ESP8266 is used as a server to wait for the connection and communication of client on the same LAN.
@@ -299,8 +300,10 @@ Component List
 =================================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :header-rows: 1
+   :class: table-line
 
    * -  ESP8266 x1
      -  USB cable
@@ -308,7 +311,7 @@ Component List
    * -  |Chapter00_00|
      -  |Chapter00_01| 
 
-Code
+Circuit
 ============================
 
 Connect Freenove ESP8266 to the computer using USB cable.
@@ -316,16 +319,16 @@ Connect Freenove ESP8266 to the computer using USB cable.
 .. image:: ../_static/imgs/28_WiFi_Working_Modes/Chapter28_01.png
     :align: center
 
-Sketch
+Code
 ======================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "29.2_TCP_as_Server" and double click "TCP_as_Server.py". 
 
 Before clicking "Run current script", please modify the name and password of your router shown in the box below.
 
-TCP_as_Server
+29.2_TCP_as_Server
 -----------------------
 
 .. image:: ../_static/imgs/29_TCP_IP/Chapter29_33.png

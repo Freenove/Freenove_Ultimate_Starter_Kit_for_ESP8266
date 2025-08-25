@@ -22,34 +22,38 @@ Open-source code repositories of Thonny: https://github.com/thonny/thonny
 
 Follow the instruction of official website to install Thonny or click the links below to download and install. (Select the appropriate one based on your operating system.)
 
-+------------------+----------------------------------------------------------------------------+
-| Operating System | Download links/methods                                                     |
-+------------------+----------------------------------------------------------------------------+
-| Windows          | https://github.com/thonny/thonny/releases/download/v3.2.7/thonny-3.2.7.exe |
-+------------------+----------------------------------------------------------------------------+
-| Mac OS           | https://github.com/thonny/thonny/releases/download/v3.2.7/thonny-3.2.7.pkg |
-+------------------+----------------------------------------------------------------------------+
-|                  | **The latest version:**                                                    |
-|                  |                                                                            |
-|                  | **Binary bundle for PC (Thonny+Python):**                                  |
-|                  |                                                                            |
-|                  | bash <(wget -O - https://thonny.org/installer-for-linux)                   |
-|                  |                                                                            |
-|                  | **With pip:**                                                              |
-|                  |                                                                            |
-|                  | pip3 install thonny                                                        |
-|                  |                                                                            |
-| Linux            | **Distro packages (may not be the latest version):**                       |
-|                  |                                                                            |
-|                  | **Debian, Rasbian, Ubuntu, Mint and others:**                              |
-|                  |                                                                            |
-|                  | sudo apt install thonny                                                    |
-|                  |                                                                            |
-|                  | **Fedora:**                                                                |
-|                  |                                                                            |
-|                  | sudo dnf install thonny                                                    |
-+------------------+----------------------------------------------------------------------------+
+.. table:: 
+    :align: center
+    :class: zebra
 
+    +------------------+----------------------------------------------------------------------------+
+    | Operating System | Download links/methods                                                     |
+    +==================+============================================================================+
+    | Windows          | https://github.com/thonny/thonny/releases/download/v3.2.7/thonny-3.2.7.exe |
+    +------------------+----------------------------------------------------------------------------+
+    | Mac OS           | https://github.com/thonny/thonny/releases/download/v3.2.7/thonny-3.2.7.pkg |
+    +------------------+----------------------------------------------------------------------------+
+    |                  | **The latest version:**                                                    |
+    |                  |                                                                            |
+    |                  | **Binary bundle for PC (Thonny+Python):**                                  |
+    |                  |                                                                            |
+    |                  | bash <(wget -O - https://thonny.org/installer-for-linux)                   |
+    |                  |                                                                            |
+    |                  | **With pip:**                                                              |
+    |                  |                                                                            |
+    |                  | pip3 install thonny                                                        |
+    |                  |                                                                            |
+    | Linux            | **Distro packages (may not be the latest version):**                       |
+    |                  |                                                                            |
+    |                  | **Debian, Rasbian, Ubuntu, Mint and others:**                              |
+    |                  |                                                                            |
+    |                  | sudo apt install thonny                                                    |
+    |                  |                                                                            |
+    |                  | **Fedora:**                                                                |
+    |                  |                                                                            |
+    |                  | sudo dnf install thonny                                                    |
+    +------------------+----------------------------------------------------------------------------+
+    
 You can also open "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Software", we have prepared it in advance.
 
 .. image:: ../_static/imgs/0_LED/Chapter00_09.png

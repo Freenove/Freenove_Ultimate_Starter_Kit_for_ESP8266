@@ -1,12 +1,12 @@
 ##############################################################################
-Chapter Analog & PWM
+Chapter 4 Analog & PWM
 ##############################################################################
 
 In previous study, we have known that one button has two states: pressed and released, and LED has light-on/off state, then how to enter a middle state? How to output an intermediate state to let LED "semi bright"?  That's what we're going to learn.
 
 First, let's learn how to control the brightness of a LED.
 
-Project Breathing LED
+Project 4.1 Breathing LED
 ************************************
 
 Breathing light, that is, LED is turned from off to on gradually, and gradually from on to off, just like "breathing". So, how to control the brightness of a LED?  We will use PWM to achieve this target.
@@ -14,19 +14,24 @@ Breathing light, that is, LED is turned from off to on gradually, and gradually 
 Component List
 ==================================
 
-+-------------------------+------------------------------+
-| ESP8266 x1              | USB cable                    |
-|                         |                              |
-| |Chapter01_00|          | |Chapter01_01|               |
-+-------------------------+------------------------------+
-| Breadboard x1                                          |
-|                                                        |
-| |Chapter01_02|                                         |
-+----------------+------------------+--------------------+
-| LED x1         | Resistor 220Ω x1 | Jumper wire M/M x3 |
-|                |                  |                    |
-| |Chapter01_03| | |Chapter01_04|   | |Chapter01_05|     |
-+----------------+------------------+--------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +-------------------------+------------------------------+
+    | ESP8266 x1              | USB cable                    |
+    |                         |                              |
+    | |Chapter01_00|          | |Chapter01_01|               |
+    +-------------------------+------------------------------+
+    | Breadboard x1                                          |
+    |                                                        |
+    | |Chapter01_02|                                         |
+    +----------------+------------------+--------------------+
+    | LED x1         | Resistor 220Ω x1 | Jumper wire M/M x3 |
+    |                |                  |                    |
+    | |Chapter01_03| | |Chapter01_04|   | |Chapter01_05|     |
+    +----------------+------------------+--------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -48,7 +53,7 @@ Their differences can more easily be seen when compared when graphed as below.
 .. image:: ../_static/imgs/4_Analog_&_PWM/Chapter04_00.png
     :align: center
 
-In practical application, we often use binary as the digital signal, that is a series of 0’s and 1’s. Since a binary signal only has two values (0 or 1), it has great stability and reliability. Lastly, both analog and digital signals can be converted into the other.
+In practical application, we often use binary as the digital signal, that is a series of 0's and 1's. Since a binary signal only has two values (0 or 1), it has great stability and reliability. Lastly, both analog and digital signals can be converted into the other.
 
 PWM
 --------------------------------------------
@@ -79,17 +84,16 @@ relationship, we can use PWM to control the brightness of an LED or the speed of
 Circuit
 ===========================
 
-This circuit is the same as the one in engineering Blink.
-
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter04_03|
    * -  Hardware connection 
      
-        If you need any support, please feel free to contact us via: support@freenove.com
+        :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
    * -  |Chapter04_04|
 
@@ -103,9 +107,9 @@ This project is designed to make PWM output GPIO4 with pulse width increasing fr
 
 Upload following sketch:
 
-**Freenove_Ultimate_Starter_Kit_for_ESP8266\C\Sketches\Sketch_04.1_BreathingLight**
+**Freenove_Ultimate_Starter_Kit_for_ESP8266\\C\\Sketches\\Sketch_04.1_BreathingLight**
 
-Sketch_BreathingLight
+Sketch_04.1_BreathingLight
 ------------------------------
 
 .. image:: ../_static/imgs/4_Analog_&_PWM/Chapter04_05.png
@@ -145,7 +149,7 @@ Reference
     
     In order to use this function, we need to set the port to output mode.
 
-.. py:function:: map(value, fromLow, fromHigh, toLow, toHigh)	
+.. py:function:: map(value, fromLow, fromHigh, toLow, toHigh)
     
     This function is used to remap a value, which will return a new value whose percentage in the range of toLow-toHigh is equal to the percentage of "value" in the range of fromLow-fromHigh. 
     
@@ -153,7 +157,7 @@ Reference
     
 For more related functions, please refer to https://www.arduino.cc/reference/en/
 
-Project Meteor Flowing Light
+Project 4.2 Meteor Flowing Light
 *************************************
 
 After learning about PWM, we can use it to control LED bar graph and realize a cooler flowing light.
@@ -163,22 +167,23 @@ The component list, circuit, and hardware are exactly consistent with the projec
 Circuit
 ==============================
 
-.. list-table:: 
-   :width: 100%
+.. list-table::
+   :width: 80%
    :align: center
+   :class: table-line
 
-   * -  Schematic diagram
-   * -  |Chapter04_07|
-   * -  Hardware connection 
-     
-        If you need any support, please feel free to contact us via: support@freenove.com
+   * - Schematic diagram
+   * - |Chapter04_07|
+   * - Hardware connection
+
+        :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
    * -  |Chapter04_08|
 
 .. |Chapter04_07| image:: ../_static/imgs/4_Analog_&_PWM/Chapter04_07.png
 .. |Chapter04_08| image:: ../_static/imgs/4_Analog_&_PWM/Chapter04_08.png
 
-:red:`If LED bar does not work, try to rotate it for 180°. The label is random.`
+:combo:`red font-bolder:If LED bar does not work, try to rotate it for 180°. The label is random.`
 
 Sketch
 ==============================
@@ -187,9 +192,9 @@ Meteor flowing light will be implemented with PWM.
 
 Upload following sketch:
 
-**Freenove_Ultimate_Starter_Kit_for_ESP8266\C\Sketches\Sketch_04.2_FlowingLight2**
+**Freenove_Ultimate_Starter_Kit_for_ESP8266\\C\\Sketches\\Sketch_04.2_FlowingLight2**
 
-Sketch_FlowingLight2
+Sketch_04.2_FlowingLight2
 ---------------------------------
 
 Download the code to ESP8266, and LED bar graph will gradually light up and out from left to right, then light up and out from right to left.

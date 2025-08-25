@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Smart home
+Chapter 30 Smart home
 ##############################################################################
 
 In this chapter, we will use ESP8266 to make a simple smart home.We will learn how to control LED lights through web pages.
 
-Project Control_LED_through_Web
+Project 30.1 Control_LED_through_Web
 *******************************************
 
 In this project, we need to build a Web Service and then use ESP8266 to control the LED through the Web browser of the phone or PC.Through this example, you can remotely control the appliances in your home to achieve smart home.
@@ -13,8 +13,9 @@ Component List
 ===========================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  ESP8266 x1
      -  USB cable
@@ -69,11 +70,11 @@ Connect Freenove ESP8266 to the computer using USB cable.
 Code
 ===========================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP8266/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "30.1_Control_LED_through_Web". and double click "Control_LED_through_Web". 
 
-Control_LED_through_Web
+30.1_Control_LED_through_Web
 ------------------------------------
 
 .. image:: ../_static/imgs/30_Smart_home/Chapter30_04.png

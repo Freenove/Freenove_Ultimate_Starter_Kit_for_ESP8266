@@ -1,5 +1,5 @@
 ##############################################################################
-Chapter Potentiometer & LED
+Chapter 10 Potentiometer & LED
 ##############################################################################
 
 In the previous section, we have finished reading ADC value and converting it into voltage. Now, we will try
@@ -14,24 +14,29 @@ In this project, we will make a soft light. We will use an ADC Module to read AD
 Component List
 =============================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |          USB cable                    |
-|                                  |                                       |
-| |Chapter01_00|                   |          |Chapter01_01|               |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------------------+---------------------------------------+
-| Rotary potentiometer x1          | Jumper wire M/M x8                    |
-|                                  |                                       |
-| |Chapter09_00|                   |          |Chapter01_05|               |
-+----------------------------------+---------------------------------------+
-| LED x1                           | Resistor 220Ω x1                      |
-|                                  |                                       |
-| |Chapter01_03|                   |          |Chapter01_04|               |
-+----------------------------------+---------------------------------------+
-
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +----------------------------------+---------------------------------------+
+    | ESP8266 x1                       |          USB cable                    |
+    |                                  |                                       |
+    | |Chapter01_00|                   |          |Chapter01_01|               |
+    +----------------------------------+---------------------------------------+
+    | Breadboard x1                                                            |
+    |                                                                          |
+    | |Chapter01_02|                                                           |
+    +----------------------------------+---------------------------------------+
+    | Rotary potentiometer x1          | Jumper wire M/M x8                    |
+    |                                  |                                       |
+    | |Chapter09_00|                   |          |Chapter01_05|               |
+    +----------------------------------+---------------------------------------+
+    | LED x1                           | Resistor 220Ω x1                      |
+    |                                  |                                       |
+    | |Chapter01_03|                   |          |Chapter01_04|               |
+    +----------------------------------+---------------------------------------+
+    
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED/Chapter01_02.png
@@ -46,8 +51,9 @@ Circuit
 Use pin A0 on control board to detect the voltage of rotary potentiometer, and use pin 4 to control one LED.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter10_00|
@@ -63,7 +69,7 @@ Use pin A0 on control board to detect the voltage of rotary potentiometer, and u
 Sketch
 =======================
 
-Sketch_Softlight
+Sketch_10.1_Softlight
 --------------------------------
 
 .. image:: ../_static/imgs/10_Potentiometer_&_LED/Chapter10_02.png
@@ -91,23 +97,28 @@ In this project, a potentiometer is used to control the RGB LED. The RGB LED is 
 Component List
 ================================
 
-+----------------------------------+---------------------------------------+
-| ESP8266 x1                       |          USB cable                    |
-|                                  |                                       |
-| |Chapter01_00|                   |          |Chapter01_01|               |
-+----------------------------------+---------------------------------------+
-| Breadboard x1                                                            |
-|                                                                          |
-| |Chapter01_02|                                                           |
-+----------------------------------+---------------------------------------+
-| Rotary potentiometer x1          | Jumper wire M/M x9                    |
-|                                  |                                       |
-| |Chapter09_00|                   |          |Chapter01_05|               |
-+----------------------------------+---------------------------------------+
-| RGBLED x1                        | Resistor 220Ω x3                      |
-|                                  |                                       |
-| |Chapter05_00|                   |          |Chapter01_04|               |
-+----------------------------------+---------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +----------------------------------+---------------------------------------+
+    | ESP8266 x1                       |          USB cable                    |
+    |                                  |                                       |
+    | |Chapter01_00|                   |          |Chapter01_01|               |
+    +----------------------------------+---------------------------------------+
+    | Breadboard x1                                                            |
+    |                                                                          |
+    | |Chapter01_02|                                                           |
+    +----------------------------------+---------------------------------------+
+    | Rotary potentiometer x1          | Jumper wire M/M x9                    |
+    |                                  |                                       |
+    | |Chapter09_00|                   |          |Chapter01_05|               |
+    +----------------------------------+---------------------------------------+
+    | RGBLED x1                        | Resistor 220Ω x3                      |
+    |                                  |                                       |
+    | |Chapter05_00|                   |          |Chapter01_04|               |
+    +----------------------------------+---------------------------------------+
 
 .. |Chapter05_00| image:: ../_static/imgs/5_RGB_LED/Chapter05_00.png
 
@@ -115,8 +126,9 @@ Circuit
 =============================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter10_03|
@@ -134,7 +146,7 @@ Sketch
 
 Download the code to ESP8266, rotate the potentiometers, then the color of RGB LED will change. 
 
-:red:`If you have any concerns, please contact us via:` support@freenove.com
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com
 
 The following is the program code:
 

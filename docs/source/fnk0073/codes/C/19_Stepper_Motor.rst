@@ -1,32 +1,37 @@
 ##############################################################################
-Chapter Stepper Motor
+Chapter 19 Stepper Motor
 ##############################################################################
 
 In this project, we will learn how to drive a stepper motor, and understand its working principle.
 
-Project Stepper Motor
+Project 19.1 Stepper Motor
 ************************************
 
 Component List
 =========================================
 
-+------------------------------------------------+-----------------------------------------------------+
-| ESP8266 x1                                     |  USB cable                                          |
-|                                                |                                                     |
-| |Chapter01_00|                                 |   |Chapter01_01|                                    |
-+------------------------------------------------+-----------------------------------------------------+
-| Breadboard x1                                                                                        |
-|                                                                                                      |
-| |Chapter01_02|                                                                                       |
-+----------------------+---------------------------------------+---------------------------------------+
-| Stepper Motor x1     | ULN2003 Stepper Motor Driver x1       | Jumper wire F/M x7                    |
-|                      |                                       |                                       |
-| |Chapter19_00|       |   |Chapter19_01|                      |  |Chapter19_02|                       |
-+----------------------+------------------+--------------------+---------------------------------------+
-| Breadboard Power module x1              | 9V battery (prepared by yourself) & battery line           |
-|                                         |                                                            |
-| |Chapter19_03|                          |   |Chapter19_04|                                           |
-+-----------------------------------------+------------------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------------------+--------------------------------------------+
+    | ESP8266 x1                                     |  USB cable                                 |
+    |                                                |                                            |
+    | |Chapter01_00|                                 |   |Chapter01_01|                           |
+    +------------------------------------------------+--------------------------------------------+
+    | Breadboard x1                                                                               |
+    |                                                                                             |
+    | |Chapter01_02|                                                                              |
+    +----------------------+---------------------------------------+------------------------------+
+    | Stepper Motor x1     | ULN2003 Stepper Motor Driver x1       | Jumper wire F/M x7           |
+    |                      |                                       |                              |
+    | |Chapter19_00|       |   |Chapter19_01|                      |  |Chapter19_02|              |
+    +----------------------+------------------+--------------------+------------------------------+
+    | Breadboard Power module x1              | 9V battery (prepared by yourself) & battery line  |
+    |                                         |                                                   |
+    | |Chapter19_03|                          |   |Chapter19_04|                                  |
+    +-----------------------------------------+---------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -81,8 +86,9 @@ Circuit
 When building the circuit, note that rated voltage of the stepper motor is 5V, and we need to use the breadboard power supply independently. Additionally, the breadboard power supply needs to share Ground with ESP8266.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
 
    * -  Schematic diagram
    * -  |Chapter19_09|
@@ -100,7 +106,7 @@ Sketch
 
 This code uses the four-step, four-part mode to drive the stepper motor in the clockwise and anticlockwise directions.
 
-Sketch_Drive_Stepper_Motor
+Sketch_19.1_Drive_Stepper_Motor
 ------------------------------------
 
 .. image:: ../_static/imgs/19_Stepper_Motor/Chapter19_11.png
@@ -130,6 +136,7 @@ In this project, we define four pins to drive stepper motor.
 moveOneStep Function is used to drive the stepper motor to rotate clockwise or counterclockwise. The parameter "dir" indicates the direction of rotation. If "dir" returns true, the stepper motor rotates clockwise, otherwise the stepper motor rotates counterclockwise.
 
 .. code-block:: c
+    :linenos:
 
     void moveOneStep(bool dir) {
         ...
