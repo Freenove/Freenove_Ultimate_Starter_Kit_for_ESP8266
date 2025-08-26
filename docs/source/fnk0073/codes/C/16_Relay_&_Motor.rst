@@ -4,7 +4,7 @@ Chapter 16 Relay & Motor
 
 In this chapter, we will learn a kind of special switch module, relay module.
 
-Project Relay & Motor
+Project 16.1 Relay & Motor
 *************************************
 
 In this project, we will use a push button switch indirectly to control the motor via a relay.

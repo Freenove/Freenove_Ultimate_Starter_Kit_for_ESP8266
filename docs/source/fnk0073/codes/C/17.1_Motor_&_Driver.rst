@@ -4,7 +4,7 @@ Chapter 17 Motor & Driver
 
 In this chapter, we will learn about DC motors and DC motor drivers and how to control the speed and direction of a DC motor.
 
-Project Control Motor with Potentiometer
+Project 17.1 Control Motor with Potentiometer
 ***************************************************
 
 Control the direction and speed of the motor with a potentiometer.

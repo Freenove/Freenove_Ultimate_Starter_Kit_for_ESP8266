@@ -88,7 +88,7 @@ Refer to the following operations:
 .. image:: ../_static/imgs/24_Hygrothermograph_DHT11/Chapter24_05.png
     :align: center
 
-Sketch_Temperature_and_Humidity_Sensor
+Sketch_24.1_Temperature_and_Humidity_Sensor
 -------------------------------------------------
 
 .. image:: ../_static/imgs/24_Hygrothermograph_DHT11/Chapter24_06.png
@@ -152,11 +152,11 @@ Reference
     
     Parameter 2: select the type of sensor, DHT11 or DHT12.
     
-    **getTempAndHumidity():** Obtain temperature and humidity data. The received data must be stored in the ‘TempAndHumidity' class.
+    **getTempAndHumidity():** Obtain temperature and humidity data. The received data must be stored in the 'TempAndHumidity' class.
     
     **getStatus():** To judge whether the obtained data format is normal, the return value of 0 means the data is normal, and the return value of non-0 means the data is abnormal or the data fails to be obtained.
 
-Project Hygrothermograph
+Project 24.2 Hygrothermograph
 **************************************
 
 In this project, we use L2C-LCD1602 to display data collected by DHT11.

@@ -4,7 +4,7 @@ Chapter 20 LCD1602
 
 In this chapter, we will learn about the LCD1602 Display Screen.
 
-Project LCD1602
+Project 20.1 LCD1602
 *************************************
 
 In this section we learn how to use LCD1602 to display something.

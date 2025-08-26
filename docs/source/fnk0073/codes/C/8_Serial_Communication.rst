@@ -4,7 +4,7 @@ Chapter 8 Serial Communication
 
 Serial Communication is a means of communication between different devices/devices. This section describes ESP8266's Serial Communication.
 
-Project Serial Print
+Project 8.1 Serial Print
 ***********************************
 
 This project uses ESP8266's serial communicator to send data to the computer and print it on the serial monitor.
@@ -130,7 +130,7 @@ Reference
 
     Returns the number of milliseconds since the current system was booted.
 
-Project Serial Read and Write
+Project 8.2 Serial Read and Write
 **************************************
 
 From last section, we use serial port on Freenove ESP8266 to send data to a computer, now we will use that to receive data from computer.

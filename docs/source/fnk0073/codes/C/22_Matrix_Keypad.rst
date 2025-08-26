@@ -4,7 +4,7 @@ Chapter 22 Matrix Keypad
 
 Earlier we learned about a single push button switch. In this chapter, we will learn about matrix keyboards, which integrates a number of push button switches as keys for the purposes of input.
 
-Project Matrix Keypad
+Project 22.1 Matrix Keypad
 ************************************
 
 In this project, we will attempt to get every key code on the matrix keypad to work.

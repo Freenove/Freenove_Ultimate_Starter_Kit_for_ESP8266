@@ -89,7 +89,7 @@ Connect the circuit board to power supply (3~5V). You can use ESP8266 board or b
 
 Press the push button after connecting the power, and then the buzzer will make a sound.
 
-Project Soldering a Flowing Water Light
+Project 33.2 Soldering a Flowing Water Light
 ******************************************************
 
 From previous chapter, we have learned to make a flowing water light with LED. Now, we will solder a circuit board, and use the improved code to make a more interesting flowing water light.

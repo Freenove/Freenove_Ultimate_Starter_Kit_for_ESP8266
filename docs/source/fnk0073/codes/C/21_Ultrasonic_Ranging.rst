@@ -122,7 +122,7 @@ Note that the voltage of ultrasonic module is 5V in the circuit.
 Sketch
 =========================
 
-Sketch_Ultrasonic_Ranging
+Sketch_21.1_Ultrasonic_Ranging
 -----------------------------------
 
 .. image:: ../_static/imgs/21_Ultrasonic_Ranging/Chapter21_08.png
@@ -183,7 +183,7 @@ About function pulseIn():
     
     **timeout (optional):** the number of microseconds to wait for the pulse to start; default is one second. 
 
-Project Ultrasonic Ranging
+Project 21.2 Ultrasonic Ranging
 ***************************************
 
 Component List and Circuit
@@ -204,7 +204,7 @@ Refer to the following operations:
 .. image:: ../_static/imgs/21_Ultrasonic_Ranging/Chapter21_10.png
     :align: center
 
-Sketch_21.1_Ultrasonic_Ranging
+Sketch_21.2_Ultrasonic_Ranging
 -----------------------------------
 
 .. image:: ../_static/imgs/21_Ultrasonic_Ranging/Chapter21_11.png

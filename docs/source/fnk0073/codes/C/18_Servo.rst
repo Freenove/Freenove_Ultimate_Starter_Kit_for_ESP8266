@@ -234,7 +234,7 @@ Use caution when supplying power to the servo, it should be 5V. Make sure you do
 Sketch
 ==========================
 
-Sketch_Control_Servo_by_Potentiometer
+Sketch_18.2_Control_Servo_by_Potentiometer
 -----------------------------------------------
 
 .. image:: ../_static/imgs/18_Servo/Chapter18_13.png

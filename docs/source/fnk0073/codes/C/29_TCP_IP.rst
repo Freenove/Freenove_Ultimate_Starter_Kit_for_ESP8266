@@ -309,7 +309,7 @@ Sketch
 
 Before running Sketch, please modify the contents of the box below first. 
 
-Sketch_As_Server
+Sketch_29.2_As_Server
 -----------------------------
 
 .. image:: ../_static/imgs/29_TCP_IP/Chapter29_18.png

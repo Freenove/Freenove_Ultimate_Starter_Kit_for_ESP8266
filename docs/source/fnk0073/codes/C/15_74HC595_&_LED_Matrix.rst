@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter 74HC595 & LED Matrix
+Chapter 15 74HC595 & LED Matrix
 ##############################################################################
 
 Thus far we have learned how to use the 74HC595 IC chip to control the LED bar graph and the 7-segment display. We will now use 74HC595 IC chips to control a LED matrix.
 
-Project LED Matrix
+Project 15.1 LED Matrix
 *********************************
 
 In this project, we will use two 74HC595 IC chips to control a monochrome (one color) (8X8) LED matrix to make it display both simple graphics and characters.
@@ -119,7 +119,7 @@ Sketch
 
 The following code will make LED matrix display a smiling face, and then display scrolling character "0-F".
 
-Sketch_LED_Matrix
+Sketch_15.1_LED_Matrix
 ------------------------------
 
 .. image:: ../_static/imgs/15_74HC595_&_LED_Matrix/Chapter15_06.png

@@ -4,7 +4,7 @@ Chapter 9 ADC Converter
 
 We have learned how to control the brightness of LED through PWM and understood that PWM is not the real analog before. In this chapter, we will learn how to read analog, convert it into digital. That is, ADC.
 
-Project Read the Voltage of Potentiometer 
+Project 9.1 Read the Voltage of Potentiometer 
 *******************************************************
 
 In this project, ADC is used to convert analog signals into digital signals. Control chip on the control board has integrated this function. Now let us try to use this function to convert analog signals into digital signals.
