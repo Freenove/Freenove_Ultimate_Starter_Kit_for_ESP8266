@@ -21,7 +21,7 @@ Component List
 .. list-table:: 
    :width: 80%
    :align: center
-   :classL: tanle-op0kkkkkkkkkkkkkkkkkkkkkkkkkkkk
+   :class: table-line
 
    * -  ESP8266 x1
      -  USB cable
