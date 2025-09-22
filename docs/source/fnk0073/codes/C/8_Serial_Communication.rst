@@ -140,7 +140,7 @@ Component and circuit are the same as in the previous project.
 Sketch
 =================================
 
-Sketch_SerialRW
+Sketch_08.2_SerialRW
 -----------------------------
 
 .. image:: ../_static/imgs/8_Serial_Communication/Chapter08_11.png

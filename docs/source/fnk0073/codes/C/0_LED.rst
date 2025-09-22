@@ -1,5 +1,5 @@
 ##############################################################################
-0. Chapter LED
+Chapter 0 LED
 ##############################################################################
 
 This chapter is the Start Point in the journey to build and explore ESP8266 electronic projects. We will start with simple "Blink" project.
